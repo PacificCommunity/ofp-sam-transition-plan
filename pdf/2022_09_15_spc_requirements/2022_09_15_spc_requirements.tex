@@ -1,0 +1,150 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{spc}
+\usepackage{textpos}
+\begin{document}
+
+\begin{frame}
+  \title{\vspace{-5ex}\darkblue SPC Requirements for Stock Assessments\\[2ex]
+    \it\large\darkgray Current and future modelling platforms}
+  \author{\vspace{-10ex}\darkgray\bf
+    Arni Magnusson, Claudio Castillo Jordán, Jemery Day, Thomas Teears}
+  \date{\darkgreen Chat with Paul, Nick, Fabrice, and Mark\\[0.5ex]
+    Noumea, 15 September 2022}
+  \titlepage
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Overview}
+  \begin{itemize}
+    \item[] {\bf\darkblue Current Mode of Operation} \comment{Dave, Nick, John,
+      and new stock assessors}\\[5ex]
+    \item[] {\bf\darkblue Changes Ahead} \comment{alternative stock assessment
+      platforms}\\[5ex]
+    \item[] {\bf\darkblue FIMS Project} \comment{uncertainty about products and
+      timeline}\\[5ex]
+    \item[] {\bf\darkblue Transition Plan} \comment{stages, from experimental to
+    accepted model, resources}\\[1ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Current Mode of Operation}\fns
+  \begin{itemize}
+    \item[] Stock assessors are hired on 3-year contracts,\\
+    update assessments are produced every 3 years\\[3ex]
+
+    \item[] It takes more than 3 years to become proficient enough in MFCL to
+    produce a\\
+    stock assessment, with changes involving data components and model
+    settings\\[3ex]
+
+    \item[] This process has worked (to a varying degree) because we have John
+    and Nick\\
+    to continually guide and mentor the new stock assessors\\[3ex]
+
+    \item[] Without Nick and John, this process would not work\\[3ex]
+
+    \item[] It would require at least 2 people each with 10 years of MFCL
+    experience to\\
+    have the level of expertise to take over the roles of John and Nick\\[3ex]
+
+    \item[] With Dave Fournier retiring in 2021, the development of MFCL is
+    severely hampered\\[3ex]
+
+    \item[] In a few years, when John and Nick retire, the team may consist of
+    only new stock assessors\\[3ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Changes Ahead}\fns
+  \begin{itemize}
+    \item[] In a few years, if the team does not have stock assessors with 10
+    years of MFCL experience...\\[3ex]
+    \item[] ...then it is not very likely that they will use MFCL to conduct the
+    tuna stock assessments, as\\
+    this would be much more challenging than the (already challenging) current
+    mode of operation\\[3ex]
+    \item[] Current stock assessment platforms that could be considered
+    include:\\[0.5ex]
+    \begin{itemize}\fns
+      \item[] Casal2, Gadget, Stock Synthesis\\[2ex]
+    \end{itemize}
+    \item[] Future stock assessment platforms that could be considered
+    include:\\[0.5ex]
+    \begin{itemize}\fns
+      \item[] SAM with length + regions + tags\\[1ex]
+      \item[] WHAM with length + regions + tags\\[1ex]
+      \item[] FIMS model with length + regions + tags\\[1ex]
+      \item[] SPC developed model with length + regions + tags\\[3ex]
+    \end{itemize}
+    It is very likely that future SPC assessments will have a CKMR model
+    component\\[3ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Stock Synthesis}\fns
+  \begin{itemize}
+    \item[] SS has been used for tuna assessments in the Indian Ocean and the
+    Eastern Pacific Ocean\\[4ex]
+    \item[] IOTC yellowfin assessment has 4 regions and tagging data, takes one
+    hour to run\\[4ex]
+    \item[] Current (and future) stock assessors are experienced SS users\\[4ex]
+    \item[] SS has a larger developer and user base than any other
+    platform\\[4ex]
+    \item[] R4SS provides a feature-rich automated set of standard plots that
+    are pasted directly into assessment reports\\[4ex]
+    \item[] An experimental CKMR component has been added to SS\\[4ex]
+    \item[] FIMS model will have a well supported transition from SS to
+    FIMS\\[4ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Casal2}\fns
+  \begin{itemize}
+    \item[] Casal2 seems to have better support than SS for multiregional models
+    with tagging data\\[5ex]
+    \item[] The development team is small and the optimization engine may be
+    less efficient than\\
+    ADMB and TMB-based platforms
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{FIMS}\fns
+  \begin{itemize}
+    \item[] Like SAM, WHAM, and bespoke assessment models, the FIMS project uses
+    TMB that allows efficient use of random effects\\[5ex]
+    \item[] The exact timeline and products from the FIMS project are difficult
+    to predict\\[5ex]
+    \item[] It is possible that it will not produce a model platform that is fit
+    for SPC tuna\\
+    assessments in the next 10 years\\[4ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Transition Plan Stages}\fns
+  \begin{itemize}
+    \item[] Experimental SS models\\[4ex]
+    \item[] SPC workshops inviting external SS experts\\[4ex]
+    \item[] Parallel/staggered MFCL + SS assessments\\[4ex]
+    \item[] Full and accepted SS assessments\\[4ex]
+    \item[] Ensure MFCL components are carried over to future platforms\\[4ex]
+    \item[] FIMS involvement and contributions\\[4ex]
+    \item[] This will involve a lot of extra work compared to the traditional
+    work cycle,\\
+    but we cannot shrug and wait a few more years...
+  \end{itemize}
+\end{frame}
+
+\end{document}
