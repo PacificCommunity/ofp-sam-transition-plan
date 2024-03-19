@@ -3,7 +3,8 @@
 **An age- and length-structured statistical catch-at-length model for
 hard-to-age fisheries stocks**
 
-Fan Zhang and Noel G. Cadigan. 2022. Fish and Fisheries 23(5):1121-1135
+Fan Zhang and Noel G. Cadigan. 2022. [Fish and Fisheries
+23:1121-1135](https://doi.org/10.1111/faf.12673)
 
 ## ABSTRACT
 
