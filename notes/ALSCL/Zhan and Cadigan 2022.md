@@ -32,31 +32,39 @@ using survey catch-at-length, weight-at-length, and maturity-at-length data
 Population dynamics, where l is length, a is age, t is time, and G is the Growth
 transition matrix:
 
+```
 n[l|a,t] = G (n[l|a-1,t-1] * exp(-Z[l|t-1]))                         Eq. 1
+```
 
 The growth transition matrix is an LxL stochastic matrix, with each column
 summing to tone, that changes the cohort length distribution over time:
 
+```
     /             \
     |  p11 . p1L  |
 G = |   .  .  .   |                                                  Eq. 3
     |  pL1 . pLL  |
     \             /
+```
 
 Growth follows a reparametrized von Bertalanffy function (Millar and Notthingham
 2019), overcoming the problems that can arise when length bins are greater than
 Linf
 
+```
                       delta[max]
 mu[x] = ---------------------------------------                      Eq. 6
          1 + exp(-log(19) * (x-L50)/(L95-L50))
+```
 
 Fishing mortality is length-dependent and is stochastic and correlated across
 lengths and time steps, where log(F[l,t]) has a multivariate normal (MVN)
 distribution with a common mean for all l and t (mu[F]) and a separable
 covariance matrix Sigma[F],
 
+```
 Cov(Sigma[F,l,t], Sigma[F,l-i,t-j]) = f(sigma[F], phi[L], phi[T])    Eq. 7
+```
 
 where phi[L] is length autocorrelation and phi[T] is time autocorrelation
 
@@ -67,7 +75,9 @@ For simplicity, we assume that M is known and constant as 0.2
 Recruitment is also stochastic and follows a first-order autoregressive process
 AR(1),
 
+```
 r[t] = rbar * exp(eps[t])                                            Eq. 8
+```
 
 where rbar is the median recruitment and eps[t] is MVN with mean 0 and AR(1)
 covariance with correlation phi[r]
@@ -75,7 +85,9 @@ covariance with correlation phi[r]
 The initial population follows an age-dependent stochastic equilibrium
 distribution:
 
+```
 n[a,1] = r[1] * exp(-Zinit * (a-1)) * exp(eps[a]), a = 1, ..., A    Eq. 11
+```
 
 ### 2.2 PARAMETER ESTIMATION
 
@@ -134,5 +146,4 @@ https://github.com/Linbojun99/ACL
 ### QUESTIONS
 
 - Do the simulated datasets include commercial catch?
-
 - Do the operating models estimate the shape of the selectivity curve?
