@@ -19,13 +19,25 @@ John Hampton <johnh@spc.int>
 Johnoel Ancheta <johnoel@hawaii.edu>
 Laura Tremblay-Boyer <laura.tremblay-boyer@csiro.au>
 Mark Maunder <mmaunder@iattc.org>
+Mauricio Ortiz <mauricio.ortiz@iccat.int>
 Michael Schirripa <michael.schirripa@noaa.gov>
+Nathan Taylor <nathan.taylor@iccat.int>
 Nicholas Ducharme-Barth <nicholas.ducharme-barth@noaa.gov>
 Nick Davies <nd200806@gmail.com>
 Noel Cadigan <noel.cadigan@mi.mun.ca>
 Paul Hamer <paulh@spc.int>
 Rich Hillary <rich.hillary@csiro.au>
 Richard Methot <richard.methot@noaa.gov>
+Scott Rasmussen <scott@zaita.com>
 Simon Hoyle <simon.hoyle@niwa.co.nz>
 Thomas Teears <thomast@spc.int>
 Timothy Miller <timothy.j.miller@noaa.gov>
+
+---
+
+Contact later
+
+Kevin Stokes <kevin@stokes.net.nz>
+Ana Parma <anaparma@gmail.com>
+Victor Restrepo <vrestrepo@iss-foundation.org>
+Hilario Murua <hmurua@iss-foundation.org>
