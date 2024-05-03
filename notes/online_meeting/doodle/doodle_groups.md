@@ -50,11 +50,13 @@ People who can't make it on 13d: Mark*, Rick*, Nicholas*, Michael, Caro, Darcy
 
 15. Darcy overlaps with Mark, Rich, Nicholas, Michael, Caro, and Darcy on 16b
 
-=> 16b
+16. Nick can make it on 14b, we need him
+
+=> 14b
 
 ---
 
-People who can make it on 13d (but not 16b):
+People who can make it on 13d (but not 14b):
 
 Nick Davies       SPC
 Giancarlo Correa  WHAM
@@ -65,7 +67,7 @@ Alistair Dunn     Casal
 Scott Rasmussen   Casal
 Ai Kimoto         ICCAT
 
-People who can make it on 16b (but not 13d):
+People who can make it on 14b (but not 13d):
 
 Mark Maunder             IATTC
 Rick Methot              Stock Synthesis
@@ -74,24 +76,28 @@ Michael Schirripa        ICCAT
 Carolina Minte-Vera      IATTC
 Darcy Webber             CCSBT
 
-People who can make it on 13d or 16b:
+People who can make it on 13d or 14b:
 
 Arni Magnusson  Both
-Rich Hillary    16b
-Simon Hoyle     Either
+Johnoel Ancheta Both
+Paul Hamer      Both
 Noel Cadigan    13d
 Tim Miller      13d
-Jemery Day      Either
-Johnoel Ancheta Either
-Haikun Xu       16b
-Paul Hamer      Either
+Rich Hillary    14b
+Haikun Xu       14b
+
 Claudio Castillo-Jordan  Either
+Simon Hoyle     Either
+Jemery Day      Either
 
 ---
 
 Monday 7pm-9pm (13d)
 
+Arni Magnusson    SPC
 Nick Davies       SPC
+Paul Hamer        SPC
+Johnoel Ancheta   ADMB
 Giancarlo Correa  WHAM
 Tim Miller        WHAM
 Fan Zhang         ALSCL
@@ -101,13 +107,16 @@ Jamie Lentin      Gadget
 Alistair Dunn     Casal
 Scott Rasmussen   Casal
 
-Thursday 8am-10am (16b)
+Tuesday 8am-10am (14b)
 
-Mark Maunder             IATTC
+Arni Magnusson           SPC
+Paul Hamer               SPC
+Johnoel Ancheta          ADMB
 Rick Methot              Stock Synthesis
+Mark Maunder             IATTC
+Carolina Minte-Vera      IATTC
+Haikun Xu                IATTC
 Nicholas Ducharme-Barth  WCPFC
 Michael Schirripa        ICCAT
-Carolina Minte-Vera      IATTC
 Darcy Webber             CCSBT
 Rich Hillary             CCSBT
-Haikun Xu                IATTC
