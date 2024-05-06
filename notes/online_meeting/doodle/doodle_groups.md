@@ -50,15 +50,14 @@ People who can't make it on 13d: Mark*, Rick*, Nicholas*, Michael, Caro, Darcy
 
 15. Darcy overlaps with Mark, Rich, Nicholas, Michael, Caro, and Darcy on 16b
 
-16. Nick can make it on 14b, we need him
+16. Nick can make it on 16b, see email
 
-=> 14b
+=> 16b
 
 ---
 
-People who can make it on 13d (but not 14b):
+People who can make it on 13d (but not 16b):
 
-Nick Davies       SPC
 Giancarlo Correa  WHAM
 Fan Zhang         ALSCL
 Bjarki Elvarsson  Gadget
@@ -67,7 +66,7 @@ Alistair Dunn     Casal
 Scott Rasmussen   Casal
 Ai Kimoto         ICCAT
 
-People who can make it on 14b (but not 13d):
+People who can make it on 16b (but not 13d):
 
 Mark Maunder             IATTC
 Rick Methot              Stock Synthesis
@@ -76,47 +75,52 @@ Michael Schirripa        ICCAT
 Carolina Minte-Vera      IATTC
 Darcy Webber             CCSBT
 
-People who can make it on 13d or 14b:
+People who can make it on 13d or 16b:
 
 Arni Magnusson  Both
-Johnoel Ancheta Both
+Nick Davies     Both
 Paul Hamer      Both
+Johnoel Ancheta Both
 Noel Cadigan    13d
 Tim Miller      13d
-Rich Hillary    14b
-Haikun Xu       14b
+Rich Hillary    16b
+Haikun Xu       16b
 
 Claudio Castillo-Jordan  Either
-Simon Hoyle     Either
-Jemery Day      Either
+Simon Hoyle              Either
+Jemery Day               Either
 
 ---
 
 Monday 7pm-9pm (13d)
 
-Arni Magnusson    SPC
-Nick Davies       SPC
-Paul Hamer        SPC
-Johnoel Ancheta   ADMB
-Giancarlo Correa  WHAM
-Tim Miller        WHAM
-Fan Zhang         ALSCL
-Noel Cadigan      ALSCL
-Bjarki Elvarsson  Gadget
-Jamie Lentin      Gadget
-Alistair Dunn     Casal
-Scott Rasmussen   Casal
+Arni Magnusson           SPC    7pm
+Nick Davies              SPC    8pm
+Paul Hamer               SPC    7pm
+Johnoel Ancheta          ADMB   10pm.
+Giancarlo Correa         WHAM   10am
+Tim Miller               WHAM   4am???
+Fan Zhang                ALSCL  4pm
+Noel Cadigan             ALSCL  5:30am???
+Bjarki Elvarsson         Gadget 8am
+Jamie Lentin             Gadget 9am
+Alistair Dunn            Casal  8pm.
+Scott Rasmussen          Casal  8pm.
 
-Tuesday 8am-10am (14b)
+Thursday 8am-10am (16b)
 
-Arni Magnusson           SPC
-Paul Hamer               SPC
-Johnoel Ancheta          ADMB
-Rick Methot              Stock Synthesis
-Mark Maunder             IATTC
-Carolina Minte-Vera      IATTC
-Haikun Xu                IATTC
-Nicholas Ducharme-Barth  WCPFC
-Michael Schirripa        ICCAT
-Darcy Webber             CCSBT
-Rich Hillary             CCSBT
+Arni Magnusson           SPC    8am
+Nick Davies              SPC    9am
+Paul Hamer               SPC    8am
+Johnoel Ancheta          ADMB   11am
+Rick Methot              SS3    2pm
+Mark Maunder             IATTC  2pm
+Carolina Minte-Vera      IATTC  2pm
+Haikun Xu                IATTC  2pm
+Nicholas Ducharme-Barth  WCPFC  11am
+Michael Schirripa        ICCAT  5pm
+Darcy Webber             CCSBT  9am
+Rich Hillary             CCSBT  7am.
+---
+Tim Miller               WHAM   5pm???
+Noel Cadigan             ALSCL  6:30pm???
