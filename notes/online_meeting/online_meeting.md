@@ -4,9 +4,9 @@
 
 0:00 - 0:20 Introduction
 0:20 - 0:30 Platforms currently used in tuna stock assessments (presentation)
-0:30 - 0:40 SPC challenges and project plan (presentation)
-0:40 - 1:00 Common challenges of all tuna RFMOs, longevity of MULTIFAN-CL and
+0:30 - 0:50 Common challenges of all tuna RFMOs, longevity of MULTIFAN-CL and
             Stock Synthesis, succession plans (round table)
+0:50 - 1:00 SPC challenges and project plan (presentation)
 1:00 - 1:10 Features of current and future platforms (presentation)
 1:10 - 1:30 Discussion on platform features most relevant for tuna (round table)
 1:30 - 1:40 State-space models and latest developments (presentation)
