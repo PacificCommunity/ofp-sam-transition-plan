@@ -20,6 +20,7 @@ Ai Kimoto <ai.kimoto@iccat.int>
 Alistair Dunn <alistair.dunn@oceanenvironmental.co.nz>
 Anders Nielsen <an@aqua.dtu.dk>
 Andre Punt <aepunt@uw.edu>
+Andrea Havron <andrea.havron@noaa.gov>
 Arni Magnusson <arnim@spc.int>
 Bjarki Elvarsson <bjarki.elvarsson@hafogvatn.is>
 Carolina Minte-Vera <cminte@iattc.org>
