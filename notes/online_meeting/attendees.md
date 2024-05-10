@@ -5,7 +5,7 @@ Ai Kimoto               | -     | -
 Alistair Dunn           | -     | -
 Anders Nielsen          | Yes   | -
 Andre Punt              | -     | No
-Andrea Havron           | -     | -
+Andrea Havron           | -     | Yes
 Arni Magnusson          | Yes   | Yes
 Bjarki Elvarsson        | -     | -
 Carolina Minte-Vera     | -     | -
