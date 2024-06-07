@@ -25,6 +25,7 @@ Arni Magnusson <arnim@spc.int>
 Bjarki Elvarsson <bjarki.elvarsson@hafogvatn.is>
 Carolina Minte-Vera <cminte@iattc.org>
 Christine Stawitz <christine.stawitz@noaa.gov>
+Christopher Cahill <cahill11@msu.edu>
 Claudio Castillo Jordan <claudioc@spc.int>
 Colin Millar <colin.millar@ices.dk>
 D'Arcy Webber <darcy@quantifish.co.nz>
