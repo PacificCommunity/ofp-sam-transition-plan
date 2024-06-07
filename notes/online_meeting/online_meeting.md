@@ -34,13 +34,16 @@ Finlay Scott <finlays@spc.int>
 Giancarlo Correa <gmoron@azti.es>
 Graham Pilling <grahamp@spc.int>
 Haikun Xu <hkxu@iattc.org>
+Hilario Murua <hmurua@iss-foundation.org>
 Jamie Lentin <jm@lentin.co.uk>
 Jemery Day <jemeryd@spc.int>
 Jim Ianelli <jim.ianelli@noaa.gov>
 John Hampton <johnh@spc.int>
 Johnoel Ancheta <johnoel@hawaii.edu>
+Kelli Johnson <kelli.johnson@noaa.gov>
 Laura Tremblay-Boyer <laura.tremblay-boyer@csiro.au>
 Mark Maunder <mmaunder@iattc.org>
+Matthew Vincent <matthew.vincent@noaa.gov>
 Mauricio Ortiz <mauricio.ortiz@iccat.int>
 Michael Schirripa <michael.schirripa@noaa.gov>
 Nan Yao <nany@spc.int>
@@ -58,6 +61,7 @@ Simon Hoyle <simon.hoyle@niwa.co.nz>
 Steven Hare <stevenh@spc.int>
 Thomas Teears <thomast@spc.int>
 Timothy Miller <timothy.j.miller@noaa.gov>
+Victor Restrepo <vrestrepo@iss-foundation.org>
 
 ---
 
@@ -66,4 +70,3 @@ Contact later
 * Ana Parma <anaparma@gmail.com>
 * Hilario Murua <hmurua@iss-foundation.org>
 * Kevin Stokes <kevin@stokes.net.nz>
-* Victor Restrepo <vrestrepo@iss-foundation.org>
