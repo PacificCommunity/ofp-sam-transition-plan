@@ -29,17 +29,17 @@ alternative existing software exists, or new software must be developed in the
 longer-term, to continue to support the specificities and future requirements of
 WCPFC tuna stock assessments.
 
-While MFCL continues to be improved to service the WCPFC tuna assessment needs
-over at least the next 5+ years, it is important to start on a phased approach
-to its replacement. An initial scoping phase is required to assess what features
-and capabilities will be important in future assessment software for tunas. This
-scoping phase will benefit from input from stock assessment scientists across
-global tuna RFMOs. Once this scoping phase is conducted, consideration of
-available software packages in relation to the desired features and capabilities
-can be conducted. This may identify suitable existing software that has
-potential to provide the desired features and/or has potential to be developed
-further. Alternatively, it may indicate whether embarking on development of a
-new software package is recommended.
+While MFCL (Fournier et al. 1998) continues to be improved to service the WCPFC
+tuna assessment needs over at least the next 5+ years, it is important to start
+on a phased approach to its replacement. An initial scoping phase is required to
+assess what features and capabilities will be important in future assessment
+software for tunas. This scoping phase will benefit from input from stock
+assessment scientists across global tuna RFMOs. Once this scoping phase is
+conducted, consideration of available software packages in relation to the
+desired features and capabilities can be conducted. This may identify suitable
+existing software that has potential to provide the desired features and/or has
+potential to be developed further. Alternatively, it may indicate whether
+embarking on development of a new software package is recommended.
 
 There has also been discussion around the need to explore, through
 modeling/simulation exercises, the benefits of applying alternative assessment
@@ -102,6 +102,8 @@ Years 2025 and 2026 (subject to SC advice and funding approvals by WCPFC)
 
 \subsection{Existing software}
 
+Punt et al. (2020)
+
 \subsection{Recent and ongoing software development}
 
 \section{Possible tasks for SPC to prioritize}
@@ -154,8 +156,8 @@ The meeting agenda covered the following discussion topics:
 
 There was a consensus among the experts that the goal should be to design and
 develop a model specific for tuna assessments, rather than a general model for
-all countries and species. The advice was to start with a lean design and get a
-simple model up and running before adding all the features required for an
+global usage and all species. The advice was to start with a lean design and get
+a simple model up and running before adding all the features required for an
 assessment. In general, the cost of adding features is much greater than the
 implementation cost, as each layer complexity makes long-term maintenance and
 future modifications of the software more difficult and costly.
@@ -170,8 +172,22 @@ State-space models are a statistically and computationally efficient way to
 allow time-varying processes in stock assessment models, such as time-varying
 selectivity. Other statistical approaches exist, but the successful track record
 of using state-space models in production assessments, e.g., across a variety of
-ICES groundfish stocks, indicates that state-space formulation can be
+Atlantic groundfish stocks, indicates that state-space formulation can be
 recommended for new model development.
+
+Age-length structure is explicitly tracked in Gadget models, accounting for the
+fact that fast-growing individuals are caught by the fishery and the
+slow-growing individuals in the cohort remain in the population. Casal and Stock
+Synthesis have optional model features with a similar aim. This leads to an
+improved level of realism, and simulations with a very basic model ALSCL (Zhang
+and Cadigan 2022) indicate improved estimation accuracy. The drawback is that
+tracking the population structure in terms of age and length, instead of age
+only, comes at a considerable computational cost. The SPC tuna assessment models
+that are currently run in MFCL are already very computationally heavy, with
+models running overnight before results are available. The recommendation is to
+explore the feature of incorporating full age-length structure in the next tuna
+assessment models, considering estimation performance and computational time, as
+well as software development and maintenance cost.
 
 \subsection{Workshop activities in 2024--2026}
 
@@ -196,11 +212,14 @@ recommended for new model development.
   https://cran.r-project.org/package=RTMB.
   \item Kristensen, K. A. Nielsen, C.W. Berg, H. Skaug, and B.M. Bell. 2016.
   TMB: Automatic differentiation and Laplace approximation. J. Stat. Softw.
-  70(5):1-21.
+  70(5):1--21.
   \item Punt, A.E., A. Dunn, B.Þ. Elvarsson, J. Hampton, S.D. Hoyle, M.N.
   Maunder, R.D. Methot, and A. Nielsen. 2020. Essential features of the
   next-generation integrated fisheries stock assessment package: A perspective.
   Fish. Res. 229:105617.
+  \item Zhang, F. and N.G. Cadigan. 2022. An age-and length-structured
+  statistical catch-at-length model for hard-to-age fisheries stocks. Fish and
+  Fish. 23:1121--1135.
 \end{description}
 
 \end{document}
