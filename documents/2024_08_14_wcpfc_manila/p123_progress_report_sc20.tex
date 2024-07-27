@@ -1,6 +1,7 @@
 \documentclass{SCreport}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{float}
 \setcounter{tocdepth}{2}
 \reporttype{SC20}
 \reportauthor{A.~Magnusson\footnote{\spc} and N.~Davies\footnote{TeTakina Ltd}}
@@ -8,6 +9,7 @@
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
 \reportdate{14 August 2024}
+\hyphenation{}
 \begin{document}
 
 \wcpfctitlepage
@@ -16,6 +18,17 @@
 \newpage
 
 \section{Executive summary}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{tasks_no_margin}
+  \vspace{-1ex}
+  \caption{Overview of tasks related to the next generation of tuna stock
+    assessment software. Project~123 will focus on the first line of scoping
+    tasks (communicate, organize, evaluate) and prepare the ground for
+    subsequent lines of tasks (the main project), which will require additional
+    funding and resources.}
+\end{figure}
 
 \section{Introduction}
 
@@ -102,9 +115,55 @@ Years 2025 and 2026 (subject to SC advice and funding approvals by WCPFC)
 
 \subsection{Existing software}
 
-Punt et al. (2020)
+The CAPAM 2019 Workshop on Next Generation Assessment Models (Punt et al. 2020)
+provided an overview and discussion of existing software, as well as
+recommendations for further software development.
 
-\subsection{Recent and ongoing software development}
+For the purposes of tuna assessments, the most relevant existing software (other
+than MFCL) includes:
+
+\begin{itemize}
+  \item \textbf{Stock Synthesis} is used in tuna assessments by the IATTC, IOTC,
+  and ICCAT. Migrating SPC assessments to Stock Synthesis would lose some of the
+  features provided by MFCL and this would be transitioning to another platform
+  that is expected to phased out in the not-too-distant future. On the other
+  hand, increased use of Stock Synthesis at SPC would facilitate collaboration
+  between the tRFMOs, including development of future models. It would also
+  shorten the training time for new SPC stock assessors and make their skills
+  and experience more transferable to subsequent workplaces. Stock Synthesis has
+  a large user community that is relevant for peer reviews and discussing
+  technical decisions. It also comes with a suite of tools useful for
+  diagnostics and automated plots and tables for assessment reports.
+  \item \textbf{sbt} is used in the assessment of southern bluefin tuna by
+  CCSBT. This package, implemented in TMB, stands out as the primary stock
+  assessment software that is built around close-kin mark-recapture (CKMR) which
+  is a new and important data type in upcoming SPC tuna assessments. The
+  \textsf{sbt} R package is designed for a single-region assessment and would
+  require some additional development to be used for a multiregion assessment.
+  \item \textbf{Gadget3} is the Gadget stock assessment platform implemented in
+  TMB. Porting the software to TMB has resulted in a significant performance
+  gain in terms of computational time. Gadget has a wide range of features
+  relevant for tuna assessments and there is interest from SPC and the Gadget
+  maintainers to test its use for a tuna assessment.
+  \item \textbf{Casal2} is the Casal stock assessment platform rewritten with an
+  improved design and user interface. Casal has a wide range of features
+  relevant for tuna assessments and there is interest from SPC and the Casal
+  maintainers to test its use for a tuna assessment.
+\end{itemize}
+
+\subsection{Ongoing and upcoming software development}
+
+Some ongoing software development projects are of particular interest in the
+context of the next SPC tuna assessment models:
+
+\begin{itemize}
+  \item \textbf{ALSCL} is a basic model that has two important features:
+  state-space formulation and age-length structure. The current implementation
+  fits only to survey data and does not include commercial catches or fleets.
+  \item \textbf{Stock Synthesis with Enhanced Tags}
+  \item \textbf{WHAM with Tags}
+  \item \textbf{SAM with Tags}
+\end{itemize}
 
 \section{Possible tasks for SPC to prioritize}
 
@@ -180,14 +239,27 @@ fact that fast-growing individuals are caught by the fishery and the
 slow-growing individuals in the cohort remain in the population. Casal and Stock
 Synthesis have optional model features with a similar aim. This leads to an
 improved level of realism, and simulations with a very basic model ALSCL (Zhang
-and Cadigan 2022) indicate improved estimation accuracy. The drawback is that
-tracking the population structure in terms of age and length, instead of age
-only, comes at a considerable computational cost. The SPC tuna assessment models
-that are currently run in MFCL are already very computationally heavy, with
-models running overnight before results are available. The recommendation is to
-explore the feature of incorporating full age-length structure in the next tuna
-assessment models, considering estimation performance and computational time, as
-well as software development and maintenance cost.
+and Cadigan 2022) indicate improved estimation accuracy.
+
+It is worth noting that the ALSCL simulation study involved a single-area model
+with survey data and no commercial catch data or fleets, which is quite far from
+the model complexity of tuna assessments.
+
+An important drawback is that tracking the population structure in terms of age
+and length, instead of age only, comes at a considerable computational cost. The
+SPC tuna assessment models that are currently run in MFCL are already very
+computationally heavy, with models requiring to run overnight before results are
+available. The recommendation is to explore the feature of incorporating full
+age-length structure in the next tuna assessment models, considering estimation
+performance and the difference in the resulting management advice, as well as
+computational time, required software development, and maintenance cost.
+
+The discussion at the international expert meeting covered several other topics,
+but the above recommendations are particularly relevant for upcoming
+explorations and initial development. In addition to the discussion and
+recommendations, an important outcome of the international expert meeting was to
+establish collaboration with various research labs related to the development of
+new tuna assessment models. See next section.
 
 \subsection{Workshop activities in 2024--2026}
 
