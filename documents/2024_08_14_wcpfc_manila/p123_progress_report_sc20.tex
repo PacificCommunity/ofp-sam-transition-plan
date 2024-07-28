@@ -9,7 +9,8 @@
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
 \reportdate{14 August 2024}
-\hyphenation{}
+\hyphenation{computational consideration desired assessment future replacement
+  development}
 \begin{document}
 
 \wcpfctitlepage
@@ -126,29 +127,38 @@ than MFCL) includes:
   \item \textbf{Stock Synthesis} is used in tuna assessments by the IATTC, IOTC,
   and ICCAT. Migrating SPC assessments to Stock Synthesis would lose some of the
   features provided by MFCL and this would be transitioning to another platform
-  that is expected to phased out in the not-too-distant future. On the other
-  hand, increased use of Stock Synthesis at SPC would facilitate collaboration
-  between the tRFMOs, including development of future models. It would also
-  shorten the training time for new SPC stock assessors and make their skills
-  and experience more transferable to subsequent workplaces. Stock Synthesis has
-  a large user community that is relevant for peer reviews and discussing
-  technical decisions. It also comes with a suite of tools useful for
-  diagnostics and automated plots and tables for assessment reports.
+  that is expected to phased out in the \mbox{not-too-distant} future. On the
+  other hand, increasing the use of Stock Synthesis at SPC would facilitate
+  collaboration between the tRFMOs, including development of future models. It
+  would also shorten the training time for new SPC stock assessors and make
+  their skills and experience more transferable to subsequent workplaces. Stock
+  Synthesis has a large user community that is relevant for peer reviews and
+  discussing technical decisions. It also comes with an exceptionally complete
+  suite of tools useful for diagnostics, as well as automated plots and tables
+  for assessment reports. There is interest from SPC and the Stock Synthesis
+  maintainers to explore the possibility of enhancing the tag module, see
+  the next section on `Ongoing and upcoming software development'.
   \item \textbf{sbt} is used in the assessment of southern bluefin tuna by
   CCSBT. This package, implemented in TMB, stands out as the primary stock
   assessment software that is built around close-kin mark-recapture (CKMR) which
   is a new and important data type in upcoming SPC tuna assessments. The
   \textsf{sbt} R package is designed for a single-region assessment and would
   require some additional development to be used for a multiregion assessment.
-  \item \textbf{Gadget3} is the Gadget stock assessment platform implemented in
-  TMB. Porting the software to TMB has resulted in a significant performance
-  gain in terms of computational time. Gadget has a wide range of features
-  relevant for tuna assessments and there is interest from SPC and the Gadget
-  maintainers to test its use for a tuna assessment.
-  \item \textbf{Casal2} is the Casal stock assessment platform rewritten with an
-  improved design and user interface. Casal has a wide range of features
-  relevant for tuna assessments and there is interest from SPC and the Casal
-  maintainers to test its use for a tuna assessment.
+  There is interest from SPC and the \textsf{sbt} maintainers to explore the
+  possibility of adding multiregion functionality to the software.
+  \item \textbf{Gadget3} is the latest version of Gadget stock assessment
+  platform, implemented in TMB. Porting the software to TMB has resulted in a
+  significant performance gain in terms of computational time. Gadget has a wide
+  range of features relevant for tuna assessments and there is interest from SPC
+  and the Gadget maintainers to test its use for a tuna assessment.
+  \item \textbf{Casal2} is the latest version of the Casal stock assessment
+  platform, rewritten with an improved design and user interface. Casal has a
+  wide range of features relevant for tuna assessments and there is interest
+  from SPC and the Casal maintainers to test its use for a tuna assessment.
+  \item \textbf{Stock Synthesis + CKMR} is an experimental add-on to Stock
+  Synthesis (A.É. Punt, pers. comm), adding CKMR as a data type in Stock
+  Synthesis. This was successful as a proof of concept but is not very likely to
+  be added to the core software.
 \end{itemize}
 
 \subsection{Ongoing and upcoming software development}
@@ -157,12 +167,30 @@ Some ongoing software development projects are of particular interest in the
 context of the next SPC tuna assessment models:
 
 \begin{itemize}
-  \item \textbf{ALSCL} is a basic model that has two important features:
-  state-space formulation and age-length structure. The current implementation
-  fits only to survey data and does not include commercial catches or fleets.
-  \item \textbf{Stock Synthesis with Enhanced Tags}
-  \item \textbf{WHAM with Tags}
-  \item \textbf{SAM with Tags}
+  \item \textbf{ALSCL + Fleets} is a recent and simple model that has two
+  important features: state-space formulation and age-length structure. It is
+  implemented in TMB, but the software currently fits only to survey data and
+  does not include commercial catches or fleets. There is interest from SPC and
+  the ALSCL maintainers to explore the possibility of adding commercial catches
+  and fleets as software features.
+  \item \textbf{Stock Synthesis + Enhanced Tags} is a proposed software
+  development of an enhanced tag module for Stock Synthesis. The current
+  implementation of fitting to tagging data is somewhat limited, e.g., requiring
+  the user to enter the age at release, which is not available in tuna
+  assessments. The idea is to borrow some of the functionality and features from
+  the tag module in MFCL, which has a long record of using tagging data as a
+  primary data type in tuna assessments. There is interest from SPC and NOAA
+  scientists to explore the possibility of contributing an enhanced tag module
+  to be incorporated into the core Stock Synthesis software.
+  \item \textbf{WHAM + Length} is a recent software development (Correa et al.
+  2023) extending the state-space stock assessment software WHAM (Stock and
+  Miller 2021) to fit to length data. There is interest from SPC and AZTI
+  scientists to experiment with fitting the WHAM + Length model to an SPC tuna
+  assessment dataset.
+  \item \textbf{SAM + Length} is an early exploration of extending the
+  state-space stock assessment software SAM (Nielsen and Berg 2014) to fit to
+  length data. There is interest from SPC and DTU/ICES scientists to continue
+  this exploration.
 \end{itemize}
 
 \section{Possible tasks for SPC to prioritize}
@@ -238,28 +266,26 @@ Age-length structure is explicitly tracked in Gadget models, accounting for the
 fact that fast-growing individuals are caught by the fishery and the
 slow-growing individuals in the cohort remain in the population. Casal and Stock
 Synthesis have optional model features with a similar aim. This leads to an
-improved level of realism, and simulations with a very basic model ALSCL (Zhang
-and Cadigan 2022) indicate improved estimation accuracy.
-
-It is worth noting that the ALSCL simulation study involved a single-area model
-with survey data and no commercial catch data or fleets, which is quite far from
-the model complexity of tuna assessments.
-
-An important drawback is that tracking the population structure in terms of age
-and length, instead of age only, comes at a considerable computational cost. The
-SPC tuna assessment models that are currently run in MFCL are already very
-computationally heavy, with models requiring to run overnight before results are
-available. The recommendation is to explore the feature of incorporating full
-age-length structure in the next tuna assessment models, considering estimation
-performance and the difference in the resulting management advice, as well as
-computational time, required software development, and maintenance cost.
+improved level of realism, and simulations using a very basic model ALSCL (Zhang
+and Cadigan 2022) indicate improved estimation accuracy. It is worth noting that
+the ALSCL simulation study involved a single-area model with survey data and no
+commercial catch data or fleets, which is quite far from the model complexity of
+tuna assessments. An important drawback is that tracking the population
+structure in terms of age and length, instead of age only, comes at a
+considerable computational cost. The SPC tuna assessment models that are
+currently run in MFCL are already very computationally heavy, with models
+requiring to run overnight before results are available. The recommendation is
+to explore the feature of incorporating full age-length structure in the next
+tuna assessment models, considering estimation performance and the difference in
+the resulting management advice, as well as computational time, required
+software development, and maintenance cost.
 
 The discussion at the international expert meeting covered several other topics,
-but the above recommendations are particularly relevant for upcoming
-explorations and initial development. In addition to the discussion and
-recommendations, an important outcome of the international expert meeting was to
-establish collaboration with various research labs related to the development of
-new tuna assessment models. See next section.
+but the above recommendations are particularly relevant for initial explorations
+and development. In addition to the discussion and recommendations, an important
+outcome of the international expert meeting was to establish collaboration with
+various research labs related to the development of new tuna assessment models.
+See next section.
 
 \subsection{Workshop activities in 2024--2026}
 
@@ -276,6 +302,9 @@ new tuna assessment models. See next section.
 \sloppy\setlength\hyphenpenalty{1000}
 
 \begin{description}\setlength\itemsep{0ex}
+  \item Correa, G.M., C.C. Monnahan, J.Y. Sullivan, J.T. Thorson, and A.E. Punt.
+  2023. Modelling time-varying growth in state-space stock assessments. ICES J.
+  Mar. Sci.80:2036--2049.
   \item Fournier, D.A., J. Hampton, and J.R. Sibert. 1998. MULTIFAN-CL: A
   length-based, age-structured model for fisheries stock assessment, with
   application to South Pacific albacore, \textit{Thunnus alalunga}. Can. J.
@@ -285,10 +314,16 @@ new tuna assessment models. See next section.
   \item Kristensen, K. A. Nielsen, C.W. Berg, H. Skaug, and B.M. Bell. 2016.
   TMB: Automatic differentiation and Laplace approximation. J. Stat. Softw.
   70(5):1--21.
+  \item Nielsen, A. and C.W. Berg. 2014. Estimation of time-varying selectivity
+  in stock assessments using state-space models. Fish. Res. 158:96--101.
   \item Punt, A.E., A. Dunn, B.Þ. Elvarsson, J. Hampton, S.D. Hoyle, M.N.
   Maunder, R.D. Methot, and A. Nielsen. 2020. Essential features of the
   next-generation integrated fisheries stock assessment package: A perspective.
   Fish. Res. 229:105617.
+  \item Stock, B.C. and T.J. Miller. 2021. The Woods Hole Assessment Model
+  (WHAM): A general state-space assessment framework that incorporates time- and
+  age-varying processes via random effects and links to environmental
+  covariates. Fish. Res. 240:105967.
   \item Zhang, F. and N.G. Cadigan. 2022. An age-and length-structured
   statistical catch-at-length model for hard-to-age fisheries stocks. Fish and
   Fish. 23:1121--1135.
