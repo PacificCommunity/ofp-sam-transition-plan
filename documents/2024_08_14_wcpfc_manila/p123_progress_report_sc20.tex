@@ -10,7 +10,7 @@
 \reportnumber{\tpnum/SA-WP-01}
 \reportdate{14 August 2024}
 \hyphenation{computational consideration desired assessment future replacement
-  development}
+  development simple progression synthesis}
 \begin{document}
 
 \wcpfctitlepage
@@ -137,7 +137,7 @@ than MFCL) includes:
   suite of tools useful for diagnostics, as well as automated plots and tables
   for assessment reports. There is interest from SPC and the Stock Synthesis
   maintainers to explore the possibility of enhancing the tag module, see
-  the next section on `Ongoing and upcoming software development'.
+  \autoref{sec:ongoing-upcoming-development}.
   \item \textbf{sbt} is used in the assessment of southern bluefin tuna by
   CCSBT. This package, implemented in TMB, stands out as the primary stock
   assessment software that is built around close-kin mark-recapture (CKMR) which
@@ -156,12 +156,13 @@ than MFCL) includes:
   wide range of features relevant for tuna assessments and there is interest
   from SPC and the Casal maintainers to test its use for a tuna assessment.
   \item \textbf{Stock Synthesis + CKMR} is an experimental add-on to Stock
-  Synthesis (A.É. Punt, pers. comm), adding CKMR as a data type in Stock
+  Synthesis (A.E. Punt, pers. comm), adding CKMR as a data type in Stock
   Synthesis. This was successful as a proof of concept but is not very likely to
   be added to the core software.
 \end{itemize}
 
 \subsection{Ongoing and upcoming software development}
+\label{sec:ongoing-upcoming-development}
 
 Some ongoing software development projects are of particular interest in the
 context of the next SPC tuna assessment models:
@@ -195,9 +196,69 @@ context of the next SPC tuna assessment models:
 
 \section{Possible tasks for SPC to prioritize}
 
-\subsection{Migrating assessments to existing software}
+\subsection{Migrate assessments to existing software}
 
-\subsection{Developing new software}
+\begin{enumerate}
+  \item Move the swordfish assessment to Stock Synthesis. The swordfish
+  assessment is relatively simple compared to other SPC assessments and would be
+  a good candidate to be the first to migrate from MFCL. The 2025 swordfish
+  assessment could be developed in a stepwise progression: previous MFCL
+  diagnostic $\Rightarrow$ catch-conditioned MFCL $\Rightarrow$ Stock Synthesis.
+  \item Move the striped marlin assessment to Stock Synthesis. The striped
+  marlin assessment is also relatively simple and would be a good candidate to
+  migrate from MFCL. Currently, the next striped marlin assessment is planned in
+  2029, but an update assessment could be conducted in 2025, 2026, or 2027,
+  depending on the resources committed to this task. The update assessment could
+  be put forward as the basis of scientific advice or as a technical milestone.
+\end{enumerate}
+
+\subsection{Exploratory analyses using existing software}
+
+\begin{enumerate}\setcounter{enumi}{2}
+  \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to
+  albacore tuna. The albacore assessment is simpler than the other tuna species
+  and therefore a candidate to be the first tuna stock to migrate from MFCL.
+  \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to the
+  original five-region yellowfin tuna dataset. The yellowfin assessment is a
+  good candidate to test the capabilities of these software platforms for tuna
+  assessments involving multiple regions, tags, and a large number of fisheries.
+  The yellowfin tuna assessment is similar to bigeye tuna but runs slightly
+  faster, thanks to the simpler \mbox{five-region} structure that was adopted in
+  the 2023 assessment.
+  \item Conduct exploratory analyses to fit models using a variety of existing
+  software to a simplified single-region yellowfin tuna dataset. Models of
+  interest include ALSCL, Casal, Gadget, MFCL, sbt, Stock Synthesis, and
+  WHAM+Length.
+\end{enumerate}
+
+\subsection{Software development}
+
+\subsubsection{Extend existing software}
+
+The benefits and rationale of the following software extensions are described in
+\autoref{sec:ongoing-upcoming-development}. The prioritization and duration of
+these tasks may depend on the initial findings of these and other tasks,
+available resources, and the availability of external scientists involved.
+
+\begin{enumerate}\setcounter{enumi}{5}
+  \item ALSCL+Fleets. Scientists involved could include Fan Zhang (Shanghai
+  Ocean University) and Nick Davies (SPC).
+  \item Stock Synthesis+Enhanced Tags. Scientists involved could include
+  Nicholas Ducharme-Barth (NOAA), Matthew Vincent (NOAA), and Arni Magnusson
+  (SPC).
+  \item WHAM+Length. Scientists involved could include Giancarlo Correa (AZTI)
+  and Arni Magnusson (SPC).
+  \item SAM+Length. Scientists involved could include Anders Nielsen (DTU),
+  Colin Millar (ICES), and Arni Magnusson (SPC).
+\end{enumerate}
+
+\subsubsection{Design and develop new software for tuna assessments}
+
+\begin{enumerate}\setcounter{enumi}{9}
+  \item Initial explorations using RTMB, starting with simple model development
+  and gradually adding complexity and tests. Scientists involved could include
+  Nick Davies (SPC) and Arni Magnusson (SPC).
+\end{enumerate}
 
 \section{Timeline}
 
@@ -217,13 +278,13 @@ The meeting objectives were:
 
 \subsubsection{Format}
 
-Two online meetings were held on 13 May and 18 June, inviting stock assessment
-and software development experts from around the world. The two sessions had the
-same format and agenda, but one was centered on European time zones and the
-other on North American time zones. Around 40 participants represented the tuna
-RFMOs (CCSBT, IATTC, ICCAT, IOTC, WCPFC), stock assessment software projects
-(ALSCL, CASAL, FIMS, Gadget, MFCL, SAM, sbt, Stock Synthesis, WHAM), and
-maintainers of relevant programming languages (ADMB, RTMB, TMB).
+Two online meetings were held on 13 May and 18 June 2024, inviting stock
+assessment and software development experts from around the world. The two
+sessions had the same format and agenda, but one was centered on European time
+zones and the other on North American time zones. Around 40 participants
+represented the tuna RFMOs (CCSBT, IATTC, ICCAT, IOTC, WCPFC), stock assessment
+software projects (ALSCL, CASAL, FIMS, Gadget, MFCL, SAM, sbt, Stock Synthesis,
+WHAM), and maintainers of relevant programming languages (ADMB, RTMB, TMB).
 
 The meeting agenda covered the following discussion topics:
 
@@ -253,7 +314,12 @@ RTMB (Kristensen 2024) is a new alternative interface for developing TMB
 (Kristensen et al. 2017) models. RTMB provides a leaner development paradigm
 than TMB. The recommendation from the TMB/RTMB development team, articulated at
 the expert meeting, was to develop the next tuna stock assessment model in RTMB
-rather than TMB.
+rather than TMB. Another recommendation from the TMB/RTMB development team,
+given the streamlined nature of RTMB model implementation is for SPC to consider
+writing specific models for each species, rather than a general platform for all
+species and tRFMOs. A specific RTMB model requires a very small codebase that is
+easy to maintain and modify. Parts of code can still be reused between species,
+either as code blocks or functions.
 
 State-space models are a statistically and computationally efficient way to
 allow time-varying processes in stock assessment models, such as time-varying
