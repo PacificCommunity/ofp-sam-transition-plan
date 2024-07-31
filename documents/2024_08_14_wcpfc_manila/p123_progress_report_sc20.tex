@@ -11,7 +11,8 @@
 \reportdate{14 August 2024}
 \hyphenation{computational consideration desired assessment future replacement
   development simple progression synthesis inter-national exploring evaluate
-  technical meeting}
+  technical meeting occasional software magnus-son efficient selectivity
+  scientists succession coordination collaborate consultation}
 \begin{document}
 
 \wcpfctitlepage
@@ -25,11 +26,11 @@
   \centering
   \includegraphics[width=\textwidth]{tasks_no_margin}
   \vspace{-1ex}
-  \caption{Overview of tasks related to the next generation of tuna stock
+  \caption{Overview of steps related to the next generation of tuna stock
     assessment software. Project~123 will focus on the first line of scoping
     tasks (communicate, organize, evaluate) and prepare the ground for
     subsequent lines of tasks (the main project), which will require additional
-    funding and resources.}
+    funding and resources.}\label{fig:diagram}
 \end{figure}
 
 \section{Introduction}
@@ -74,6 +75,7 @@ collaboration in this venture is essential to achieving this and is expected to
 be encouraged through this project.
 
 \subsection{Project outline}
+\label{sec:project-outline}
 
 The project is divided into stages, as follows:
 
@@ -219,7 +221,7 @@ context of the next SPC tuna assessment models:
 \begin{enumerate}\setcounter{enumi}{2}
   \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to
   albacore tuna. The albacore assessment is simpler than the other tuna species
-  and therefore a candidate to be the first tuna stock to migrate from MFCL.
+  and therefore a candidate to be the~first tuna stock to migrate from MFCL.
   \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to the
   original five-region yellowfin tuna dataset. The yellowfin assessment is a
   good candidate to test the capabilities of these software platforms for tuna
@@ -304,56 +306,86 @@ The meeting agenda covered the following discussion topics:
 
 \subsubsection{Outcomes}
 
-There was a consensus among the experts that the goal should be to design and
-develop a model specific for tuna assessments, rather than a general model for
-global usage and all species. The advice was to start with a lean design and get
-a simple model up and running before adding all the features required for an
-assessment. In general, the cost of adding features is much greater than the
-implementation cost, as each layer complexity makes long-term maintenance and
-future modifications of the software more difficult and costly.
+The following recommendations emerged from the discussions at the international
+expert meeting:
 
-RTMB (Kristensen 2024) is a new alternative interface for developing TMB
-(Kristensen et al. 2017) models. RTMB provides a leaner development paradigm
-than TMB. The recommendation from the TMB/RTMB development team, articulated at
-the expert meeting, was to develop the next tuna stock assessment model in RTMB
-rather than TMB. Another recommendation from the TMB/RTMB development team,
-given the streamlined nature of RTMB model implementation is for SPC to consider
-writing specific models for each species, rather than a general platform for all
-species and tRFMOs. A specific RTMB model requires a very small codebase that is
-easy to maintain and modify. Parts of code can still be reused between species,
-either as code blocks or functions.
+\begin{enumerate}
+  \item \textbf{Tuna assessment software.} There was a consensus among the
+  experts that the goal should be to design and develop a model specific for
+  tuna assessments, rather than a general model for global usage and all
+  species. The advice was to start with a lean design and get a simple model up
+  and running before adding all the features required for an assessment. In
+  general, the cost of adding features is much greater than the implementation
+  cost, as each layer complexity makes long-term maintenance and future
+  modifications of the software more difficult and costly.
+  \item \textbf{RTMB as a lean software development paradigm.} RTMB (Kristensen
+  2024) is a new alternative interface for developing TMB (Kristensen et al.
+  2017) models. RTMB provides a leaner development paradigm than TMB. The
+  recommendation from the TMB/RTMB development team, articulated at the expert
+  meeting, was to develop the next tuna stock assessment model in RTMB rather
+  than TMB. Another recommendation from the TMB/RTMB development team, given the
+  streamlined nature of RTMB model implementation is for SPC to consider writing
+  specific models for each species, rather than a general platform for all
+  species and tRFMOs. A specific RTMB model requires a very small codebase that
+  is easy to maintain and modify. Parts of code can still be reused between
+  species, either as code blocks or functions.
+  \item \textbf{State-space formulation.} State-space models are a statistically
+  and computationally efficient way to allow time-varying processes in stock
+  assessment models, such as time-varying selectivity. Other statistical
+  approaches exist, but the successful track record of using state-space models
+  in production assessments, e.g., across a variety of Atlantic groundfish
+  stocks, indicates that state-space formulation can be recommended for new
+  model development.
+  \item \textbf{Age-length structure.} Gadget models explicitly track the
+  population by age and length, accounting for the fact that fast-growing
+  individuals are caught by the fishery and the slow-growing individuals in the
+  cohort remain in the population. Casal and Stock Synthesis have optional model
+  features with a similar aim. This leads to an improved level of realism, and
+  simulations using a very basic model ALSCL (Zhang and Cadigan 2022) indicate
+  improved estimation accuracy. It is worth noting that the ALSCL simulation
+  study involved a single-area model with survey data and no commercial catch
+  data or fleets, which is quite far from the model complexity of tuna
+  assessments. An important drawback is that tracking the population structure
+  in terms of age and length, instead of age only, comes at a considerable
+  computational cost. The SPC tuna assessment models that are currently run in
+  MFCL are already very computationally heavy, with models requiring to run
+  overnight before results are available. The recommendation is to explore the
+  feature of incorporating full age-length structure in the next tuna assessment
+  models, considering estimation performance and the difference in the resulting
+  management advice, as well as computational time, required software
+  development, and maintenance cost.
+  \item \textbf{Simple models.} SPC challenges were outlined and discussed at
+  the meeting, focusing on the upcoming paradigm change in how stock assessments
+  are conducted at SPC. The MFCL Team (Dave Fournier, John Hampton, Nick Davies)
+  will be retiring in the 2020s. Other stock assessment staff tend to have a
+  relatively quick turnover rate, often consisting of young scientists with
+  relatively few years of stock assessment experience before they start their
+  job at SPC. It takes many years to become an expert in MFCL, with John Hampton
+  typically making the main modeling decisions and guiding new staff, with the
+  help of Nick Davies. Generally, it is preferable to have some long-term staff
+  in the stock assessment team, but it is precautionary and prudent to prepare
+  for an era where there might be no long-term staff, only short-term. In
+  software design terms, this would favor not only a simple and intuitive user
+  interface but also simpler assessment models than have been used in the past.
+  \item \textbf{Collaboration between tuna
+    RFMOs.}\label{item:collaboration-rfmos} While SPC uses MFCL for tuna
+  assessments, other tuna RFMOs use primarily Stock Synthesis in assessments
+  that fit to length composition data from multiple fisheries. Both software
+  platforms are currently in a sunset phase, heading towards end of life in the
+  coming years. Development of new features in MFCL and Stock Synthesis is
+  slowing down, with resources being allocated to succession plans. For SPC, it
+  would be preferable to avoid developing and maintaining major software
+  products that is not used outside of SPC. Since the statistical challenges of
+  analyzing tuna data are comparable between the tuna RFMOs, it makes sense to
+  coordinate and collaborate in succession plans and new software development.
+\end{enumerate}
 
-State-space models are a statistically and computationally efficient way to
-allow time-varying processes in stock assessment models, such as time-varying
-selectivity. Other statistical approaches exist, but the successful track record
-of using state-space models in production assessments, e.g., across a variety of
-Atlantic groundfish stocks, indicates that state-space formulation can be
-recommended for new model development.
-
-Age-length structure is explicitly tracked in Gadget models, accounting for the
-fact that fast-growing individuals are caught by the fishery and the
-slow-growing individuals in the cohort remain in the population. Casal and Stock
-Synthesis have optional model features with a similar aim. This leads to an
-improved level of realism, and simulations using a very basic model ALSCL (Zhang
-and Cadigan 2022) indicate improved estimation accuracy. It is worth noting that
-the ALSCL simulation study involved a single-area model with survey data and no
-commercial catch data or fleets, which is quite far from the model complexity of
-tuna assessments. An important drawback is that tracking the population
-structure in terms of age and length, instead of age only, comes at a
-considerable computational cost. The SPC tuna assessment models that are
-currently run in MFCL are already very computationally heavy, with models
-requiring to run overnight before results are available. The recommendation is
-to explore the feature of incorporating full age-length structure in the next
-tuna assessment models, considering estimation performance and the difference in
-the resulting management advice, as well as computational time, required
-software development, and maintenance cost.
-
-The discussion at the international expert meeting covered several other topics,
-but the above recommendations are particularly relevant for initial explorations
-and development. In addition to the discussion and recommendations, an important
-outcome of the international expert meeting was to establish collaboration with
-various research labs related to the development of new tuna assessment models.
-See next section.
+The discussion at the international expert meeting covered several other
+topics, but the above recommendations are particularly relevant for initial
+explorations and development. In addition to the discussion and
+recommendations, an important outcome of the international expert meeting was
+to establish collaboration with various research labs related to the
+development of new tuna assessment models. See next section.
 
 \subsection{Workshop activities in 2024--2026}
 
@@ -403,11 +435,68 @@ tasks will be prioritized by the WCPFC Scientific Committee and SPC.
 
 \subsection{Launching the main project}
 
+The current annual budget of project 123 is sufficient for scoping the needs,
+identifying current software platforms, reaching out to the scientific community
+for consultation, and to conduct occasional workshops to strengthen
+collaboration ties and initial explorations. This corresponds to the first line
+in \autoref{fig:diagram} and objectives 1--4 in the project outline
+(\autoref{sec:project-outline}).
+
+The goal of the \emph{main project}, which could either overlap or succeed the
+scoping project, is to test/develop tuna stock assessment software and
+transition all SPC assessments from MFCL to other platforms. To make significant
+progress on the steps required to complete the main project (see full diagram in
+\autoref{fig:diagram}), thus achieving objectives 5--8 in the project outline
+(\autoref{sec:project-outline}), a~substantially larger commitment of resources
+will be required, see next section.
+
 \section{Required resources}
 
 \subsection{Collaboration with other tRFMOs}
 
+There are significant potential benefits for the tuna RFMOs to coordinate
+together and collaborate on succession plans and new software development
+(expert meeting recommendation \ref{item:collaboration-rfmos}). Coordination and
+collaboration has already begun between tuna stock assessment scientists, with
+one-on-one consultation meetings before and after the 2024 international expert
+meeting.
+
+The next step is for the tRFMOs to discuss financial and staff commitments to
+formalize and strengthen collaboration related to succession plans and new
+software development. Projects to accomplish the tasks laid out in
+\autoref{fig:diagram} will require considerable resources. To achieve the
+desired rate of progress and scientific quality of the end result, each tRFMO
+could hire/assign one full-time person to the project for five years, or until
+assessments have been transitioned to the new software.
+
 \subsection{SPC staff positions, consultants}
+
+The research and development required to test, design and develop stock
+assessment software and successfully transition all SPC assessments from MFCL to
+other platforms is difficult to estimate precisely, in terms of budget and time.
+It is clear, however, that it will likely to take several years for a newly
+formed team consisting of SPC staff scientists and/or consultants, along with
+collaborators from other tRFMOs and research labs. To succeed, this team should
+be 100\% assigned to this project and not committed to the traditional stock
+assessment related tasks and workflows. There is interaction between the roles
+of a \emph{project coordinator}, \emph{fisheries scientist}, and \emph{software
+  developer}, but it would be helpful for the project to define the role of each
+staff scientist and consultant as clearly as possible, to accurately measure the
+resources committed to the main project.
+
+The resources committed to the main project will determine the scientific
+quality of the end result and the number of years it takes to transition all SPC
+assessments from MFCL to other platforms. Now that the first author of MFCL,
+David Fournier, has retired, it would be highly beneficial for the project to
+move relatively fast, before the remaining MFCL team (John Hampton and Nick
+Davies) retire and will no longer be available for consultation and involvement
+regarding software design, testing and technical decisions.
+
+Compared to the other tuna RFMOs, SPC is in a greater urgency of moving the
+project forward at a fast pace. Independent of decisions and commitments of the
+other tuna RFMOs, the main project would probably require two full-time people
+to the project for five years, or until assessments have been transitioned to
+the new software.
 
 \section{References}
 
