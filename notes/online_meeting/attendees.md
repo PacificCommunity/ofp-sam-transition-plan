@@ -1,48 +1,48 @@
 Person                  | I     | II    | Country       | Keyword
------------------------ | ----- | ----- | ------------- | -------
-Agurtzane Urtizberea    | Yes   | -     | Spain         | IOTC
-Ai Kimoto               | Yes   | -     | Spain         | ICCAT
-Alistair Dunn           | Yes   | -     | New Zealand   | CASAL2
-Anders Nielsen          | Yes   | -     | Denmark       | SAM
-Andre Punt              | -     | Yes   | USA           | WCPFC
-Andrea Havron           | -     | Yes   | USA           | FIMS
-Arni Magnusson          | Yes   | Yes   | New Caledonia | -
-Bjarki Elvarsson        | Yes   | -     | Iceland       | Gadget
-Carolina Minte-Vera     | -     | Yes   | USA           | IATTC
-Claudio Castillo Jordan | -     | Yes   | New Caledonia | -
-Colin Millar            | Yes   | Yes   | Denmark       | SAM
-D'Arcy Webber           | -     | Yes   | New Zealand   | sbt
-Fan Zhang               | Yes   | -     | China         | ALSCL
-Finlay Scott            | -     | Yes   | New Caledonia | -
-Giancarlo Correa        | Yes   | -     | Spain         | WHAM
-Haikun Xu               | -     | Yes   | USA           | IATTC
-Jamie Lentin            | Yes   | -     | UK            | Gadget
-Jemery Day              | Yes   | Yes   | New Caledonia | -
-Jim Ianelli             | -     | Yes   | USA           | WCPFC
-John Hampton            | Yes   | -     | New Caledonia | MFCL
-Johnoel Ancheta         | -     | Yes   | USA           | ADMB
-Kelli Johnson           | -     | Yes   | USA           | FIMS
-Laura Tremblay-Boyer    | -     | Yes   | Australia     | WCPFC
-Mark Maunder            | -     | Yes   | USA           | IATTC
-Michael Schirripa       | Yes   | -     | USA           | ICCAT
-Nan Yao                 | Yes   | Yes   | New Caledonia | -
-Nathan Taylor           | Yes   | -     | Spain         | ICCAT
-Nicholas Ducharme-Barth | -     | Yes   | USA           | WCPFC
-Nick Davies             | Yes   | Yes   | New Zealand   | MFCL
-Paul Hamer              | Yes   | Yes   | New Caledonia | -
-Rich Hillary            | Yes   | -     | Australia     | sbt
-Rick Methot             | -     | Yes   | USA           | SS3
-Rob Scott               | Yes   | -     | New Caledonia | -
-Sam McKechnie           | Yes   | -     | New Caledonia | -
-Scott Rasmussen         | Yes   | -     | New Zealand   | CASAL2
-Simon Hoyle             | Yes   | -     | New Zealand   | WCPFC
-Thomas Teears           | -     | Yes   | New Caledonia | -
-Tim Miller              | -     | Yes   | USA           | WHAM
+----------------------- | ----- | ----- | ------------- | ------- | --------------------------
+Agurtzane Urtizberea    | Yes   | -     | Spain         | IOTC    | AZTI
+Ai Kimoto               | Yes   | -     | Spain         | ICCAT   | ICCAT
+Alistair Dunn           | Yes   | -     | New Zealand   | CASAL2  | Ocean Environmental
+Anders Nielsen          | Yes   | -     | Denmark       | SAM     | DTU Aqua
+Andre Punt              | -     | Yes   | USA           | WCPFC   | Univ Washington
+Andrea Havron           | -     | Yes   | USA           | FIMS    | NOAA
+Arni Magnusson          | Yes   | Yes   | New Caledonia | -       | SPC
+Bjarki Elvarsson        | Yes   | -     | Iceland       | Gadget  | Marine and Freshwater Inst
+Carolina Minte-Vera     | -     | Yes   | USA           | IATTC   | IATTC
+Claudio Castillo Jordan | -     | Yes   | New Caledonia | -       | SPC
+Colin Millar            | Yes   | Yes   | Denmark       | SAM     | ICES
+D'Arcy Webber           | -     | Yes   | New Zealand   | sbt     | Quantifish
+Fan Zhang               | Yes   | -     | China         | ALSCL   | Shanghai Ocean Univ
+Finlay Scott            | -     | Yes   | New Caledonia | -       | SPC
+Giancarlo Correa        | Yes   | -     | Spain         | WHAM    | AZTI
+Haikun Xu               | -     | Yes   | USA           | IATTC   | IATTC
+Jamie Lentin            | Yes   | -     | UK            | Gadget  | Shuttle Thread
+Jemery Day              | Yes   | Yes   | New Caledonia | -       | SPC
+Jim Ianelli             | -     | Yes   | USA           | WCPFC   | NOAA
+John Hampton            | Yes   | -     | New Caledonia | MFCL    | SPC
+Johnoel Ancheta         | -     | Yes   | USA           | ADMB    | Univ Hawaii
+Kelli Johnson           | -     | Yes   | USA           | FIMS    | NOAA
+Laura Tremblay-Boyer    | -     | Yes   | Australia     | WCPFC   | CSIRO
+Mark Maunder            | -     | Yes   | USA           | IATTC   | IATTC
+Michael Schirripa       | Yes   | -     | USA           | ICCAT   | NOAA
+Nan Yao                 | Yes   | Yes   | New Caledonia | -       | SPC
+Nathan Taylor           | Yes   | -     | Spain         | ICCAT   | ICCAT
+Nicholas Ducharme-Barth | -     | Yes   | USA           | WCPFC   | NOAA
+Nick Davies             | Yes   | Yes   | New Zealand   | MFCL    | TeTakina
+Paul Hamer              | Yes   | Yes   | New Caledonia | -       | SPC
+Rich Hillary            | Yes   | -     | Australia     | sbt     | CSIRO
+Rick Methot             | -     | Yes   | USA           | SS3     | NOAA
+Rob Scott               | Yes   | -     | New Caledonia | -       | SPC
+Sam McKechnie           | Yes   | -     | New Caledonia | -       | SPC
+Scott Rasmussen         | Yes   | -     | New Zealand   | CASAL2  | Waddle
+Simon Hoyle             | Yes   | -     | New Zealand   | WCPFC   | Hoyle Consulting
+Thomas Teears           | -     | Yes   | New Caledonia | -       | SPC
+Tim Miller              | -     | Yes   | USA           | WHAM    | NOAA
 
-Person                  | I     | II    | Country       | Keyword
------------------------ | ----- | ----- | ------------- | -------
-Dan Fu                  | -     | -     | Seychelles    | IOTC
-Graham Pilling          | -     | -     | New Caledonia | -
-Mauricio Ortiz          | -     | -     | Spain         | ISSF
-Noel Cadigan            | -     | -     | Canada        | ALSCL
-Victor Restrepo         | -     | -     | USA           | ISSF
+Person                  | I     | II    | Country       | Keyword | Affiliation
+----------------------- | ----- | ----- | ------------- | ------- | --------------------------
+Dan Fu                  | -     | -     | Seychelles    | IOTC    | IOTC
+Graham Pilling          | -     | -     | New Caledonia | -       | SPC
+Mauricio Ortiz          | -     | -     | Spain         | ISSF    | ISSF
+Noel Cadigan            | -     | -     | Canada        | ALSCL   | Memorial Univ
+Victor Restrepo         | -     | -     | USA           | ISSF    | ISSF
