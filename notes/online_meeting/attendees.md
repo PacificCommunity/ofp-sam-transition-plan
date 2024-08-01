@@ -1,5 +1,5 @@
 Person                  | I     | II    | Country       | Keyword | Affiliation
------------------------ | ----- | ----- | ------------- | ------- | --------------------------
+----------------------- | ----- | ----- | ------------- | ------- | -------------------
 Agurtzane Urtizberea    | Yes   | -     | Spain         | IOTC    | AZTI
 Ai Kimoto               | Yes   | -     | Spain         | ICCAT   | ICCAT
 Alistair Dunn           | Yes   | -     | New Zealand   | CASAL2  | Ocean Environmental
@@ -7,7 +7,7 @@ Anders Nielsen          | Yes   | -     | Denmark       | SAM     | DTU Aqua
 Andre Punt              | -     | Yes   | USA           | WCPFC   | Univ Washington
 Andrea Havron           | -     | Yes   | USA           | FIMS    | NOAA
 Arni Magnusson          | Yes   | Yes   | New Caledonia | -       | SPC
-Bjarki Elvarsson        | Yes   | -     | Iceland       | Gadget  | Marine and Freshwater Inst
+Bjarki Elvarsson        | Yes   | -     | Iceland       | Gadget  | MFRI
 Carolina Minte-Vera     | -     | Yes   | USA           | IATTC   | IATTC
 Claudio Castillo Jordan | -     | Yes   | New Caledonia | -       | SPC
 Colin Millar            | Yes   | Yes   | Denmark       | SAM     | ICES
@@ -40,7 +40,7 @@ Thomas Teears           | -     | Yes   | New Caledonia | -       | SPC
 Tim Miller              | -     | Yes   | USA           | WHAM    | NOAA
 
 Person                  | I     | II    | Country       | Keyword | Affiliation
------------------------ | ----- | ----- | ------------- | ------- | --------------------------
+----------------------- | ----- | ----- | ------------- | ------- | -------------------
 Dan Fu                  | -     | -     | Seychelles    | IOTC    | IOTC
 Graham Pilling          | -     | -     | New Caledonia | -       | SPC
 Mauricio Ortiz          | -     | -     | Spain         | ISSF    | ISSF
