@@ -1,4 +1,4 @@
-Person                  | I     | II    | Country       | Keyword
+Person                  | I     | II    | Country       | Keyword | Affiliation
 ----------------------- | ----- | ----- | ------------- | ------- | --------------------------
 Agurtzane Urtizberea    | Yes   | -     | Spain         | IOTC    | AZTI
 Ai Kimoto               | Yes   | -     | Spain         | ICCAT   | ICCAT
