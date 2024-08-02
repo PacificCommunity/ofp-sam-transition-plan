@@ -3,16 +3,19 @@
 \usepackage[T1]{fontenc}
 \usepackage{float}
 \setcounter{tocdepth}{2}
+\newcommand\I[1]{\rule{0pt}{#1}}
 \reporttype{SC20}
 \reportauthor{A.~Magnusson\footnote{\spc} and N.~Davies\footnote{TeTakina Ltd}}
 \reporttitle{Scoping the Next Generation of Tuna Stock Assessment
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
-\reportdate{14 August 2024}
+\reportdate{2 August 2024}
 \hyphenation{computational consideration desired assessment future replacement
   development simple progression synthesis inter-national exploring evaluate
   technical meeting occasional software magnus-son efficient selectivity
-  scientists succession coordination collaborate consultation}
+  scientists succession coordination collaborate consultation traditional
+  collaboration benefits versus exercises collaborative formulation survey
+  programming relevant RFMOs}
 \begin{document}
 
 \wcpfctitlepage
@@ -65,7 +68,7 @@ software developments or changing methodology. Similar can be said about
 exploring benefits of state-space models and their use of random variables.
 Simulation exercises to explore the benefits or drawbacks of alternative model
 structures or approaches will also require collaboration across tuna RFMOs and
-experienced practitioners using the alternative approaches and/or software.
+practitioners experienced in using the alternative approaches and/or software.
 
 An important outcome of this work would be to ultimately have a software package
 that has the desired functionality for tuna assessments, not only for WCPFC, but
@@ -135,93 +138,111 @@ than MFCL) includes:
   collaboration between the tRFMOs, including development of future models. It
   would also shorten the training time for new SPC stock assessors and make
   their skills and experience more transferable to subsequent workplaces. Stock
-  Synthesis has a large user community that is relevant for peer reviews and
-  discussing technical decisions. It also comes with an exceptionally complete
-  suite of tools useful for diagnostics, as well as automated plots and tables
-  for assessment reports. There is interest from SPC and the Stock Synthesis
-  maintainers to explore the possibility of enhancing the tag module, see
-  \autoref{sec:ongoing-upcoming-development}.
+  Synthesis assessments would allow closer comparisons of assessments conducted
+  across RFMOs and also SPC and the ISC. Stock Synthesis has a large user
+  community that is relevant for peer reviews and discussing technical
+  decisions. It also comes with an exceptionally complete suite of tools useful
+  for diagnostics, as well as automated plots and tables for assessment reports.
+  A possible avenue of collaborative development is to explore the possibility
+  of enhancing the tag module, see \autoref{sec:ongoing-upcoming-development}.
   \item \textbf{sbt} is used in the assessment of southern bluefin tuna by
   CCSBT. This package, implemented in TMB, stands out as the primary stock
   assessment software that is built around close-kin mark-recapture (CKMR) which
   is a new and important data type in upcoming SPC tuna assessments. The
   \textsf{sbt} R package is designed for a single-region assessment and would
-  require some additional development to be used for a multiregion assessment.
-  There is interest from SPC and the \textsf{sbt} maintainers to explore the
-  possibility of adding multiregion functionality to the software.
+  require some additional development to be used for a multiregion assessment. A
+  possible avenue of collaborative development is to explore the possibility of
+  adding multiregion functionality to the software.
   \item \textbf{Gadget3} is the latest version of Gadget stock assessment
   platform, implemented in TMB. Porting the software to TMB has resulted in a
   significant performance gain in terms of computational time. Gadget has a wide
-  range of features relevant for tuna assessments and there is interest from SPC
-  and the Gadget maintainers to test its use for a tuna assessment.
+  range of features relevant for tuna assessments and a possible avenue of
+  collaborative development is to test the use of Gadget for a tuna assessment.
   \item \textbf{Casal2} is the latest version of the Casal stock assessment
   platform, rewritten with an improved design and user interface. Casal has a
-  wide range of features relevant for tuna assessments and there is interest
-  from SPC and the Casal maintainers to test its use for a tuna assessment.
+  wide range of features relevant for tuna assessments and a possible avenue of
+  collaborative development is to test the use of Casal for a tuna assessment.
   \item \textbf{Stock Synthesis + CKMR} is an experimental add-on to Stock
   Synthesis (A.E. Punt, pers. comm), adding CKMR as a data type in Stock
-  Synthesis. This was successful as a proof of concept but is not very likely to
-  be added to the core software.
+  Synthesis. This was successful as a proof of concept but it is unlikely to be
+  added to the core software.
 \end{itemize}
 
 \subsection{Ongoing and upcoming software development}
 \label{sec:ongoing-upcoming-development}
 
 Some ongoing software development projects are of particular interest in the
-context of the next SPC tuna assessment models:
+context of the next WCPFC tuna assessment models:
 
 \begin{itemize}
-  \item \textbf{ALSCL + Fleets} is a recent and simple model that has two
-  important features: state-space formulation and age-length structure. It is
-  implemented in TMB, but the software currently fits only to survey data and
-  does not include commercial catches or fleets. There is interest from SPC and
-  the ALSCL maintainers to explore the possibility of adding commercial catches
-  and fleets as software features.
+  \item \textbf{ALSCL + Fleets} is a recent model that has two important
+  features: state-space formulation and age-length structure. It is implemented
+  in TMB, but the software currently fits only to survey data and does not
+  include commercial catches or fleets. A possible avenue of collaborative
+  development is to explore the possibility of adding commercial catches and
+  fleets as software features.
   \item \textbf{Stock Synthesis + Enhanced Tags} is a proposed software
   development of an enhanced tag module for Stock Synthesis. The current
   implementation of fitting to tagging data is somewhat limited, e.g., requiring
   the user to enter the age at release, which is not available in tuna
   assessments. The idea is to borrow some of the functionality and features from
   the tag module in MFCL, which has a long record of using tagging data as a
-  primary data type in tuna assessments. There is interest from SPC and NOAA
-  scientists to explore the possibility of contributing an enhanced tag module
-  to be incorporated into the core Stock Synthesis software.
+  primary data type in tuna assessments. A possible avenue of collaborative
+  development is to explore the possibility of contributing an enhanced tag
+  module to be incorporated into the core Stock Synthesis software.
   \item \textbf{WHAM + Length} is a recent software development (Correa et al.
   2023) extending the state-space stock assessment software WHAM (Stock and
-  Miller 2021) to fit to length data. There is interest from SPC and AZTI
-  scientists to experiment with fitting the WHAM + Length model to an SPC tuna
-  assessment dataset.
+  Miller 2021) to fit to length data. A possible avenue of collaborative
+  development is to experiment with fitting the WHAM + Length model to an SPC
+  tuna assessment dataset.
   \item \textbf{SAM + Length} is an early exploration of extending the
   state-space stock assessment software SAM (Nielsen and Berg 2014) to fit to
-  length data. There is interest from SPC and DTU/ICES scientists to continue
+  length data. A possible avenue of collaborative development is to continue
   this exploration.
+  \item \textbf{FIMS} is a NOAA project that coordinates the development of a
+  next-generation framework of stock assessment models based on TMB. So far,
+  model development within FIMS has focused on models fitting to age data. It is
+  not clear at this point whether the FIMS project will lead to stock assessment
+  software that can be used in tuna assessments, but given the considerable
+  resources and collaborative nature of the project, SPC will communicate and
+  interact with the FIMS project to share development progress and ideas.
 \end{itemize}
 
 \section{Possible tasks for SPC to prioritize}
 \label{sec:possible-tasks}
 
+This section discusses core areas for ongoing work, and proposed activities to
+be considered in each area. We reiterate that progression from MFCL to an
+alternative software is not a `side project' that can be subsumed within the
+current SSP resourcing. For this reason we suggest that a small informal working
+group could be convened by the SC to discuss and prioritise activities that
+would require additional resources, and develop TORs for priority activities.
+
 \subsection{Migrate assessments to existing software}
 
 \begin{enumerate}
-  \item Move the swordfish assessment to Stock Synthesis. The swordfish
-  assessment is relatively simple compared to other SPC assessments and would be
-  a good candidate to be the first to migrate from MFCL. The 2025 swordfish
-  assessment could be developed in a stepwise progression: previous MFCL
-  diagnostic $\Rightarrow$ catch-conditioned MFCL $\Rightarrow$ Stock Synthesis.
+  \item Move the swordfish assessment to Stock Synthesis. The Southwest Pacific
+  swordfish assessment model is relatively simple compared to other SPC
+  assessments and would be a good candidate to be the first to migrate from
+  MFCL. The 2025 swordfish assessment could be developed in a stepwise
+  progression: previous MFCL diagnostic $\Rightarrow$ catch-conditioned MFCL
+  $\Rightarrow$ Stock Synthesis.
   \item Move the striped marlin assessment to Stock Synthesis. The striped
-  marlin assessment is also relatively simple and would be a good candidate to
-  migrate from MFCL. Currently, the next striped marlin assessment is planned in
-  2029, but an update assessment could be conducted in 2025, 2026, or 2027,
-  depending on the resources committed to this task. The update assessment could
-  be put forward as the basis of scientific advice or as a technical milestone.
+  marlin assessment model is also relatively simple and would be a good
+  candidate to migrate from MFCL. The 2029 striped marlin assessment could be
+  developed in a stepwise progression: previous catch-conditioned MFCL
+  diagnostic $\Rightarrow$ Stock Synthesis.
 \end{enumerate}
 
 \subsection{Exploratory analyses using existing software}
 
 \begin{enumerate}\setcounter{enumi}{2}
   \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to
-  albacore tuna. The albacore assessment is simpler than the other tuna species
-  and therefore a candidate to be the~first tuna stock to migrate from MFCL.
+  albacore tuna. The South Pacific albacore assessment model is simpler than the
+  other tuna species and therefore a candidate to be the~first tuna stock
+  assessment to consider for migration from MFCL. Also, for the next South
+  Pacific albacore assesment there may be CKMR information available to
+  incorporate in the assessment.
   \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to the
   original five-region yellowfin tuna dataset. The yellowfin assessment is a
   good candidate to test the capabilities of these software platforms for tuna
@@ -268,6 +289,13 @@ available resources, and the availability of external scientists involved.
 
 \subsection{International expert meeting 2024}
 
+Two online meetings were held on 13 May and 18 June 2024, inviting stock
+assessment and software development experts from around the world. Around 40
+participants represented the tuna RFMOs (CCSBT, IATTC, ICCAT, IOTC, WCPFC),
+stock assessment software projects (ALSCL, CASAL, FIMS, Gadget, MFCL, SAM, sbt,
+Stock Synthesis, WHAM), and relevant programming environments (ADMB, RTMB, TMB).
+See participant list in \autoref{sec:meeting-participants}.
+
 \subsubsection{Objectives}
 
 The meeting objectives were:
@@ -282,15 +310,9 @@ The meeting objectives were:
 
 \subsubsection{Format}
 
-Two online meetings were held on 13 May and 18 June 2024, inviting stock
-assessment and software development experts from around the world. The two
-sessions had the same format and agenda, but one was centered on European time
-zones and the other on North American time zones. Around 40 participants
-represented the tuna RFMOs (CCSBT, IATTC, ICCAT, IOTC, WCPFC), stock assessment
-software projects (ALSCL, CASAL, FIMS, Gadget, MFCL, SAM, sbt, Stock Synthesis,
-WHAM), and maintainers of relevant programming languages (ADMB, RTMB, TMB).
-
-The meeting agenda covered the following discussion topics:
+The two sessions had the same format and agenda, but one was centered on
+European time zones and the other on North American time zones. The meeting
+agenda covered the following discussion topics:
 
 \begin{itemize}
   \item Platforms currently used in tuna stock assessments\\[-4ex]
@@ -375,9 +397,10 @@ expert meeting:
   coming years. Development of new features in MFCL and Stock Synthesis is
   slowing down, with resources being allocated to succession plans. For SPC, it
   would be preferable to avoid developing and maintaining major software
-  products that is not used outside of SPC. Since the statistical challenges of
-  analyzing tuna data are comparable between the tuna RFMOs, it makes sense to
-  coordinate and collaborate in succession plans and new software development.
+  products that are not used outside of SPC. The statistical challenges of
+  analyzing tuna data are comparable between the tuna RFMOs, noting some
+  differences like degree of tagging data, so it makes sense to coordinate and
+  collaborate in succession plans and new software development.
 \end{enumerate}
 
 The discussion at the international expert meeting covered several other
@@ -392,11 +415,11 @@ development of new tuna assessment models. See next section.
 The first steps in the scoping project 123 have involved a review of software
 needs and existing software, an evaluation of options, establishing
 collaborative ties with research labs, and reaching out to scientists from the
-other tRFMOs for coordination and consultation. Following the international
-expert meeting in May--June 2024, a presentation and discussion at the WCPFC
-Scientific Committee (SC) meeting in Manila in August 2024 is planned. The SC
-discussion and feedback will guide which of the tasks listed in
-\autoref{sec:possible-tasks} will be prioritized.
+other tRFMOs for coordination and consultation. We expect that presentation of
+the outcomes so far at SC20 will facilitate discussion and the feedback from SC
+will guide which of the tasks listed in \autoref{sec:possible-tasks} will be
+prioritized. Discussions at SC should help guide TORs for each year's successive
+work.
 
 Hands-on technical workshops will be conducted in 2024--2026 to strengthen
 collaboration ties and make stepwise progress on tasks that have been selected
@@ -411,12 +434,12 @@ scientists and other tRFMOs.
 Project 123 includes a budget that can be used to invite selected external
 scientists to attend technical workshops to collaborate with SPC scientists on
 selected tasks. A workshop might be organized for a week, either at SPC
-headquarters or at another convenient venue, and collaborative work is conducted
+headquarters or at another convenient venue, and collaborative work conducted
 before, during, and after a workshop.
 
 The first hands-on technical workshop had been planned at SPC headquarters
 around October--November 2024, inviting two scientists. However, the unrest in
-New Caledonia in 2024 will prevent such a workshop to be conducted.
+New Caledonia in 2024 will prevent such a workshop being conducted at that time.
 
 Instead, the first hands-on technical workshop will take place in New Zealand on
 23--30 August 2024, with Nick Davies (SPC consultant) and Arni Magnusson (SPC)
@@ -492,11 +515,17 @@ move relatively fast, before the remaining MFCL team (John Hampton and Nick
 Davies) retire and will no longer be available for consultation and involvement
 regarding software design, testing and technical decisions.
 
-Compared to the other tuna RFMOs, SPC is in a greater urgency of moving the
-project forward at a fast pace. Independent of decisions and commitments of the
-other tuna RFMOs, the main project would probably require two full-time people
-to the project for five years, or until assessments have been transitioned to
-the new software.
+Compared to the other tuna RFMOs, there is greater urgency for WCPFC to move
+this project forward. Independent of decisions and commitments of the other tuna
+RFMOs, the main project would probably require two full-time people on the
+project for five years, or until assessments have been transitioned to the new
+software.
+
+\section{Acknowledgements}
+
+We thank WCPFC and ISSF for funding this scoping project. We are also grateful
+for the valuable input of the scientists and software developers who joined the
+online meetings of the 2024 international expert meeting.
 
 \section{References}
 
@@ -529,5 +558,69 @@ the new software.
   statistical catch-at-length model for hard-to-age fisheries stocks. Fish and
   Fish. 23:1121--1135.
 \end{description}
+
+\appendix
+\section{Participants in the international expert meeting 2024}
+\label{sec:meeting-participants}
+
+\vspace{2ex}
+
+\begin{tabular}{lll}
+  \hline
+  Name                    & Affiliation          & Country\\
+  \hline
+  Agurtzane Urtizberea    & AZTI                 & Spain\I{2.6ex}\\
+  Ai Kimoto               & ICCAT                & Spain\\
+  Alistair Dunn           & Ocean Environmental  & NZ\\
+  Anders Nielsen          & DTU Aqua             & Denmark\\
+  Andre Punt              & Univ Washington      & USA\\
+  Andrea Havron           & NOAA                 & USA\\
+  Arni Magnusson          & SPC                  & New Caledonia\\
+  Bjarki Elvarsson        & MFRI                 & Iceland\\
+  Carolina Minte-Vera     & IATTC                & USA\\
+  Christopher Cahill      & Michigan State Univ  & USA\\
+  Claudio Castillo Jordán & SPC                  & New Caledonia\\
+  Colin Millar            & ICES                 & Denmark\\
+  D'Arcy Webber           & Quantifish           & NZ\\
+  Fan Zhang               & Shanghai Ocean Univ  & China\\
+  Finlay Scott            & SPC                  & New Caledonia\\
+  Giancarlo Correa        & AZTI                 & Spain\\
+  Graham Pilling          & SPC                  & New Caledonia\\
+  Haikun Xu               & IATTC                & USA\\
+  Hilario Murua           & ISSF                 & Spain\\
+  Jamie Lentin            & Shuttle Thread       & UK\\
+  Jemery Day              & SPC                  & New Caledonia\\
+  Jim Ianelli             & NOAA                 & USA\\
+  John Hampton            & SPC                  & New Caledonia\\
+  Johnoel Ancheta         & Univ Hawaii          & USA\\
+  Kelli Johnson           & NOAA                 & USA\\
+  Laura Tremblay-Boyer    & CSIRO                & Australia\\
+  Mark Maunder            & IATTC                & USA\\
+  Matthew Vincent         & NOAA                 & USA\\
+  Michael Schirripa       & NOAA                 & USA\\
+  Nan Yao                 & SPC                  & New Caledonia\\
+  Nathan Taylor           & ICCAT                & Spain\\
+  Nicholas Ducharme-Barth & NOAA                 & USA\\
+  Nick Davies             & TeTakina             & NZ\\
+  Noel Cadigan            & Memorial Univ        & Canada\\
+  Paul Hamer              & SPC                  & New Caledonia\\
+  \hline
+\end{tabular}
+
+\begin{tabular}{lll}
+  \hline
+  Name                    & Affiliation          & Country\\
+  \hline
+  Rich Hillary            & CSIRO                & Australia\\
+  Rick Methot\hspace{13.5ex} & NOAA              & USA\I{2.6ex}\\
+  Rob Scott               & SPC                  & New Caledonia\\
+  Sam McKechnie           & SPC                  & New Caledonia\\
+  Scott Rasmussen         & Waddle               & NZ\\
+  Shelton Harley          & Ministry Primary Ind & NZ\\
+  Simon Hoyle             & Hoyle Consulting     & NZ\\
+  Thomas Teears           & SPC                  & New Caledonia\\
+  Tim Miller              & NOAA                 & USA\\
+  \hline
+\end{tabular}
 
 \end{document}
