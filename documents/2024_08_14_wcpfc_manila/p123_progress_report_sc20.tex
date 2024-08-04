@@ -3,19 +3,21 @@
 \usepackage[T1]{fontenc}
 \usepackage{float}
 \setcounter{tocdepth}{2}
+\newcommand\h[1]{\hspace{#1}}
 \newcommand\I[1]{\rule{0pt}{#1}}
 \reporttype{SC20}
-\reportauthor{A.~Magnusson\footnote{\spc} and N.~Davies\footnote{TeTakina Ltd}}
+\reportauthor{A.~Magnusson\footnote{\spc}, N.~Davies\footnote{TeTakina Ltd},
+  G.~Pilling$^1$, P.~Hamer$^1$}
 \reporttitle{Scoping the Next Generation of Tuna Stock Assessment
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
-\reportdate{2 August 2024}
+\reportdate{3 August 2024}
 \hyphenation{computational consideration desired assessment future replacement
   development simple progression synthesis inter-national exploring evaluate
   technical meeting occasional software magnus-son efficient selectivity
   scientists succession coordination collaborate consultation traditional
   collaboration benefits versus exercises collaborative formulation survey
-  programming relevant RFMOs}
+  programming relevant RFMOs valuable}
 \begin{document}
 
 \wcpfctitlepage
@@ -80,44 +82,45 @@ be encouraged through this project.
 \subsection{Project outline}
 \label{sec:project-outline}
 
+This scoping project is scheduled from 1 Feb 2024 to 31 Dec 2026. It will:
+
+\begin{itemize}
+  \item[-] evaluate features and capabilities that will be important in future
+  tuna assessments\\[-4.5ex]
+  \item[-] explore fitting models to tuna data using existing software
+  platforms\\[-4.5ex]
+  \item[-] guide decisions on what kind of new software development will be
+  required\\[-4.5ex]
+  \item[-] establish collaboration with tRFMOs and research labs to achieve
+  these goals
+\end{itemize}
+
+Additional projects can be launched in parallel to power up the model
+exploration and software development.
+
 The project is divided into stages, as follows:
 
 Year 2024
 
 \begin{enumerate}
-  \item Review and identify a list of necessary and desired features for
-  software to conduct tuna stock assessments.
-  \item Identify existing software platforms that have some or all these
-  features or can be extended to add such features.
-  \item Reach out to and initiate collaboration with developers who are already
-  exploring extensions to current age-structured catch-at-age and state-space
-  models that would allow those models to fit to length data.
-  \item Conduct two workshops with selected experts from other tuna RFMOs and or
-  with relevant expertise. The first workshop can be remote (prior to SC20) and
-  the second one potentially in person (post SC20). The main goal will be to
-  plan and document collaborative simulation studies to evaluate the performance
-  of candidate software platforms for tuna stock assessments.
+  \item Review and identify important features for tuna assessments.\\[-4.5ex]
+  \item Identify existing software platforms that have these features or can be
+  extended.\\[-4.5ex]
+  \item Reach out to and initiate collaboration with model developers.\\[-4.5ex]
+  \item Conduct two workshops in 2024, one online and one in person.\\
 \end{enumerate}
 
 Years 2025 and 2026 (subject to SC advice and funding approvals by WCPFC)
 
 \begin{enumerate}\setcounter{enumi}{4}
-  \item Conduct the simulation studies outlined in stage 4, in collaboration
-  with experts that are supported by other agencies/RFMOs.
-  \item Based on the results from simulation studies, determine which, if any,
-  software platforms can be considered viable candidate platforms for WCPFC tuna
-  assessments.
-  \item If a viable candidate platform has been identified, provide a plan to
-  transition assessments to this software. Evaluate which transitioned
-  assessments could replace old MFCL assessments and build the transition into
-  the WCPFC assessment schedule.
-  \item If no viable candidate platform is identified, further extensions to
-  existing platforms may be required, or the development of a new assessment
-  software platform. The design process for a new platform would require
-  additional development workshops and involvement of software developers
-  (additional funds likely required) and could include identification of MFCL
-  features and algorithms that can be borrowed and ported across to a new
-  framework.
+  \item Explore and compare existing platforms, fitting to SPC tuna
+  data.\\[-4.5ex]
+  \item Determine which platforms can be considered viable candidates.\\[-4.5ex]
+  \item If a viable candidate platform has been identified, plan
+  transition.\\[-4.5ex]
+  \item If no viable candidate platform is identified, launch a software
+  development project\\
+  to extend a platform or create a new one.
 \end{enumerate}
 
 \subsection{Existing software}
@@ -154,10 +157,11 @@ than MFCL) includes:
   possible avenue of collaborative development is to explore the possibility of
   adding multiregion functionality to the software.
   \item \textbf{Gadget3} is the latest version of Gadget stock assessment
-  platform, implemented in TMB. Porting the software to TMB has resulted in a
-  significant performance gain in terms of computational time. Gadget has a wide
-  range of features relevant for tuna assessments and a possible avenue of
-  collaborative development is to test the use of Gadget for a tuna assessment.
+  platform, implemented in TMB. It is an age-length structured platform and
+  porting the software to TMB has resulted in a significant performance gain in
+  terms of computational time. Gadget has a wide range of features relevant for
+  tuna assessments and a possible avenue of collaborative development is to test
+  the use of Gadget for a tuna assessment.
   \item \textbf{Casal2} is the latest version of the Casal stock assessment
   platform, rewritten with an improved design and user interface. Casal has a
   wide range of features relevant for tuna assessments and a possible avenue of
@@ -207,6 +211,13 @@ context of the next WCPFC tuna assessment models:
   resources and collaborative nature of the project, SPC will communicate and
   interact with the FIMS project to share development progress and ideas.
 \end{itemize}
+
+Model features that are important for future tuna assessment models are reviewed
+by Punt et al. (2020), Hoyle et al. (2020), and Magnusson and Davies (2024).
+
+Advice on the management and structure of a software development project is
+provided by Hoyle et al. (2020), covering topics such as design, programming
+paradigms, maintenance tools, and user interface.
 
 \section{Possible tasks for SPC to prioritize}
 \label{sec:possible-tasks}
@@ -286,6 +297,15 @@ available resources, and the availability of external scientists involved.
 \end{enumerate}
 
 \section{Timeline}
+
+\subsection{Pre-assessment workshop 2024}
+
+An initial outline and discussion of project 123 was presented (Magnusson and
+Davies 2024a) at the pre-assessment workshop at SPC headquarters on 28 March
+2024. It provided a summary of existing software platforms and ongoing software
+development projects, a roadmap of the project, and highlighted the need for
+increased resources needed to conduct model exploration and software
+development.
 
 \subsection{International expert meeting 2024}
 
@@ -390,25 +410,26 @@ expert meeting:
   software design terms, this would favor not only a simple and intuitive user
   interface but also simpler assessment models than have been used in the past.
   \item \textbf{Collaboration between tuna
-    RFMOs.}\label{item:collaboration-rfmos} While SPC uses MFCL for tuna
-  assessments, other tuna RFMOs use primarily Stock Synthesis in assessments
-  that fit to length composition data from multiple fisheries. Both software
-  platforms are currently in a sunset phase, heading towards end of life in the
-  coming years. Development of new features in MFCL and Stock Synthesis is
-  slowing down, with resources being allocated to succession plans. For SPC, it
-  would be preferable to avoid developing and maintaining major software
-  products that are not used outside of SPC. The statistical challenges of
-  analyzing tuna data are comparable between the tuna RFMOs, noting some
-  differences like degree of tagging data, so it makes sense to coordinate and
-  collaborate in succession plans and new software development.
+    RFMOs.}\label{item:collaboration-rfmos} For undertaking tuna assessments
+  that fit to length composition data from multiple fisheries, SPC uses MFCL,
+  while other tuna RFMOs use primarily Stock Synthesis. Both software platforms
+  are currently in a sunset phase, heading towards end of life in the coming
+  years. Development of new features in MFCL and Stock Synthesis is slowing
+  down, with resources being allocated to succession plans. For SPC, it would be
+  preferable to avoid developing and maintaining major software products that
+  are not used outside of SPC. The statistical challenges of analyzing tuna data
+  are comparable between the tuna RFMOs, noting some differences like degree of
+  tagging data, so it makes sense to coordinate and collaborate in succession
+  plans and new software development.
 \end{enumerate}
 
-The discussion at the international expert meeting covered several other
-topics, but the above recommendations are particularly relevant for initial
-explorations and development. In addition to the discussion and
-recommendations, an important outcome of the international expert meeting was
-to establish collaboration with various research labs related to the
-development of new tuna assessment models. See next section.
+The discussion at the international expert meeting covered several other topics,
+but the above recommendations are particularly relevant for initial explorations
+and development. The presentations from the international expert meeting are
+available online (\autoref{sec:deliverables}). In addition to the discussion and
+recommendations, an important outcome of the international expert meeting was to
+establish collaboration with various research labs related to the development of
+new tuna assessment models. See next section.
 
 \subsection{Workshop activities in 2024--2026}
 
@@ -446,7 +467,7 @@ Instead, the first hands-on technical workshop will take place in New Zealand on
 meeting directly after the SC~meeting in Manila. The main objectives are to test
 the functionality and capabilities of RTMB on simple models and to conduct
 exploratory runs of the ALSCL model. The 2024 workshop will evaluate RTMB as a
-programming platform and paradigm for further software development, exploring
+programming environment and paradigm for further software development, exploring
 technical aspects such as whether it would be practical to organize the majority
 of source code behind an assessment model as scripts, a package, or more than
 one package. This would determine how code is maintained and shared between
@@ -517,7 +538,7 @@ regarding software design, testing and technical decisions.
 
 Compared to the other tuna RFMOs, there is greater urgency for WCPFC to move
 this project forward. Independent of decisions and commitments of the other tuna
-RFMOs, the main project would probably require two full-time people on the
+RFMOs, the main project would probably require two full-time SPC people on the
 project for five years, or until assessments have been transitioned to the new
 software.
 
@@ -539,11 +560,25 @@ online meetings of the 2024 international expert meeting.
   length-based, age-structured model for fisheries stock assessment, with
   application to South Pacific albacore, \textit{Thunnus alalunga}. Can. J.
   Fish. Aquat. Sci. 55:2105--2116.
+  \item Hoyle, S.D., M.N. Maunder, and Z.T. A'mar. 2020. Frameworks for the next
+  generation of general stock assessment models: 2019 CAPAM workshop report. New
+  Zealand Fish. Assess. Rep. 2020/39. 80 pp.
   \item Kristensen, K. 2024. RTMB: R bindings for TMB. R package version 1.5.\\
-  https://cran.r-project.org/package=RTMB.
+  \href{https://cran.r-project.org/package=RTMB}{https://cran.r-project.org/package=RTMB}.
   \item Kristensen, K. A. Nielsen, C.W. Berg, H. Skaug, and B.M. Bell. 2016.
   TMB: Automatic differentiation and Laplace approximation. J. Stat. Softw.
   70(5):1--21.
+  \item Magnusson, A. and N. Davies. 2024a. Scoping the next stock assessment
+  platform, P123: Background and discussion. Presented at the SPC pre-assessment
+  workshop, 28 March 2024. 13 pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/presentations/2024_03_28_paw_scoping/2024_03_28_paw_scoping.pdf}
+  {Available online}.
+  \item Magnusson, A. and N. Davies. 2024b. Scoping the next stock assessment
+  platform, stage I: Reaching out to tuna RFMOs and the scientific community.
+  Presented at the SPC international expert meeting, 13 May and 18 June 2024. 31
+  pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/presentations/2024_05_13_experts_scoping/2024_05_13_experts_scoping.pdf}
+  {Available online}.
   \item Nielsen, A. and C.W. Berg. 2014. Estimation of time-varying selectivity
   in stock assessments using state-space models. Fish. Res. 158:96--101.
   \item Punt, A.E., A. Dunn, B.Þ. Elvarsson, J. Hampton, S.D. Hoyle, M.N.
@@ -560,7 +595,10 @@ online meetings of the 2024 international expert meeting.
 \end{description}
 
 \appendix
-\section{Participants in the international expert meeting 2024}
+
+\section{Appendices}
+
+\subsection{Participants in the international expert meeting 2024}
 \label{sec:meeting-participants}
 
 \vspace{2ex}
@@ -609,10 +647,10 @@ online meetings of the 2024 international expert meeting.
 
 \begin{tabular}{lll}
   \hline
-  Name                    & Affiliation          & Country\\
+  Name\h{20ex}            & Affiliation\h{2ex}   & Country\\
   \hline
   Rich Hillary            & CSIRO                & Australia\\
-  Rick Methot\hspace{13.5ex} & NOAA              & USA\I{2.6ex}\\
+  Rick Methot             & NOAA                 & USA\I{2.6ex}\\
   Rob Scott               & SPC                  & New Caledonia\\
   Sam McKechnie           & SPC                  & New Caledonia\\
   Scott Rasmussen         & Waddle               & NZ\\
@@ -622,5 +660,56 @@ online meetings of the 2024 international expert meeting.
   Tim Miller              & NOAA                 & USA\\
   \hline
 \end{tabular}
+
+\newpage
+
+\subsection{List of project deliverables}
+\label{sec:deliverables}
+
+\vspace{1.5ex}
+
+\textbf{Project website}
+
+\href{https://github.com/PacificCommunity/ofp-sam-transition-plan}
+{https://github.com/PacificCommunity/ofp-sam-transition-plan}
+
+\vspace{2ex}
+
+\textbf{Presentations}
+
+2024
+
+\begin{description}\setlength\itemsep{0ex}
+  \item Magnusson, A. and N. Davies. 2024a. Scoping the next stock assessment
+  platform, P123: Background and discussion. Presented at the SPC pre-assessment
+  workshop, 28 March 2024. 13 pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/presentations/2024_03_28_paw_scoping/2024_03_28_paw_scoping.pdf}
+  {Available online}.
+  \item Magnusson, A. and N. Davies. 2024b. Scoping the next stock assessment
+  platform, stage I: Reaching out to tuna RFMOs and the scientific community.
+  Presented at the SPC international expert meeting, 13 May and 18 June 2024. 31
+  pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/presentations/2024_05_13_experts_scoping/2024_05_13_experts_scoping.pdf}
+  {Available online}.
+  \item Davies, N. 2024. MULTIFAN-CL: Longevity and valuable features for tuna
+  dynamics. Presented at the SPC international expert meeting, 13 May and 18
+  June 2024. 8 pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/presentations/2024_05_13_mfcl_future/MULTIFAN-CL_future.pdf}
+  {Available online}.
+\end{description}
+
+\vspace{2ex}
+
+\textbf{Reports}
+
+2024
+
+\begin{description}\setlength\itemsep{0ex}
+  \item Magnusson, A., N. Davies, G. Pilling, and P. Hamer. Scoping the next
+  generation of tuna stock assessment software: Progress report and outline of
+  options (project 123). WCPFC-SC20-2024/SA-WP-01. 17 pp.
+  \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/documents/2024_08_14_wcpfc_manila/p123_progress_report_sc20.pdf}
+  {Available online}.
+\end{description}
 
 \end{document}
