@@ -1,7 +1,9 @@
 \documentclass{SCreport}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{caption}
 \usepackage{float}
+\captionsetup{font=small}
 \setcounter{tocdepth}{2}
 \newcommand\h[1]{\hspace{#1}}
 \newcommand\I[1]{\rule{0pt}{#1}}
@@ -11,13 +13,13 @@
 \reporttitle{Scoping the Next Generation of Tuna Stock Assessment
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
-\reportdate{3 August 2024}
+\reportdate{4 August 2024}
 \hyphenation{computational consideration desired assessment future replacement
   development simple progression synthesis inter-national exploring evaluate
   technical meeting occasional software magnus-son efficient selectivity
   scientists succession coordination collaborate consultation traditional
   collaboration benefits versus exercises collaborative formulation survey
-  programming relevant RFMOs valuable}
+  programming relevant RFMOs valuable recommendations expected}
 \begin{document}
 
 \wcpfctitlepage
@@ -26,6 +28,19 @@
 \newpage
 
 \section{Executive summary}
+
+This report gives an overview of the current status of the scoping project
+launched in 2024 and the progress so far. Discussion points for SC20 are
+highlighted the resulting recommendations will guide the project, in terms of
+which of the possible avenues of model exploration and software development
+options should be prioritized.
+
+The overarching objective of transitioning all WCPFC assessments from
+MULTIFAN-CL to other software platforms (\autoref{fig:diagram}) will require a
+larger project with resources to hire SPC staff scientists and/or consultants
+who will focus 100\% on model exploration and software development.
+
+\vspace{3ex}
 
 \begin{figure}[H]
   \centering
@@ -37,6 +52,19 @@
     subsequent lines of tasks (the main project), which will require additional
     funding and resources.}\label{fig:diagram}
 \end{figure}
+
+\vspace{1ex}
+
+Other tuna RFMOs use primarily Stock Synthesis for tuna assessments, a platform
+that is also expected to be phased out in the not-too-distant future. Therefore,
+it would make sense for WCPFC and other tuna RFMOs to coordinate and collaborate
+in software succession plans and new software development.
+
+Compared to the other tuna RFMOs, there is greater urgency for WCPFC to move
+this project forward. Independent of decisions and commitments of the other tuna
+RFMOs, the main project would probably require two full-time SPC people on the
+project for five years, or until assessments have been transitioned to the new
+software.
 
 \section{Introduction}
 
@@ -78,6 +106,8 @@ globally, thus creating a user community and ongoing development support
 capacity, so as to avoid the current situation we are facing with MFCL. Wider
 collaboration in this venture is essential to achieving this and is expected to
 be encouraged through this project.
+
+\newpage
 
 \subsection{Project outline}
 \label{sec:project-outline}
@@ -136,8 +166,8 @@ than MFCL) includes:
   \item \textbf{Stock Synthesis} is used in tuna assessments by the IATTC, IOTC,
   and ICCAT. Migrating SPC assessments to Stock Synthesis would lose some of the
   features provided by MFCL and this would be transitioning to another platform
-  that is expected to phased out in the \mbox{not-too-distant} future. On the
-  other hand, increasing the use of Stock Synthesis at SPC would facilitate
+  that is expected to be phased out in the not-too-distant future. On the other
+  hand, increasing the use of Stock Synthesis at SPC would facilitate
   collaboration between the tRFMOs, including development of future models. It
   would also shorten the training time for new SPC stock assessors and make
   their skills and experience more transferable to subsequent workplaces. Stock
@@ -185,6 +215,7 @@ context of the next WCPFC tuna assessment models:
   include commercial catches or fleets. A possible avenue of collaborative
   development is to explore the possibility of adding commercial catches and
   fleets as software features.
+  \newpage
   \item \textbf{Stock Synthesis + Enhanced Tags} is a proposed software
   development of an enhanced tag module for Stock Synthesis. The current
   implementation of fitting to tagging data is somewhat limited, e.g., requiring
@@ -240,28 +271,28 @@ would require additional resources, and develop TORs for priority activities.
   $\Rightarrow$ Stock Synthesis.
   \item Move the striped marlin assessment to Stock Synthesis. The striped
   marlin assessment model is also relatively simple and would be a good
-  candidate to migrate from MFCL. The 2029 striped marlin assessment could be
-  developed in a stepwise progression: previous catch-conditioned MFCL
-  diagnostic $\Rightarrow$ Stock Synthesis.
+  candidate to migrate from MFCL. The next striped marlin assessment, currently
+  scheduled in 2029, could be developed in a stepwise progression: previous
+  catch-conditioned MFCL diagnostic $\Rightarrow$ Stock Synthesis.
 \end{enumerate}
 
-\subsection{Exploratory analyses using existing software}
+\subsection{Model exploration using existing software}
 
 \begin{enumerate}\setcounter{enumi}{2}
-  \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to
+  \item Conduct model exploration to fit Casal/Gadget/Stock Synthesis to
   albacore tuna. The South Pacific albacore assessment model is simpler than the
   other tuna species and therefore a candidate to be the~first tuna stock
   assessment to consider for migration from MFCL. Also, for the next South
   Pacific albacore assesment there may be CKMR information available to
   incorporate in the assessment.
-  \item Conduct exploratory analyses to fit Casal/Gadget/Stock Synthesis to the
+  \item Conduct model exploration to fit Casal/Gadget/Stock Synthesis to the
   original five-region yellowfin tuna dataset. The yellowfin assessment is a
   good candidate to test the capabilities of these software platforms for tuna
   assessments involving multiple regions, tags, and a large number of fisheries.
   The yellowfin tuna assessment is similar to bigeye tuna but runs slightly
   faster, thanks to the simpler \mbox{five-region} structure that was adopted in
   the 2023 assessment.
-  \item Conduct exploratory analyses to fit models using a variety of existing
+  \item Conduct model exploration to fit models using a variety of existing
   software to a simplified single-region yellowfin tuna dataset. Models of
   interest include ALSCL, Casal, Gadget, MFCL, sbt, Stock Synthesis, and
   WHAM+Length.
@@ -327,6 +358,8 @@ The meeting objectives were:
   \item Seek advice from the scientific community.
   \item Seek collaboration with tuna RFMOs and various research labs.
 \end{enumerate}
+
+\newpage
 
 \subsubsection{Format}
 
@@ -423,6 +456,8 @@ expert meeting:
   plans and new software development.
 \end{enumerate}
 
+\newpage
+
 The discussion at the international expert meeting covered several other topics,
 but the above recommendations are particularly relevant for initial explorations
 and development. The presentations from the international expert meeting are
@@ -446,7 +481,7 @@ Hands-on technical workshops will be conducted in 2024--2026 to strengthen
 collaboration ties and make stepwise progress on tasks that have been selected
 as priorities. If prioritized, the work on migrating billfish assessments (Tasks
 1--2 in the list of tasks) will be conducted by SPC scientists independent of
-project 123 workshops. Progress with exploratory analyses using alternative
+project 123 workshops. Progress with model exploration using alternative
 software (Tasks 3--5) and software development (Tasks 6--9), if prioritized,
 will depend on the resources and number of staff and consultants engaged in
 those tasks. Another factor is the availability and commitment of external
@@ -472,6 +507,8 @@ technical aspects such as whether it would be practical to organize the majority
 of source code behind an assessment model as scripts, a package, or more than
 one package. This would determine how code is maintained and shared between
 assessments of different species.
+
+\newpage
 
 The 2024 workshop corresponds to Task 10 listed in \autoref{sec:possible-tasks}.
 Focus topics for workshops in 2025 and 2026 will be selected based on which
@@ -607,7 +644,7 @@ online meetings of the 2024 international expert meeting.
   \hline
   Name                    & Affiliation          & Country\\
   \hline
-  Agurtzane Urtizberea    & AZTI                 & Spain\I{2.6ex}\\
+  Agurtzane Urtizberea    & AZTI                 & Spain\I{2.8ex}\\
   Ai Kimoto               & ICCAT                & Spain\\
   Alistair Dunn           & Ocean Environmental  & NZ\\
   Anders Nielsen          & DTU Aqua             & Denmark\\
@@ -641,7 +678,6 @@ online meetings of the 2024 international expert meeting.
   Nicholas Ducharme-Barth & NOAA                 & USA\\
   Nick Davies             & TeTakina             & NZ\\
   Noel Cadigan            & Memorial Univ        & Canada\\
-  Paul Hamer              & SPC                  & New Caledonia\\
   \hline
 \end{tabular}
 
@@ -649,6 +685,7 @@ online meetings of the 2024 international expert meeting.
   \hline
   Name\h{20ex}            & Affiliation\h{2ex}   & Country\\
   \hline
+  Paul Hamer              & SPC                  & New Caledonia\I{2.8ex}\\
   Rich Hillary            & CSIRO                & Australia\\
   Rick Methot             & NOAA                 & USA\I{2.6ex}\\
   Rob Scott               & SPC                  & New Caledonia\\
@@ -707,7 +744,7 @@ online meetings of the 2024 international expert meeting.
 \begin{description}\setlength\itemsep{0ex}
   \item Magnusson, A., N. Davies, G. Pilling, and P. Hamer. Scoping the next
   generation of tuna stock assessment software: Progress report and outline of
-  options (project 123). WCPFC-SC20-2024/SA-WP-01. 17 pp.
+  options (project 123). WCPFC-SC20-2024/SA-WP-01. 18 pp.
   \href{https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main/documents/2024_08_14_wcpfc_manila/p123_progress_report_sc20.pdf}
   {Available online}.
 \end{description}
