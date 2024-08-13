@@ -32,3 +32,8 @@ meeting)](presentations/2024_05_13_experts_scoping/2024_05_13_experts_scoping.pd
 * [MULTIFAN-CL: Longevity and valuable features for tuna
 dynamics](presentations/2024_05_13_mfcl_future/MULTIFAN-CL_future.pdf) - 2024
 May
+
+* [Scoping the next stock assessment platform: Project 123 progress update and
+outline of
+options](presentations/2024_08_14_wcpfc_manila/2024_08_14_wcpfc_manila.pdf) -
+2024 Aug
