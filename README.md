@@ -6,6 +6,9 @@
 agreement](documents/2024_02_20_project_agreement/2024_02_20_p123_scoping_the_next_sa_software.pdf) -
 2024 Feb
 
+* [Summary report from the 2024 SPC pre-assessment workshop (see pp.
+  34-37)](documents/2024_08_14_wcpfc_manila/paw_summary_sc20.pdf) - 2024 Aug
+
 * [Scoping the next generation of tuna stock assessment software: Progress
 report and outline of options (project
 123)](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
