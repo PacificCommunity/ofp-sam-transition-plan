@@ -1,4 +1,5 @@
-SC20-SA-WP-01 (Scoping the Next Generation of Tuna Stock Assessment Software: Progress Report and Outline of Options, Project 123)
+**SC20-SA-WP-01** (Scoping the Next Generation of Tuna Stock Assessment
+Software: Progress Report and Outline of Options, Project 123)
 
 A. Magnusson (SPC) presented SC20-SA-WP-01 (Scoping the Next Generation of Tuna
 Stock Assessment Software: Progress Report and Outline of Options, Project 123),
