@@ -130,6 +130,10 @@ Figure 5. Mean absolute relative errors for numbers at age 1, ..., 9+.
 
 Figure 6. Mean relative bias for numbers at age 1, ..., 9+.
 
+Figure 6 shows that ALSCL has much lower mean relative bias than ACL when
+mortality and growth are length-based (but not when mortality and growth are
+age-based).
+
 ### 3.2 CASE STUDY
 
 Female yellowtail flounder on grand Bank off Newfoundland between 1996 and 2017.
