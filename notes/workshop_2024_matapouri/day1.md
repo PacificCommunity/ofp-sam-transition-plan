@@ -33,10 +33,20 @@ the older are not subject to fishing anymore.
 2. Does Gadget estimate the length-based growth function, including Linf and
    variation?
 
+3. Are tagged fish handled as separate tagged populations?
+
 ---
+
+## Simulation study
 
 By running a simulation study, we compare the run time of different software,
 their relative accuracy, and the feature shortcomings.
 
 Jeremy McKenzie has written an individual-based operating model that could be
 used as an operating model to compare MFCL, Gadget, and other other software.
+
+---
+
+## Questions regarding Casal
+
+1. Are tagged fish handled as separate tagged populations?
