@@ -1,7 +1,7 @@
 ## Possible outcomes
 
 The ideal outcome would be that in 10-15 years, the WCPFC tuna assessments are
-conducted in software that has the following characteristics:
+conducted in software that has the following three characteristics or criteria:
 
 1. Scientific quality: has good estimation performance, makes good use of
    available data, allows spatial and temporal variability in processes, runs
@@ -31,9 +31,11 @@ criteria 2 and 3, Gadget scores high in criterion 1, while new FIMS software
 developed jointly by tuna RFMOs might be the only option that can score high in
 all three criteria.
 
-The main problems that SPC is are related to criteria 2 and 3. The current usage
+The three criteria incur conflict in their achievement, and inevitable trade-offs
+are required when considering the various options for future platforms.
+The main problems that SPC currently have are related to the criteria 2 and 3. The current usage
 of MFCL already meets criterion 1, so Gadget would only provide an incremental
-improvement in that criterion without solving the problems meeting criteria 2
+improvement in that criterion, and perhaps not solving the problems in meeting criteria 2
 and 3. Migrating tuna assessments from MFCL to Stock Synthesis could be a
 partial sacrifice in criterion 1 to greatly improve criteria 2 and 3.
 
