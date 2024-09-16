@@ -2,6 +2,10 @@
 
 ## Documents
 
+* [SC20 outcomes document, see pp. 5-6 and
+  71-73](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
+  Sep
+
 * [Scoping the next generation of tuna stock assessment software: Progress
 report and outline of options (project
 123)](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
