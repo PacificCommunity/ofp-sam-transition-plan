@@ -25,9 +25,9 @@
       \h{17.1ex}activities, timeline}\\[5ex]
     \item[] {\bf\darkblue SC20 in 2024} \comment{international expert meeting,
       overview of software}\\[5ex]
-    \item[] {\bf\darkblue Latest Developments} \comment{workshop in Sep 2024,
+    \item[] {\bf\darkblue Latest Developments} \comment{workshop in Aug 2024,
       multiple-criteria decision analysis,\\
-      \h{27ex}updated evaluation and advice, workshop in May 2025}\\[5ex]
+      \h{27ex}external analysis of tagging data, workshop in May 2025}\\[5ex]
     \item[] {\bf\darkblue SC21 in 2025} \comment{evaluation of model features,
       outline of options,\\
       \h{18.5ex}required resources}\\[1ex]
@@ -121,7 +121,7 @@
     \item[] PAW discussion (Mar)\\[3ex]
     \item[] International expert meeting (May--Jun)\\[3ex]
     \item[] SC20 discussion (Aug)\\[3ex]
-    \item[] Developer workshop (Aug--Sep)\\[3ex]
+    \item[] Developer workshop (Aug)\\[3ex]
     \item[] Follow up with tuna RFMOs and research labs (Dec)\\[2ex]
   \end{itemize}
 \end{frame}
@@ -168,9 +168,9 @@
       \h{17.1ex}activities, timeline}\\[5ex]
     \item[] {\bf\darkblue SC20 in 2024} \comment{international expert meeting,
       overview of software}\\[5ex]
-    \item[] {\bf\darkblue Latest Developments} \comment{workshop in Sep 2024,
+    \item[] {\bf\darkblue Latest Developments} \comment{workshop in Aug 2024,
       multiple-criteria decision analysis,\\
-      \h{27ex}updated evaluation and advice, workshop in May 2025}\\[5ex]
+      \h{27ex}external analysis of tagging data, workshop in May 2025}\\[5ex]
     \item[] {\bf\darkblue SC21 in 2025} \comment{evaluation of model features,
       outline of options,\\
       \h{18.5ex}required resources}\\[1ex]
@@ -250,13 +250,12 @@
 % ______________________________________________________________________________
 
 \begin{frame}{Stock Synthesis}
-  \vspace{0.5ex}
   \textit{\blue Cons}
   \begin{itemize}
     \item[--] fewer features than MFCL\\[1ex]
-    \item[--] old software, but will be used in tuna assessments until an
-    obvious successor\\
-    comes about\\[2ex]
+    \item[--] old software, but will be used in tuna assessments until a
+    next-generation\\
+    software platform comes about\\[1.5ex]
   \end{itemize}
   \textit{\blue Pros}
   \begin{itemize}
@@ -273,6 +272,132 @@
     \item[+] next-generation frameworks will support transitioning from Stock
     Synthesis\\[1ex]
   \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Overview}
+  \begin{itemize}
+    \item[] {\bf\darkblue Overall Plan} \comment{migrating from MFCL, project
+      outline, objectives,\\
+      \h{17.1ex}activities, timeline}\\[5ex]
+    \item[] {\bf\darkblue SC20 in 2024} \comment{international expert meeting,
+      overview of software}\\[5ex]
+    \item[] {\bf\darkblue Latest Developments} \comment{workshop in Aug 2024,
+      multiple-criteria decision analysis,\\
+      \h{27ex}external analysis of tagging data, workshop in May 2025}\\[5ex]
+    \item[] {\bf\darkblue SC21 in 2025} \comment{evaluation of model features,
+      outline of options,\\
+      \h{18.5ex}required resources}\\[1ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Scoping project workshop (Aug 2024)}
+  Matapouri, 26-30 August 2024\\[1ex]
+  Arni Magnusson, Nick Davies\\[3ex]
+  \textbf{Objectives}\\[1.5ex]
+  \begin{itemize}
+    \item[] {\green Project discussion}: objectives, options, possible outcomes,
+    and other\\
+    \h{18.1ex}project-level topics\\[2ex]
+    \item[] {\green Simulation study}: discuss objectives and study design,
+    related to\\
+    \h{17.2ex}future software development\\[2ex]
+    \item[] {\green Technical explorations}: TMB automatic sparseness
+    detection,\\
+    \h{22.1ex}RTMB fisheries examples and modular design,\\
+    \h{22.1ex}and tagging model in MFCL\\[2.5ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Scoping project workshop (Aug 2024)}
+  Matapouri, 26-30 August 2024\\[1ex]
+  Arni Magnusson, Nick Davies\\[3ex]
+  \h{1.2ex}\includegraphics[width=0.45\textwidth]{matapouri_house}\qquad
+  \includegraphics[width=0.45\textwidth]{matapouri_map}
+  \vspace{2.6ex}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Objectives}
+  The ideal outcome would be that in 10--15 years, the WCPFC tuna assessments\\
+  are conducted in software that has the following three characteristics or
+  criteria:\\[1ex]
+  \begin{enumerate}
+    \item {\bf\blue Scientific quality}: has good estimation performance, makes
+    good use\\
+    of available data, allows spatial and temporal variability in processes,\\
+    runs fast.\\[1.5ex]
+    \item {\bf\blue Beginner friendly}: new staff scientists can conduct a stock
+    assessment\\
+    in their first year of contract, configuring and understanding the
+    models.\\[1.5ex]
+    \item {\bf\blue Widely used}: large development team and user community
+    beyond SPC,\\
+    new staff scientists can find expert help outside of SPC, tools
+    to work\\
+    with model input and output are feature complete and maintained
+    outside\\
+    of SPC, external reviewers have a good understanding of model\\
+    configurations and options.\\[2ex]
+  \end{enumerate}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Multiple-criteria decision analysis}
+  The three criteria incur conflict in their achievement, and inevitable
+  trade-offs\\
+  are required when considering the various options for future
+  platforms. Consider\\
+  the following three existing platforms:\\[2ex]
+  \begin{tabular}{ll}
+    \blue MFCL      & The main problems in the near future are related to the
+                      criteria 2 and 3.\\
+    ~               & The current usage of MFCL already meets criterion
+                      1.\\[2ex]
+    \blue Gadget    & Gadget could perhaps provide an incremental improvement in
+                      criterion 1\\
+    ~               & but would perhaps not solve the problems in meeting
+                      criteria 2 and 3.\\[2ex]
+    \blue Stock     & Migrating tuna assessments from MFCL to Stock Synthesis
+                      could be a\\
+    \blue Synthesis & partial sacrifice in criterion 1 to greatly improve
+                      criteria 2 and 3.\\[3ex]
+  \end{tabular}
+  Noting that the comments in respect of the above three scenarios are subject
+  to further explorations and a simulation study.\\[2ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Long-term possible outcomes}
+  In 10--15 years, the WCPFC tuna assessments could be conducted in:\\[1ex]
+  \begin{itemize}
+    \item[-] {\blue Stock Synthesis}
+    \item[-] {\blue Gadget}
+    \item[-] New software developed independently by {\blue SPC}
+    \item[-] New software developed jointly by {\blue tuna RFMOs}, independent
+    of FIMS
+    \item[-] New software developed jointly by tuna RFMOs, linked with
+    {\blue FIMS} libraries
+    \item[-] {\blue Other} new software that may come about\\[2ex]
+  \end{itemize}
+
+  Other tuna stock assessments around the world (IATTC, IOTC, ICCAT, ISC)\\
+  use Stock Synthesis and will probably continue to do so until a
+  next-generation framework comes about, which could be FIMS\\[2ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External analysis of tagging data}
+  
 \end{frame}
 
 % ______________________________________________________________________________
