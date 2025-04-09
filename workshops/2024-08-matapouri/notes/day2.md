@@ -64,18 +64,18 @@ NZ FAR report documents the Ministry project simulation study
 The best outcome for SPC would be to migrate MFCL assessments to stock
 assessment software that has the following characteristics:
 
-1. Estimation performance should be good, especially in terms of bias, both
+a. Estimation performance should be good, especially in terms of bias, both
    based on self-simulation and fitting to data simulated by a more complex
    operating model
 
-2. Model features should make good use of all available data and allow the
+b. Model features should make good use of all available data and allow the
    modelling of processes that are important for each stock
 
-3. User interface and model complexity should allow a recently hired scientist
+c. User interface and model complexity should allow a recently hired scientist
    to conduct an assessment with relative ease and confidence, being able to
    understand the model and ensure the quality of the assessment
 
-4. User support should be strong, both on-site and in the general scientific
+d. User support should be strong, both on-site and in the general scientific
    community
 
-5. Beneficial if other tuna RFMOs use the same stock assessment software
+e. Beneficial if other tuna RFMOs use the same stock assessment software
