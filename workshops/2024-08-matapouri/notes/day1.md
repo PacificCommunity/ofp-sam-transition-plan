@@ -77,18 +77,22 @@ seeding experiments, time-varying rates.
 
 ## Peterson equation
 
+```
     n[1] * n[2]
 N = -----------
          m
+```
 
 where N is population size, n[1] is the release sample, n[2] is the number of
 fish examined for tags (sample size), and m is the number of recaptures.
 
 Rearrange to:
 
+```
  m     n[1]
 ---- = ----
 n[2]    N
+```
 
 MFCL uses negative binomial likelihood, rather than Poisson used in Stock
 Synthesis.
@@ -98,11 +102,13 @@ Synthesis.
 If the mixing period functionality would not exist in MFCL, one could preprocess
 the tagging data.
 
+```
      |.
 Ntag | ..
      |   ..........
      +-------------
            Time
+```
 
 100 fish were released at t[0], but after the mixing period of two quarters they
 were equivalent of 25 released at t[2], because of recaptures and natural
@@ -115,9 +121,11 @@ M is estimated, because the 75 deaths were partly caused by natural mortalities.
 
 ## Predicting tag recaptures
 
+```
         F
 R = X * - * (1-exp-Z) * N[tagged]
         Z
+```
 
 where F is fishery-specific
 
