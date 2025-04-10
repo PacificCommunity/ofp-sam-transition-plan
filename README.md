@@ -6,7 +6,11 @@
 71-73](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
 Sep
 
-* [SC20
+* [Updated terms of
+reference](documents/2024_08_05_wcpfc_manila/updated_terms_of_reference.pdf) -
+2024 Aug
+
+* [SC20 progress
 report](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
 Aug
 
@@ -22,6 +26,10 @@ Synthesis](documents/2016_08_03_mfcl_ss_comparison/sc12_mfcl_ss_comparison.pdf) 
 2016 Aug
 
 ## Presentations
+
+* [PAW 2025
+presentation](presentations/2025_04_09_paw_scoping/2025_04_09_paw_scoping.pdf) -
+2025 Apr
 
 * [SC20
 presentation](presentations/2024_08_14_wcpfc_manila/SC20-SA-WP-01_Project123_presentation.pdf) -
