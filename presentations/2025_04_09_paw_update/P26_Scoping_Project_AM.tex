@@ -1,6 +1,7 @@
 \documentclass[aspectratio=169,fleqn]{beamer}
 \usepackage{spc}
 \usepackage{graphicx}
+\newcommand\cran[1]{\blue\href{https://cran.r-project.org/web/#1}}
 \begin{document}
 
 \begin{frame}
@@ -396,22 +397,108 @@
 
 % ______________________________________________________________________________
 
-\begin{frame}{External analysis of tagging data}
-  \vspace{2ex}
-  \green $\Rightarrow$ Produces a biomass index for each region\\[0.4ex]
-  \phantom{$\Rightarrow$} that can be incorporated into Stock Synthesis or any
-  other platform\\[1ex]
-  \begin{center}
-    \includegraphics[width=0.85\textwidth]{iattc_report}
-  \end{center}
+\begin{frame}{Evaluation of RTMB as a model development platform}
+  \textbf{\blue Scripts}\\[0.5ex]
+  \begin{itemize}
+    \item[] {\green RTMB} is a recent R package, providing a streamlined
+    interface for TMB\\[1.5ex]
+    \item[] The skipjack growth project was using TMB scripts and used the
+    opportunity\\
+    to convert the analysis to RTMB scripts, in order to compare RTMB and
+    TMB\\[1.5ex]
+    This resulted in {\green streamlined code} that runs equally fast and gives
+    the same result\\
+    as the original TMB scripts\\[1.5ex]
+    No compilation required, considerably easier to develop and modify
+    models\\[1.5ex]
+    $\Rightarrow$ RTMB can be {\green recommended} as a better alternative to
+    TMB for most scripts\\[3ex]
+  \end{itemize}
+  \textbf{\blue Package}\\[0.5ex]
+  \begin{itemize}
+    \item[] The next step was to evaluate RTMB as the basis of a {\green model
+      package}\\[3ex]
+  \end{itemize}
 \end{frame}
 
 % ______________________________________________________________________________
 
-\begin{frame}{SPC-DTU Workshop 2025}
-  Copenhagen, 12--16 May 2025\\[1ex]
-  Anders Nielsen, Arni Magnusson, Joe Scutt Phillips, Tobias Mildenberger\\[3ex]
-  \textbf{Objective}\\[1.5ex]
+\begin{frame}{fishgrowth: Fit Growth Curves to Fish Data}
+  \rm\scriptsize\fontfamily{ptm}\selectfont Fit growth models to otoliths and/or
+  tagging data, using the 'RTMB' package and maximum likelihood. The\\
+  otoliths (or similar measurements of age) provide direct observed coordinates
+  of age and length. The tagging\\
+  data provide information about the observed length at release and length at
+  recapture at a later time, where\\
+  the age at release is unknown and estimated as a vector of parameters. The
+  growth models provided by this\\
+  package can be fitted to otoliths only, tagging data only, or a combination of
+  the two. Growth variability can\\
+  be modelled as constant or increasing with length.\\[1.2ex]
+  \begin{tabular}{ll}
+    Version: & 1.0.2\\[0.1ex]
+    Depends: & R ($\geq$ 2.10), \cran{packages/RTMB/index.html}{RTMB}\\[0.1ex]
+    Suggests: & \cran{packages/areaplot/index.html}{areaplot}\\[0.1ex]
+    Published: & 2024-04-08\\[0.1ex]
+    DOI: & \blue\href{https://doi.org/10.32614/CRAN.package.fishgrowth}%
+           {10.32614/CRAN.package.fishgrowth}\\[0.1ex]
+    Author: & Arni Magnusson [aut, cre], Mark Maunder [aut]\\[0.1ex]
+    Maintainer: & Arni Magnusson $<$thisisarni at gmail.com$>$\\[0.1ex]
+    License: & \cran{licenses/GPL-3}{GPL-3}\\[0.1ex]
+    URL: & \green\href{https://github.com/arni-magnusson/fishgrowth}%
+           {https://github.com/arni-magnusson/fishgrowth}\\[0.1ex]
+    NeedsCompilation: & no\\[0.1ex]
+    Materials: & \cran{packages/fishgrowth/news/news.html}{NEWS}\\[0.1ex]
+    CRAN checks: & \cran{checks/check_results_fishgrowth.html}%
+                   {fishgrowth results}\\[0.1ex]
+  \end{tabular}
+  ~\\[0.5ex]
+  Documentation:\\[1ex]
+  \begin{tabular}{ll}
+    Reference manual:
+    & \cran{packages/fishgrowth/fishgrowth.pdf}{fishgrowth.pdf}\\[2ex]
+  \end{tabular}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External analysis of tagging data}
+  \begin{itemize}
+    \item[] P123 reaching out in December 2024 to Mark Maunder (IATTC) who
+    provided:\\[0.5ex]
+    \begin{enumerate}\normalsize
+      \item Useful comments on the initial ideas of a simulation study
+      design\\[1ex]
+      \item Recommendation that SPC consider the possibility that post-MFCL
+      assessments might analyze tags outside the stock assessment model\\[3ex]
+    \end{enumerate}
+    \item[] IATTC has recently employed a new Mildenberger-Nielsen (2022, 2023,
+    2024)\\[0.2ex]
+    spatio-temporal model to analyze skipjack tags in the Eastern Pacific
+    Ocean\\[3ex]
+    \item[] Incorporated in the IATTC EPO skipjack 2024 assessment\\[4ex]
+    $\Rightarrow$ Spatio-temporal model produces a {\green biomass index},
+    overall or by region,\\[0.2ex]
+    \phantom{$\Rightarrow$} that can be incorporated into {\green any stock
+      assessment platform}\\[3ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External analysis of tagging data}
+  \centering
+  \includegraphics[width=0.85\textwidth]{iattc_report}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External analysis of tagging data}
+  \textbf{\darkgreen SPC-DTU Workshop 2025}\\[2ex]
+  Copenhagen, 12--16 May 2025\\[2ex]
+  Anders Nielsen, Arni Magnusson, Inna Senina,\\[0.2ex]
+  Joe Scutt Phillips, Tobias Mildenberger\\[3ex]
+  \textbf{Objective}\\[1ex]
   \begin{itemize}
     \item[] Explore the possibility of applying the Mildenberger-Nielsen
     spatio-temporal\\
