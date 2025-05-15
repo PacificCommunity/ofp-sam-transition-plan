@@ -53,6 +53,16 @@ Tobias demonstrated the `momo` package, walking through the vignette example.
 
 **Brief comparison of the DTU model and SEAPODYM**
 
+The DTU model `momo` takes the starting point from the model suggested in Thorson et al. (2021), where advection, taxis, and diffusion are defined via environmental fields. Preference splines are estimated, and the preference field's value at each point in the spatial domain is expressed as the sum of the splines evaluated at that point. The taxis is defined as the gradient of the preference field. Similarly, a field is defined for the diffusion. The movement model can be solved via different numerical approximations, where one is the matrix exponential. Another is the Kalman filter --- the latter is faster, but will not be a good approximation if the probability distribution of an individual's final location is not well approximated by a 2D Gaussian (think equal probability of going left or right around an island).
+
+Tags are returned from the fishery, so if the probability of recapture is uneven w.r.t. the environmental indices, then this recapture probability needs to be accounted for. An observed recapture should be weighted higher if it is returned from an area with low recapture probability, because it is representative of more unrecaptured tag histories than a tag recaptured from an area with high recapture probability. Fishing effort measures can be used to inform about the probability of recapture.
+
+Using both recaptured and not recaptured tags, it is also possible to estimate fishing mortality and natural mortality. For all tags the likelihood of their catch history are computed (conditioned on their path), and added to the total objective function. The likelihood of the catch histories are computed via step-wise application of the catch and survival equation.
+
+As a separate step, after the movement pattern has been estimated, it is possible to produce a biomass estimate. Two approaches have been explored. 1) If the estimation of natural mortality M and spatial fishing mortality is considered reliable, then for each catch cell, it is possible to isolate N in the catch equation (in each cell where catch is available). 2) If only the estimated movement pattern is considered reliable, then it is possible to apply a Peterson-inspired estimator in each cell using the fraction of tagged fish out of the total catch. Both of these two methods require a subsequent spatial smoothing of the cell-specific N estimates to estimate the total biomass in an area.        
+
+The model is optimized by maximum likelihood estimation, where the probability of seeing all tag histories is optimized.
+
 **Future development of the DTU model**
 
 **General work plan**
