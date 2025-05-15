@@ -16,6 +16,10 @@ Explore the possibility of applying the Mildenberger-Nielsen spatio-temporal tag
 
 ## 4. Activities
 
+**Model demonstration**
+
+Tobias demonstrated the `momo` package, walking through the vignette example.
+
 ## 5. Outcomes
 
 **Data discussion**
@@ -37,3 +41,5 @@ Explore the possibility of applying the Mildenberger-Nielsen spatio-temporal tag
 **Presentations**
 
 **Data**
+
+**Software**
