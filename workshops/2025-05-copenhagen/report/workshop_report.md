@@ -59,7 +59,9 @@ Tags are returned from the fishery, so if the probability of recapture is uneven
 
 Using both recaptured and not recaptured tags, it is also possible to estimate fishing mortality and natural mortality. For all tags the likelihood of their catch history are computed (conditioned on their path), and added to the total objective function. The likelihood of the catch histories are computed via step-wise application of the catch and survival equation.
 
-As a separate step, after the movement pattern has been estimated, it is possible to produce a biomass estimate. Two approaches have been explored. 1) If the estimation of natural mortality M and spatial fishing mortality is considered reliable, then for each catch cell, it is possible to isolate N in the catch equation (in each cell where catch is available). 2) If only the estimated movement pattern is considered reliable, then it is possible to apply a Peterson-inspired estimator in each cell using the fraction of tagged fish out of the total catch. Both of these two methods require a subsequent spatial smoothing of the cell-specific N estimates to estimate the total biomass in an area.        
+As a separate step, after the movement pattern has been estimated, it is possible to produce a biomass estimate. Two approaches have been explored:
+1. If the estimation of natural mortality M and spatial fishing mortality is considered reliable, then for each catch cell, it is possible to isolate N in the catch equation (in each cell where catch is available).
+2. If only the estimated movement pattern is considered reliable, then it is possible to apply a Peterson-inspired estimator in each cell using the fraction of tagged fish out of the total catch. Both of these two methods require a subsequent spatial smoothing of the cell-specific N estimates to estimate the total biomass in an area.        
 
 The model is optimized by maximum likelihood estimation, where the probability of seeing all tag histories is optimized.
 
