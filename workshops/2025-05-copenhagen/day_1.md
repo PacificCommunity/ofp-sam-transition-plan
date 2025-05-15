@@ -29,7 +29,8 @@ An important component and assumption in the model is how movement is dictated
 by the environment, such as SST.
 
 One of the main innovations in this model is the calculation of derivatives
-related to continuous tag movement and the discrete SST data.
+related to continuous tag movement and the discrete SST data, and so ensuring the
+differentiability of the fields that influence the model parameters is key.
 
 Uses the Kalman filter.
 
@@ -54,7 +55,7 @@ Consider an environment variable such as SST, plotted as a discrete heatmap on x
 and y (lat and lon). To produce a continuous heatmap that is differentiable, we
 use local regression with regression R=1.
 
-The modelling approach used for the IATTC SKJ study, archival tags were used to
+The modelling approach proposed for use for the IATTC SKJ study, archival tags were used to
 estimate movement, while conventional tags were used to estimate stock size
 trends.
 
@@ -88,4 +89,6 @@ Mildenberger-Nielsen model keeps track of individual tags.
 
 SEAPODYM is estimating the movement pattern of recovered tags only. This is
 different from the DTU model, which attempts to estimate the movement pattern of
-all fish, by considering how representative each tag and recovery is.
+all fish, by considering how representative each tag and recovery is, as long as
+meaningful effort data can be incorporated to estimate fishing mortality and
+explain why some tags were recaptured and others not.
