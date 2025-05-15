@@ -55,6 +55,37 @@ Tobias demonstrated the `momo` package, walking through the vignette example.
 
 **Future development of the DTU model**
 
+The current version of the R package allows for the estimation of habitat
+preference functions and movement patterns based on archival and conventional
+tagging data with and without effort information. It does not yet include, the
+length-structured tagging model or biomass model. There are a number of
+important improvements to the DTU model, some of which are particularly relevant
+for the application to WCPO tagging data.
+
+Tagging model (only)
+
+- Implement boundaries (islands)
+- Further R package development (speed up MakeADFun)
+- Habitat preference functions by length classes
+- Extended and unscented Kalman filter and other PDE solvers
+- Better environmental fields with depth integration (e.g. prey fields from SEAPODYM)
+- Explore archival SKJ tags (from Japanese colleagues)
+- Account for uncertainty of recapture time and location of tags
+- Effort scenarios and effort creep scenarios and its effect on habitat
+  suitability and movement patterns
+- Explore options of including FADs as effort indicator or attractors
+- Explore suitability of geographical fields to inform habitats
+- Extend simulation-estimation framework
+
+
+Biomass model (and tagging model)
+
+- Combine ideas of both biomass models (Peterson-inspired and effort biomass
+  model)
+- Integrate biomass and movement model
+- Extend to length-structured population model
+
+
 **General work plan**
 
 ## 6. Recommendations
