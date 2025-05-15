@@ -28,6 +28,8 @@ Tobias demonstrated the `momo` package, walking through the vignette example.
 
 **Brief comparison of the DTU model and SEAPODYM**
 
+**Future development of the DTU model**
+
 **General work plan**
 
 ## 6. Recommendations
