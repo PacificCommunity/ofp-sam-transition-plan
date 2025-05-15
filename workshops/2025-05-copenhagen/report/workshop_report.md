@@ -59,11 +59,44 @@ Tags are returned from the fishery, so if the probability of recapture is uneven
 
 Using both recaptured and not recaptured tags, it is also possible to estimate fishing mortality and natural mortality. For all tags the likelihood of their catch history are computed (conditioned on their path), and added to the total objective function. The likelihood of the catch histories are computed via step-wise application of the catch and survival equation.
 
-As a separate step, after the movement pattern has been estimated, it is possible to produce a biomass estimate. Two approaches have been explored. 1) If the estimation of natural mortality M and spatial fishing mortality is considered reliable, then for each catch cell, it is possible to isolate N in the catch equation (in each cell where catch is available). 2) If only the estimated movement pattern is considered reliable, then it is possible to apply a Peterson-inspired estimator in each cell using the fraction of tagged fish out of the total catch. Both of these two methods require a subsequent spatial smoothing of the cell-specific N estimates to estimate the total biomass in an area.        
+As a separate step, after the movement pattern has been estimated, it is possible to produce a biomass estimate. Two approaches have been explored:
+1. If the estimation of natural mortality M and spatial fishing mortality is considered reliable, then for each catch cell, it is possible to isolate N in the catch equation (in each cell where catch is available).
+2. If only the estimated movement pattern is considered reliable, then it is possible to apply a Peterson-inspired estimator in each cell using the fraction of tagged fish out of the total catch. Both of these two methods require a subsequent spatial smoothing of the cell-specific N estimates to estimate the total biomass in an area.        
 
 The model is optimized by maximum likelihood estimation, where the probability of seeing all tag histories is optimized.
 
 **Future development of the DTU model**
+
+The current version of the R package allows for the estimation of habitat
+preference functions and movement patterns based on archival and conventional
+tagging data with and without effort information. It does not yet include, the
+length-structured tagging model or biomass model. There are a number of
+important improvements to the DTU model, some of which are particularly relevant
+for the application to WCPO tagging data.
+
+Tagging model (only)
+
+- Implement boundaries (islands)
+- Further R package development (speed up MakeADFun)
+- Habitat preference functions by length classes
+- Extended and unscented Kalman filter and other PDE solvers
+- Better environmental fields with depth integration (e.g. prey fields from SEAPODYM)
+- Explore archival SKJ tags (from Japanese colleagues)
+- Account for uncertainty of recapture time and location of tags
+- Effort scenarios and effort creep scenarios and its effect on habitat
+  suitability and movement patterns
+- Explore options of including FADs as effort indicator or attractors
+- Explore suitability of geographical fields to inform habitats
+- Extend simulation-estimation framework
+
+
+Biomass model (and tagging model)
+
+- Combine ideas of both biomass models (Peterson-inspired and effort biomass
+  model)
+- Integrate biomass and movement model
+- Extend to length-structured population model
+
 
 **General work plan**
 A series of modelling exercises were discussed and proposed for a potential application of the momo package for WCPO skipjack tuna. These were designed to be somewhat incremental in their complexity, permit meaningful comparisons with existing advection-diffusion movement models (i.e. SEAPODYM, those estimated for IATTC), and explore the possibility for providing absolute or relative indices of abundance/fishing mortality.
