@@ -66,6 +66,15 @@ The model is optimized by maximum likelihood estimation, where the probability o
 **Future development of the DTU model**
 
 **General work plan**
+A series of modelling exercises were discussed and proposed for a potential application of the momo package for WCPO skipjack tuna. These were designed to be somewhat incremental in their complexity, permit meaningful comparisons with existing advection-diffusion movement models (i.e. SEAPODYM, those estimated for IATTC), and explore the possibility for providing absolute or relative indices of abundance/fishing mortality.
+
+| Model         | Objective         | Tagging Data      | Environmental Data        | Fisheries Data        |
+|:---           |:---               |---:               |---:                       |---:                   |
+|SEAPODYMomo    |Comparison of estimated env preferences and H|SEAPODYM Dataset (Grouped WCPO & EPO Recaps)|Temp & Currents from L1 Epipelagic layer, MLD and SST|None|
+|SEAPODYMomo WCPO|Same as above but using all recaptures|All Reliable WCPO Recaptures|To be examined (preferably JRA55-nm family)|None|
+|Momo WCPO|Estimate "Full" Momo model providing F and abundance indices|All WCPO Tags (including unreported)|As above|Effort data|
+|Momo WCPO Peterson-type|Estimate movement model for absolute abundance estimates|All Reliable WCPO Recaptures (archival?)| |None|
+
 
 ## 6. Recommendations
 
