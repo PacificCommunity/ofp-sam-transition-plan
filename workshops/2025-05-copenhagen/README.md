@@ -2,7 +2,7 @@
 
 **Copenhagen, 12-16 May 2025**
 
-Anders Nielsen, Arni Magnusson, Inna Senina, Joe Scutt Phillips, Tobias Mildenberger
+Anders Nielsen, Arni Magnusson, Colin Millar, Inna Senina, Joe Scutt Phillips, Mark Maunder, Rujia Bi, Tobias Mildenberger
 
 ## Objective
 

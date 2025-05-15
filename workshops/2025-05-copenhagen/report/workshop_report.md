@@ -2,7 +2,7 @@
 
 **Copenhagen, 12-16 May 2025**
 
-Anders Nielsen, Arni Magnusson, Inna Senina, Joe Scutt Phillips, Tobias Mildenberger
+Anders Nielsen, Arni Magnusson, Colin Millar, Inna Senina, Joe Scutt Phillips, Mark Maunder, Rujia Bi, Tobias Mildenberger
 
 Group photo
 
@@ -41,6 +41,10 @@ The 5-day workshop was spent discussion the current methodologies employed for a
 
 ## 4. Activities
 
+**Model demonstration**
+
+Tobias demonstrated the `momo` package, walking through the vignette example.
+
 ## 5. Outcomes
 
 **Data discussion**
@@ -48,6 +52,8 @@ The 5-day workshop was spent discussion the current methodologies employed for a
 **Model discussion**
 
 **Brief comparison of the DTU model and SEAPODYM**
+
+**Future development of the DTU model**
 
 **General work plan**
 
@@ -62,3 +68,5 @@ The 5-day workshop was spent discussion the current methodologies employed for a
 **Presentations**
 
 **Data**
+
+**Software**
