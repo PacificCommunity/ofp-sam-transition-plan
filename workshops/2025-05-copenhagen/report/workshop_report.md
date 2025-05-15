@@ -104,7 +104,7 @@ A series of modelling exercises were discussed and proposed for a potential appl
 | Model         | Objective         | Tagging Data      | Environmental Data        | Fisheries Data        |
 |:---           |:---               |---:               |---:                       |---:                   |
 |SEAPODYMomo    |Comparison of estimated env preferences and H|SEAPODYM Dataset (Grouped WCPO & EPO Recaps)|Temp & Currents from L1 Epipelagic layer, MLD and SST|None|
-|SEAPODYMomo WCPO|Same as above but using all recaptures|All Reliable WCPO Recaptures|To be examined (preferably JRA55-nm family)|None|
+|SEAPODYMomo WCPO|Same as above but using all recaptures|All Reliable WCPO Recaptures|As above|None|
 |Momo WCPO|Estimate "Full" Momo model providing F and abundance indices|All WCPO Tags (including unreported)|As above|Effort data|
 |Momo WCPO Peterson-type|Estimate movement model for absolute abundance estimates|All Reliable WCPO Recaptures (archival?)|To be examined (preferably JRA55-nm family) |None|
 
