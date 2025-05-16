@@ -19,7 +19,3 @@ catch and effort could be incorporated
 The DTU model is likelihood-based, comparing observed and expected tag
 recaptures. A tag is released at a known location, moves according to
 environmental variables, and is recaptured later.
-
-The model does not have random effects to allow process variability on top of
-the deterministic model, but uses the Kalman filter instead. The effect of the
-Kalman filter is similar to random effects, but much faster.
