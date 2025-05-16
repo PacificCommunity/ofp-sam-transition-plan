@@ -32,7 +32,7 @@ One of the main innovations in this model is the calculation of derivatives
 related to continuous tag movement and the discrete SST data, and so ensuring the
 differentiability of the fields that influence the model parameters is key.
 
-Uses the Kalman filter.
+Uses the Kalman filter in the estimation.
 
 We want to estimate movement and mortality from many tags in a large area
 

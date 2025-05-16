@@ -99,12 +99,36 @@ Biomass model (and tagging model)
 
 
 **General work plan**
+A series of modelling exercises were discussed and proposed for a potential application of the momo package for WCPO skipjack tuna. These were designed to be somewhat incremental in their complexity, permit meaningful comparisons with existing advection-diffusion movement models (i.e. SEAPODYM, those estimated for IATTC), and explore the possibility for providing absolute or relative indices of abundance/fishing mortality.
+
+| Model         | Objective         | Tagging Data      | Environmental Data        | Fisheries Data        |
+|:---           |:---               |---:               |---:                       |---:                   |
+|SEAPODYMomo    |Comparison of estimated env preferences and H|SEAPODYM Dataset (Grouped WCPO & EPO Recaps)|Temp & Currents from L1 Epipelagic layer, MLD and SST|None|
+|SEAPODYMomo WCPO|Same as above but using all recaptures|All Reliable WCPO Recaptures|As above|None|
+|Momo WCPO|Estimate "Full" Momo model providing F and abundance indices|All WCPO Tags (including unreported)|As above|Effort data|
+|Momo WCPO Peterson-type|Estimate movement model for absolute abundance estimates|All Reliable WCPO Recaptures (archival?)|To be examined (preferably JRA55-nm family) |Catch|
+
 
 ## 6. Recommendations
 
+**Future meetings and workshops**
+
+SPC and DTU will have occasional online meetings to follow up on progress with
+the model development and analysis. An in-person workshop could be scheduled to
+review the analysis when it is nearing completion, to address emerging issues
+and make decisions on model options.
+
+The prototype analysis that was completed at this workshop (May 2025) will be
+the state of the project until funding has been secured.
+
 **Funding the research**
 
-**Future workshops**
+Arni and Joe will meet with Paul and Graham at SPC to discuss the best options
+to seek funding from WCPFC at the Scientific Committee meeting in August 2025.
+
+The timeline of the contract should be aligned with the SKJ 2028 assessment,
+where it would be preferable to have the final input data for that assessment
+ready by the end of 2027.
 
 ## 7. Website
 
