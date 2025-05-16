@@ -111,9 +111,24 @@ A series of modelling exercises were discussed and proposed for a potential appl
 
 ## 6. Recommendations
 
+**Future meetings and workshops**
+
+SPC and DTU will have occasional online meetings to follow up on progress with
+the model development and analysis. An in-person workshop could be scheduled to
+review the analysis when it is nearing completion, to address emerging issues
+and make decisions on model options.
+
+The prototype analysis that was completed at this workshop (May 2025) will be
+the state of the project until funding has been secured.
+
 **Funding the research**
 
-**Future workshops**
+Arni and Joe will meet with Paul and Graham at SPC to discuss the best options
+to seek funding from WCPFC at the Scientific Committee meeting in August 2025.
+
+The timeline of the contract should be aligned with the SKJ 2028 assessment,
+where it would be preferable to have the final input data for that assessment
+ready by the end of 2027.
 
 ## 7. Website
 
