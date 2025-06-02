@@ -3,15 +3,15 @@
 ## Documents
 
 * [SC20 outcomes, see pp. 5-6 and
-71-73](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
+71-73](documents/2024_08_14_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
 Sep
 
 * [Updated terms of
-reference](documents/2024_08_05_wcpfc_manila/updated_terms_of_reference.pdf) -
+reference](documents/2024_08_14_wcpfc_manila/updated_terms_of_reference.pdf) -
 2024 Aug
 
 * [SC20 progress
-report](documents/2024_08_05_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
+report](documents/2024_08_14_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
 Aug
 
 * [PAW 2024 summary (see pp.
