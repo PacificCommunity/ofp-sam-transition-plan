@@ -12,17 +12,28 @@ require(momo)
 require(lubridate)
 require(sf)
 
+## Download data if necessary
+get.data <- function(file)
+{
+  dir.create("data", showWarnings=FALSE)
+  destfile <- file.path("data", file)
+  if (!file.exists(destfile)) {
+    download.file(file.path("https://github.com/PacificCommunity",
+                            "ofp-sam-transition-plan/releases/download",
+                            "spatio-temporal-data", file), destfile)
+  }
+  destfile
+}
 
 ## Load env data
-mld <- readRDS("EPO Spatiotemporal Model/po_jra55np_1x30d_mld_1958_2022.RDS")
-t <- readRDS("EPO Spatiotemporal Model/po_jra55np_1x30d_T_L1_1958_2022.RDS")
-sst <- readRDS("EPO Spatiotemporal Model/po_jra55np_1x30d_sst_1958_2022.RDS")
-u <- readRDS("EPO Spatiotemporal Model/po_jra55np_1x30d_V_L1_1958_2022.RDS")
-v <- readRDS("EPO Spatiotemporal Model/po_jra55np_1x30d_U_L1_1958_2022.RDS")
-
+mld <- readRDS(get.data("po_jra55np_1x30d_mld_1958_2022.RDS"))
+t <- readRDS(get.data("po_jra55np_1x30d_T_L1_1958_2022.RDS"))
+sst <- readRDS(get.data("po_jra55np_1x30d_sst_1958_2022.RDS"))
+u <- readRDS(get.data("po_jra55np_1x30d_V_L1_1958_2022.RDS"))
+v <- readRDS(get.data("po_jra55np_1x30d_U_L1_1958_2022.RDS"))
 
 # Load ctags
-dat0 <- read.csv("EPO Spatiotemporal Model/WCPO_SKJ_Reliable_Recoveries.csv")
+dat0 <- read.csv(get.data("WCPO_SKJ_Reliable_Recoveries.csv"))
 
 ## Convert longitudes from [-180,180] to [0,360]
 dat0$x0 <- ifelse(dat0$x0 < 0, dat0$x0 + 360, dat0$x0)
