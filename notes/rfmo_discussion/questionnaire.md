@@ -51,4 +51,4 @@ potential coordination and collaboration with a focus on the future of tuna
 stock assessment software.
 
 On behalf of the SPC stock assessment team,\
-Arni Magnusson and Nick Davies
+Arni Magnusson, Nick Davies, and Paul Hamer
