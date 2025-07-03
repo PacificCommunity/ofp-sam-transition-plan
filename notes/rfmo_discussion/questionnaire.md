@@ -5,10 +5,10 @@ ask a few questions related to future development and evaluation of
 next-generation stock assessment software, preparing for a post Stock Synthesis
 era.
 
-This is to start an informal discussion that we can have via email, or I'm
-equally happy to schedule a call and we can chat for 30 minutes instead, if
-that's more convenient. The answers from the questionnaire will help us map the
-landscape to decide how best to move forward.
+This is to start an informal discussion that we can have via email, or we can
+schedule a call and chat for 30 minutes instead, if that's more convenient. The
+answers from the questionnaire will help us map the landscape to decide how best
+to move forward.
 
 1. What assessment software do you use for tuna and billfish assessments? If
    possible, can you indicate which software is used for which stock?
