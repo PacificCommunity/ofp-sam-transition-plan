@@ -1,4 +1,4 @@
-Dear,
+Dear Colleagues,
 
 As part of a scoping project, SPC would like to reach out to all tuna RFMOs to
 ask a few questions related to future development and evaluation of
@@ -50,6 +50,5 @@ Following up from the discussion, we look forward to staying in touch regarding
 potential coordination and collaboration with a focus on the future of tuna
 stock assessment software.
 
-On behalf of the SPC stock assessment team,
-Arni Magnusson
-Nick Davies
+On behalf of the SPC stock assessment team,\
+Arni Magnusson and Nick Davies
