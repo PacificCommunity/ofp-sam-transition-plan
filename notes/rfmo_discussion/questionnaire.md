@@ -10,8 +10,8 @@ equally happy to give you a call and we can chat for 30 minutes instead, if
 that's more convenient. The answers from the questionnaire will help us map the
 landscape to decide how best to move forward.
 
-1. What assessment software do you use for tuna assessments? If possible, can
-   you indicate which software is used for which stock?
+1. What assessment software do you use for tuna and billfish assessments? If
+   possible, can you indicate which software is used for which stock?
 
 2. Are these software adequate for your current needs?
 
@@ -19,7 +19,7 @@ landscape to decide how best to move forward.
    the likely main inadequacies?
 
 4. How important is explicit regional structure for the assessment and
-   management of tuna stocks for your RFMO?
+   management of tuna and billfish stocks for your RFMO?
 
 5. Are tagging data important for any of your assessments? If so, which
    assessments?
