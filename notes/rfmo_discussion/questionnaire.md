@@ -45,7 +45,7 @@ landscape to decide how best to move forward.
 
 We appreciate your time and interest and will coordinate the discussion at the
 scoping project
-[website](https://github.com/PacificCommunity/ofp-sam-transition-plan/tree/main/notes/rfmo_discussion).
+[website](https://github.com/PacificCommunity/ofp-sam-transition-plan).
 Following up from the discussion, we look forward to staying in touch regarding
 potential coordination and collaboration with a focus on the future of tuna
 stock assessment software.
