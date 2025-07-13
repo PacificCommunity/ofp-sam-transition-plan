@@ -7,20 +7,15 @@
 \setcounter{tocdepth}{2}
 \newcommand\h[1]{\hspace{#1}}
 \newcommand\I[1]{\rule{0pt}{#1}}
-\reporttype{SC20}
+\reporttype{SC21}
 \reportauthor{A.~Magnusson\footnote{\spc}, N.~Davies\footnote{TeTakina Ltd},
   G.~Pilling$^1$, P.~Hamer$^1$}
 \reporttitle{Scoping the Next Generation of Tuna Stock Assessment
   Software:\\Progress Report and Outline of Options (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
-\reportdate{5 August 2024}
-\hyphenation{computational consideration desired assessment future replacement
-  development simple progression synthesis inter-national exploring evaluate
-  technical meeting occasional software magnus-son efficient selectivity
-  scientists succession coordination collaborate consultation traditional
-  collaboration benefits versus exercises collaborative formulation survey
-  programming relevant RFMOs valuable recommendations expected over-arching
-  possible currently simplified}
+\reportdate{14 July 2025}
+\setlength\tolerance{2000}
+\hyphenation{decisions future supported assessments acknowledged marlin software}
 \begin{document}
 
 \wcpfctitlepage
@@ -30,66 +25,73 @@
 
 \section{Executive summary}
 
-This report gives an overview of the current status of the scoping project
-launched in 2024 and the progress so far. Discussion points for SC20 are
-highlighted and the resulting recommendations will guide the project, in terms
-of which of the possible avenues of model exploration and software development
-options should be prioritized.
+The 3-year Project 123 aims to evaluate features and capabilities that will be
+important in future tuna assessments, explore fitting models to tuna data using
+existing software platforms, guide decisions on the type of new software
+development required, and establish collaboration with tuna Regional Fisheries
+Management Organizations (RFMOs) and research labs to achieve these goals.
 
-Existing stock assessment software of particular relevance have been examined,
-consulting with the respective development teams: Stock Synthesis, sbt, Gadget,
-Casal, WHAM, SAM, and ALSCL. Possible extensions could be developed for these
-existing software to match the modelling needs for WCPFC tuna assessments. The
-programming environments TMB and RTMB will be compared in more detail later this
-year, and communications with the FIMS project will continue. International
-expert meetings were conducted in May and June this year to seek advice from the
-scientific community and to seek collaboration with tuna RFMOs and various
-research labs. A further workshop is likely later this year.
+At SC20, ISG-09 reviewed the scoping of next-generation tuna stock assessment
+software and supported prioritizing practical tasks, including transitioning
+swordfish and striped marlin assessments to Stock Synthesis and testing
+simplified models for yellowfin tuna. Members acknowledged the need to focus on
+immediate assessment priorities while keeping longer-term software development
+under consideration, depending on available resources and capacity. (SC20
+Summary Report, Attachment E).
 
-The overarching objective of transitioning all WCPFC assessments from
-MULTIFAN-CL to other software platforms will require a larger project with
-additional project resources beyond the standard service provision agreement for
-stock assessments, to allow some staff to focus most of their time on model
-exploration and software development.
+SC21 will review the progress of Project 123, which explores the transition to
+next-generation stock assessment software for tuna fisheries. The project report
+i) evaluates the benefits, limitations, uncertainties, and resource implications
+associated with each software platform under consideration; ii) evaluates the
+feasibility of analyzing tagging data independently from the main stock
+assessment models, a potential strategy to reduce model complexity while
+maintaining scientific robustness; and iii) identifies key analytical features
+and technical capabilities that future stock assessment platforms should
+incorporate, such as support for spatial structure, tagging integration, and
+flexibility for multi-species and multi-fleet assessments, to ensure that WCPFC
+assessments remain scientifically credible, transparent, and adaptable to
+evolving fishery and management needs.
 
-Other tuna RFMOs use primarily Stock Synthesis for tuna assessments, a platform
-that is also expected to be phased out in the not-too-distant future. Therefore,
-it would make sense for WCPFC and other tuna RFMOs to coordinate and collaborate
-in software succession plans and new software development.
+SC21 will provide feedback on the progress of the project as needed.
 
-Compared to the other tuna RFMOs, there is greater urgency for WCPFC to move
-this project forward. Independent of decisions and commitments of the other tuna
-RFMOs, the main project would probably require one staff to be dedicated to this
-work initially and depending on the direction taken (i.e., use pre-existing
-software vs. develop new software) an additional staff or consultant with
-software development skills. It is likely that transitioning MFCL assessments to
-other software is at least a 5 year proposition, but there are some options to
-begin this immediately with the simpler billfish assessments, and potentially
-South Pacific albacore that need to prepare for the inclusion of CKMR data.
+\vspace{4ex}
 
-\newpage
-
-We invite SC20 to:
+We invite SC21 to:
 
 \begin{itemize}
   \item note that over the next 5+ years, MULTIFAN-CL will begin to be phased
   out as a software platform for WCPFC tuna and billfish stock assessments;
-  \item note that an international expert meeting was held in 2024 to seek
-  advice from the scientific community and to seek collaboration with tuna RFMOs
-  and various research labs on exploring options and developing the next
-  generation tuna model;
-  \item review and comment on the possible avenues of model exploration and
-  software development, listed in this report, to guide SPC on which of the
-  potential tasks to prioritize in 2024--2026;
-  \item consider recommending increased WCPFC resources that are required to
-  achieve the overarching goal of migrating all MFCL assessments to other
-  software platforms; and
-  \item promote collaboration between tuna RFMOs to coordinate and strengthen
-  the research and development required for MULTIFAN-CL and Stock Synthesis
-  succession plans.
+  \item note that in 2025, the two billfish stock assessments, swordfish and
+  striped marlin, transitioned from MULTIFAN-CL to Stock Synthesis; and
+  \item review and comment on two suggested software development work streams,
+  described in this report and provide feedback that will guide the preparation
+  of project proposals to be presented to SC22;
 \end{itemize}
 
+\newpage
+
 \section{Introduction}
+
+  % \item note that in 2024, a project workshop was conducted in Matapouri, New
+  % Zealand, focusing on possible outcomes, options, and preparing for upcoming
+  % activities;
+  % \item note that in 2025, a technical evaluation of the RTMB programming
+  % environment was carried out with worked examples;
+  % \item note that in 2025, a technical workshop was conducted in Copenhagen,
+  % Denmark, focusing on the development of a fine-scale spatio-temporal model for
+  % external analysis of tagging data, producing abundance indices to be
+  % incorporated into a tuna stock assessment;
+  % \item note that in 2025, SPC reached out to the FIMS software project to
+  % discuss the possibility of developing tuna-specific code modules to link with
+  % core FIMS modules to construct models that meet the needs of tuna assessments;
+  % \item note that in 2025, SPC reached out to the Gadget software project to
+  % discuss the possibility of developing Gadget models to fit SPC tuna data, to
+  % evaluate the usefulness of explicit age-length structure and other features of
+  % Gadget relevant for tuna assessments;
+  % \item SPC has reached out to the RFMOs
+  % \item SPC has made a single-region yellowfin tuna dataset available online,
+  % intented for comparing different assessment software platforms, and fitted a
+  % MULTIFAN-CL model to this dataset
 
 \subsection{The need to migrate to new software}
 
@@ -499,7 +501,7 @@ The first steps in the scoping project 123 have involved a review of software
 needs and existing software, an evaluation of options, establishing
 collaborative ties with research labs, and reaching out to scientists from the
 other tRFMOs for coordination and consultation. We expect that presentation of
-the outcomes so far at SC20 will facilitate discussion and the feedback from SC
+the outcomes so far at SC21 will facilitate discussion and the feedback from SC
 will guide which of the tasks listed in \autoref{sec:possible-tasks} will be
 prioritized. Discussions at SC should help guide TORs for each year's successive
 work.
