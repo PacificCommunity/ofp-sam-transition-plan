@@ -114,10 +114,13 @@ development support capacity, so as to avoid the current situation we are facing
 with MFCL. Wider collaboration in this venture is essential to achieving this
 and is expected to be encouraged through this project.
 
+\newpage
+
 \subsection{Project outline}
 \label{sec:project-outline}
 
-This scoping project is scheduled from 1 Feb 2024 to 31 Dec 2026. It will:
+This initial scoping project is scheduled from 1 Feb 2024 to 31 Dec 2026. It
+will:
 
 \begin{itemize}
   \item Evaluate features and capabilities that will be important in future
@@ -130,8 +133,12 @@ This scoping project is scheduled from 1 Feb 2024 to 31 Dec 2026. It will:
   goals
 \end{itemize}
 
-Additional projects can be launched in parallel to power up the model
-exploration and software development.
+Additional projects can be launched in parallel to develop and test new
+software.
+
+It is recommended that from 2027 onwards, the scoping project becomes a
+coordination project, until all stocks have transitioned from MULTIFAN-CL and
+Stock Synthesis to new software platforms.
 
 The project is divided into stages, as follows:
 
@@ -141,24 +148,37 @@ Year 2024
   \item Review and identify important features for tuna assessments.\\[-4.5ex]
   \item Identify existing software platforms that have these features or can be
   extended.\\[-4.5ex]
-  \item Reach out to and initiate collaboration with model developers.\\[-4.5ex]
-  \item Conduct two workshops in 2024, one online and one in person.\\[-3ex]
+  \item Reach out to and initiate collaboration with model developers.\\[-3ex]
 \end{enumerate}
 
-Years 2025 and 2026 (subject to SC advice and funding approvals by WCPFC)
+Years 2025--2026 (subject to SC advice and funding approvals by WCPFC)
 
-\begin{enumerate}\setcounter{enumi}{4}
+\begin{enumerate}\setcounter{enumi}{3}
   \item Explore and compare existing platforms, fitting to SPC tuna
   data.\\[-4.5ex]
   \item Determine which platforms can be considered viable candidates.\\[-4.5ex]
-  \item If a viable candidate platform has been identified, plan
+  \item If viable candidate platforms have been identified, plan
   transition.\\[-4.5ex]
-  \item If no viable candidate platform is identified, launch a software
-  development project\\
-  to extend a platform or create a new one.
+  \item If any stocks do not have a viable candidate platform for future
+  assessments:\\
+  $\Rightarrow$ Launch software development projects to extend platforms or
+  create new ones.\\[-3ex]
 \end{enumerate}
 
-\subsection{Terms of reference}
+Years 2027--2029 (anticipating that the scoping project becomes a coordination
+project)
+
+\begin{enumerate}\setcounter{enumi}{7}
+  \item Coordinate projects developing new software for tuna
+  assessments.\\[-4.5ex]
+  \item Coordinate tests and model explorations, applying existing and new
+  software\\ platforms to SPC datasets.\\[-4.5ex]
+  \item Support transition of MULTIFAN-CL and Stock Synthesis tuna and
+  billfish\\
+  stock assessments to new software platforms.\\[-3ex]
+\end{enumerate}
+
+See also the project terms of reference in \autoref{sec:tor}.
 
 \section{General plan}
 
@@ -236,7 +256,7 @@ the software.
   platform, rewritten with an improved design and user interface. Casal has a
   wide range of features relevant for tuna assessments and a possible avenue of
   collaborative development is to test the use of Casal for a tuna assessment.
-  \item \emph{Stock Synthesis + CKMR} is an experimental add-on to Stock
+  \item \emph{Stock Synthesis $\!+\!$ CKMR} is an experimental add-on to Stock
   Synthesis (A.E. Punt, pers. comm), adding CKMR as a data type in Stock
   Synthesis. This was successful as a proof of concept but it is unlikely to be
   added to the core software.
@@ -247,7 +267,8 @@ the software.
   collaborative development is to explore the ability of this model to analyze a
   simplified tuna dataset. This would provide insights into the dynamics of
   fitting state-space age-length models in general and also be a first step
-  before considering extensions to the model further, see ALSCL + Fleets below.
+  before considering extensions to the model further, see ALSCL $\!+\!$ Fleets
+  below.
 \end{itemize}
 
 \section{Evaluation of software in early development}
@@ -269,7 +290,7 @@ ideas.
 \subsection{Other}
 
 \begin{itemize}
-  \item \textit{Stock Synthesis + Enhanced Tags} is a proposed software
+  \item \textit{Stock Synthesis $\!+\!$ Enhanced Tags} is a potential software
   development of an enhanced tag module for Stock Synthesis. The current
   implementation of fitting to tagging data is somewhat limited, e.g., requiring
   the user to enter the age at release, which is not available in tuna
@@ -278,17 +299,17 @@ ideas.
   primary data type in tuna assessments. A possible avenue of collaborative
   development is to explore the possibility of contributing an enhanced tag
   module to be incorporated into the core Stock Synthesis software.
-  \item \textit{WHAM + Length} is a recent software development (Correa et al.
-  2023) extending the state-space stock assessment software WHAM (Stock and
+  \item \textit{WHAM $\!+\!$ Length} is a recent software development (Correa et
+  al. 2023) extending the state-space stock assessment software WHAM (Stock and
   Miller 2021) to fit to length data. A possible avenue of collaborative
-  development is to experiment with fitting the WHAM + Length model to an SPC
-  tuna assessment dataset.
-  \item \textit{ALSCL + Fleets} is a potential software development extending
-  the ALSCL model to address the primary shortcomings of the current ALSCL model
-  as candidate software for tuna stock assessments. A possible avenue of
-  collaborative development is to explore the possibility of adding commercial
-  catches and fleets as software features.
-  \item \textit{SAM + Length} is an early exploration of extending the
+  development is to experiment with fitting the WHAM $\!+\!$ Length model to an
+  SPC tuna assessment dataset.
+  \item \textit{ALSCL $\!+\!$ Fleets} is a potential software development
+  extending the ALSCL model to address the primary shortcomings of the current
+  ALSCL model as candidate software for tuna stock assessments. A possible
+  avenue of collaborative development is to explore the possibility of adding
+  commercial catches and fleets as software features.
+  \item \textit{SAM $\!+\!$ Length} is an early exploration of extending the
   state-space stock assessment software SAM (Nielsen and Berg 2014) to fit to
   length data. A possible avenue of collaborative development is to continue
   this exploration.
@@ -508,7 +529,7 @@ would require additional resources, and develop TORs for priority activities.
   \item Conduct model exploration to fit models using a variety of existing
   software to a simplified single-region yellowfin tuna dataset. Models of
   interest include ALSCL, Casal, Gadget, MFCL, sbt, Stock Synthesis, and
-  WHAM+Length.
+  WHAM $\!+\!$ Length.
 \end{enumerate}
 
 \textit{Extend existing software}
@@ -519,15 +540,15 @@ these tasks may depend on the initial findings of these and other tasks,
 available resources, and the availability of external scientists involved.
 
 \begin{enumerate}\setcounter{enumi}{5}
-  \item ALSCL+Fleets. Scientists involved could include Fan Zhang (Shanghai
-  Ocean University) and Nick Davies (SPC consultant).
-  \item Stock Synthesis+Enhanced Tags. Scientists involved could include
+  \item ALSCL $\!+\!$ Fleets. Scientists involved could include Fan Zhang
+  (Shanghai Ocean University) and Nick Davies (SPC consultant).
+  \item Stock Synthesis $\!+\!$ Enhanced Tags. Scientists involved could include
   Nicholas Ducharme-Barth (NOAA), Matthew Vincent (NOAA), and Arni Magnusson
   (SPC).
-  \item WHAM+Length. Scientists involved could include Giancarlo Correa (AZTI)
-  and Arni Magnusson (SPC).
-  \item SAM+Length. Scientists involved could include Anders Nielsen (DTU),
-  Colin Millar (ICES), and Arni Magnusson (SPC).
+  \item WHAM $\!+\!$ Length. Scientists involved could include Giancarlo Correa
+  (AZTI) and Arni Magnusson (SPC).
+  \item SAM $\!+\!$ Length. Scientists involved could include Anders Nielsen
+  (DTU), Colin Millar (ICES), and Arni Magnusson (SPC).
 \end{enumerate}
 
 \textit{Design and develop new software for tuna assessments}
@@ -666,6 +687,64 @@ online meetings of the 2024 international expert meeting.
 \appendix
 
 \section{Appendices}
+
+\subsection{Terms of reference}
+\label{sec:tor}
+
+The nature of the scoping project is exploratory in nature. This means that
+focus topics may emerge and be prioritized between SC meetings. The project
+reaches out to the Scientific Committee members at to seek guidance and
+involvement in assigning project priorities.
+
+Below are the scoping project terms of reference as of SC20 (August 2024).
+
+2024
+
+\begin{enumerate}
+  \item Review and identify a list of necessary features for software to do tuna
+  stock assessments and identify existing software platforms that have these
+  features or capacity to develop these.
+  \item Conduct two workshops with selected experts from other tuna RFMOs and/or
+  with relevant expertise. The first workshop can be remote (prior to SC20) and
+  the second one potentially in person (post SC20). The main goal will be to
+  communicate the scoping project, upcoming model explorations, and succession
+  plans for MFCL and Stock Synthesis, to seek advice from the scientific
+  community, and to seek collaboration with tRFMOs and various research labs.
+  \item Explore the new RTMB programming environment and how it could be used in
+  future tuna assessments. Specifically, how to modularize and organize code in
+  RTMB models, on one hand code that is specific to one assessment and on the
+  other hand code that is shared between assessments.
+  \item Establish collaboration with NOAA scientists to explore the feasibility
+  of enhancing the tagging module in Stock Synthesis, making it more similar to
+  the tagging module in MFCL.
+\end{enumerate}
+
+2025
+
+\begin{enumerate}\setcounter{enumi}{4}
+  \item Provide support to the stock assessment team transitioning the 2025
+  swordfish assessment from MFCL to Stock Synthesis. Also, coordinate with the
+  2024/2025 striped marlin assessment team to start preparing for the transition
+  of that assessment to Stock Synthesis in 2029.
+  \item Compare a variety of software platforms using a simplified single-region
+  WCPO yellowfin tuna dataset. The comparison will evaluate available features,
+  run time speed, auxiliary tools, time and skills required to develop and
+  diagnose models, and other characteristics.
+  \item Prepare alternative workplans and budget scenarios for the larger
+  implementing (main) project to go beyond scoping. The scoping project will be
+  expected to transition into the main implementing project based on the
+  discussions at SC21, budget considerations, and funding availability. It is
+  expected that the work leading up SC21 will inform the implementing workplan
+  options and budget estimations.
+  \newpage
+  \item Communicate with tuna RFMOs and other research labs to establish which
+  RFMOs and labs are willing and able to commit scientist time to collaborate on
+  specific tasks of the scoping project, as well as the upcoming main project.
+  \item Communicate with tuna RFMOs and the FIMS project team to evaluate
+  whether joint software development by tuna RFMOs could produce FIMS code
+  modules, with the aim to develop future tuna assessment models using FIMS
+  modules.
+\end{enumerate}
 
 \subsection{Participants in the international expert meeting 2024}
 \label{sec:meeting-participants}
