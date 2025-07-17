@@ -184,16 +184,126 @@ See also the project terms of reference in \autoref{sec:tor}.
 
 \subsection{Requirements for future assessment software}
 
-The CAPAM 2019 Workshop on Next Generation Assessment Models (Punt et al. 2020)
-provided an overview and discussion of existing software, as well as
-recommendations for further software development.
+\subsubsection{CAPAM 2019}
 
-Model features that are important for future tuna assessment models are reviewed
-by Punt et al. (2020), Hoyle et al. (2020), and Magnusson and Davies (2024).
+The CAPAM 2019 Workshop on Next Generation Assessment Models provided an
+overview and discussion of existing software, as well as recommendations for
+further software development. The review paper resulting from this CAPAM
+workshop (Punt et al. 2020) identified a number of model features considered
+important in future stock assessment software. The abstract of the review paper
+lists these features:
 
-Advice on the management and structure of a software development project is
-provided by Hoyle et al. (2020), covering topics such as design, programming
-paradigms, maintenance tools, and user interface.
+\begin{itemize}
+  \item Ability to to capture age and size dynamics simultaneously yet
+  computationally efficiently, while also offering the option to run a model as
+  purely age-structured for a simple and fast model
+  \item Scale from data-rich to data-poor
+  \item Include some multispecies capability
+  \item More appropriately deal with temporal variation, e.g., random effects
+  and state-space models
+  \item Better handling of tagging data, e.g., release-conditioned or
+  recapture-conditioned model
+  \item Ability to use close-kin mark-recapture data
+  \item Efficient methods to share parameter priors among stocks, borrowing
+  information from similar stocks where more data have been collected
+  \item Training programs and documentation
+  \item Data entry system that is well documented
+  \item Does not require specification of inputs that will not be used in an
+  application
+  \item Expert system to configure default settings based on best practices
+  \item Automatic production of diagnostic statistics
+\end{itemize}
+
+The summary table in Punt et al. (2020) adds the following features:
+
+\begin{itemize}
+  \item Spatial structure
+  \item Multiple fisheries and surveys
+  \item Flexible parametrization of the initial conditions
+  \item Multiple time steps within a year
+  \item Flexible parametrization of growth
+  \item Flexible parametrization of natural mortality
+  \item Flexible parametrization of fecundity
+  \item Flexible parametrization of movement
+  \item Multiple recruitment functional forms, including nonparametric
+  \item Selectivity as a function of age, size, or both
+  \item Multiple selectivity functional forms, including dome-shaped and
+  asymptotic
+  \item Incorporation of ageing error
+  \item Ability to simulate datasets for management strategy evaluation
+  \item Prefer statistically based likelihood weighting over subjective choices
+  \item Ability to evaluate uncertainty using a variety of statistical methods
+  \item Allow time-varying processes, both in biology and fishing processes
+\end{itemize}
+
+Further in the text, Punt et al. (2020) add the following features:
+
+\begin{itemize}
+  \item Allow for density-dependence at the spatial area level, as well as at
+  the stock level
+  \item Allow for nesting of spatial scales such that a population model can
+  appropriately utilize data types collected at fine scale and coarse spatial
+  resolutions
+  \item Allow for multiple movement types including advection, diffusion, and
+  that movement responds to environmental drivers
+  \item Account for multiple hypotheses regarding movement, including age- and
+  sex-specific processes processes, as well as density-dependent and
+  time-varying movement
+\end{itemize}
+
+\subsubsection{International Expert Meeting 2024}
+
+At the launch of this scoping project in 2024, an international expert meeting
+was held in two sessions. As a background for the meeting discussion, the
+conveners (Magnusson and Davies 2024) highlighted model features that can be
+especially relevant in tuna assessments:
+
+\textit{Incorporating data}
+
+\begin{itemize}
+  \item Fit to length comps
+  \item Fit to weight comps
+  \item Fit to tagging data
+  \item Fit to CKMR data
+  \item Estimate growth curve using otolith data
+  \item Utilize tag-recapture growth increment to estimate growth
+\end{itemize}
+
+\textit{Specifics}
+
+\begin{itemize}
+  \item Age-specific M
+  \item Length-specific selectivity
+  \item Sex-specific growth and M
+  \item Region-specific growth
+\end{itemize}
+
+\textit{Dimensions}
+
+\begin{itemize}
+  \item Explicit regions with movement
+  \item Tracking age and length in population
+  \item Time steps within a year
+\end{itemize}
+
+\textit{Ecology}
+
+\begin{itemize}
+  \item Multispecies interactions
+  \item Climate change
+\end{itemize}
+
+\textit{Implementation}
+
+\begin{itemize}
+  \item Random effects, state space
+  \item Parallel computing
+  \item Computation time
+\end{itemize}
+
+\subsubsection{Summary}
+
+
 
 \subsection{Possible outcomes and options}
 
@@ -623,7 +733,7 @@ development projects, a roadmap of the project, and highlighted the need for
 increased resources needed to conduct model exploration and software
 development.
 
-\section{Recommended work streams that would require funding}
+\section{Recommended development work streams and required resources}
 
 \subsection{Tuna-specific FIMS modules}
 
