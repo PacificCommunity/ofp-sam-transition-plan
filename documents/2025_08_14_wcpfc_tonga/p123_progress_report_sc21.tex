@@ -20,7 +20,7 @@
 \setlength\tolerance{2000}
 \hyphenation{decisions future supported assessments acknowledged marlin software
   assessment replacement consideration development traditional collaboration
-  benefits exercises embarking}
+  benefits exercises embarking modules variety structure}
 \begin{document}
 
 \wcpfctitlepage
@@ -148,7 +148,7 @@ Year 2024
   \item Review and identify important features for tuna assessments.\\[-4.5ex]
   \item Identify existing software platforms that have these features or can be
   extended.\\[-4.5ex]
-  \item Reach out to and initiate collaboration with model developers.\\[-3ex]
+  \item Reach out to and initiate collaboration with model developers.
 \end{enumerate}
 
 Years 2025--2026 (subject to SC advice and funding approvals by WCPFC)
@@ -162,7 +162,7 @@ Years 2025--2026 (subject to SC advice and funding approvals by WCPFC)
   \item If any stocks do not have a viable candidate platform for future
   assessments:\\
   $\Rightarrow$ Launch software development projects to extend platforms or
-  create new ones.\\[-3ex]
+  create new ones.
 \end{enumerate}
 
 Years 2027--2029 (anticipating that the scoping project becomes a coordination
@@ -175,7 +175,7 @@ project)
   software\\ platforms to SPC datasets.\\[-4.5ex]
   \item Support transition of MULTIFAN-CL and Stock Synthesis tuna and
   billfish\\
-  stock assessments to new software platforms.\\[-3ex]
+  stock assessments to new software platforms.
 \end{enumerate}
 
 See also the project terms of reference in \autoref{sec:tor}.
@@ -301,9 +301,7 @@ especially relevant in tuna assessments:
   \item Computation time
 \end{itemize}
 
-\subsubsection{Summary}
-
-
+\subsubsection{Conclusion}
 
 \subsection{Possible outcomes and options}
 
@@ -362,23 +360,22 @@ the software.
 \subsection{Other}
 
 \begin{itemize}
-  \item \emph{Casal 2} is the latest version of the Casal stock assessment
-  platform, rewritten with an improved design and user interface. Casal has a
-  wide range of features relevant for tuna assessments and a possible avenue of
+  \item Casal 2 is the latest version of the Casal stock assessment platform,
+  rewritten with an improved design and user interface. Casal has a wide range
+  of features relevant for tuna assessments and a possible avenue of
   collaborative development is to test the use of Casal for a tuna assessment.
-  \item \emph{Stock Synthesis $\!+\!$ CKMR} is an experimental add-on to Stock
+  \item Stock Synthesis $\!+\!$ CKMR is an experimental add-on to Stock
   Synthesis (A.E. Punt, pers. comm), adding CKMR as a data type in Stock
-  Synthesis. This was successful as a proof of concept but it is unlikely to be
+  Synthesis. This was successful as a proof of concept, but it is unlikely to be
   added to the core software.
-  \item \emph{ALSCL} is a recent model (Zhang and Cadigan 2022) that has two
-  important features: state-space formulation and age-length structure. It is
-  implemented in TMB, but the software currently fits only to survey data and
-  does not include commercial catches or fleets. A possible avenue of
-  collaborative development is to explore the ability of this model to analyze a
-  simplified tuna dataset. This would provide insights into the dynamics of
-  fitting state-space age-length models in general and also be a first step
-  before considering extensions to the model further, see ALSCL $\!+\!$ Fleets
-  below.
+  \item ALSCL is a recent model (Zhang and Cadigan 2022) that has two important
+  features: state-space formulation and age-length structure. It is implemented
+  in TMB, but the software currently fits only to survey data and does not
+  include commercial catches or fleets. A possible avenue of collaborative
+  development is to explore the ability of this model to analyze a simplified
+  tuna dataset. This would provide insights into the dynamics of fitting
+  state-space age-length models in general and also be a first step before
+  considering extensions to the model further, see ALSCL $\!+\!$ Fleets below.
 \end{itemize}
 
 \section{Evaluation of software in early development}
@@ -400,29 +397,16 @@ ideas.
 \subsection{Other}
 
 \begin{itemize}
-  \item \textit{Stock Synthesis $\!+\!$ Enhanced Tags} is a potential software
-  development of an enhanced tag module for Stock Synthesis. The current
-  implementation of fitting to tagging data is somewhat limited, e.g., requiring
-  the user to enter the age at release, which is not available in tuna
-  assessments. The idea is to borrow some of the functionality and features from
-  the tag module in MFCL, which has a long record of using tagging data as a
-  primary data type in tuna assessments. A possible avenue of collaborative
-  development is to explore the possibility of contributing an enhanced tag
-  module to be incorporated into the core Stock Synthesis software.
-  \item \textit{WHAM $\!+\!$ Length} is a recent software development (Correa et
-  al. 2023) extending the state-space stock assessment software WHAM (Stock and
+  \item WHAM $\!+\!$ Length is a recent software development (Correa et al.
+  2023) extending the state-space stock assessment software WHAM (Stock and
   Miller 2021) to fit to length data. A possible avenue of collaborative
   development is to experiment with fitting the WHAM $\!+\!$ Length model to an
   SPC tuna assessment dataset.
-  \item \textit{ALSCL $\!+\!$ Fleets} is a potential software development
-  extending the ALSCL model to address the primary shortcomings of the current
-  ALSCL model as candidate software for tuna stock assessments. A possible
-  avenue of collaborative development is to explore the possibility of adding
-  commercial catches and fleets as software features.
-  \item \textit{SAM $\!+\!$ Length} is an early exploration of extending the
-  state-space stock assessment software SAM (Nielsen and Berg 2014) to fit to
-  length data. A possible avenue of collaborative development is to continue
-  this exploration.
+  \item ALSCL $\!+\!$ Fleets is a potential software development extending the
+  ALSCL model to address the primary shortcomings of the current ALSCL model as
+  candidate software for tuna stock assessments. A possible avenue of
+  collaborative development is to explore the possibility of adding commercial
+  catches and fleets as software features.
 \end{itemize}
 
 \section{Overview of project activities}
@@ -652,13 +636,8 @@ available resources, and the availability of external scientists involved.
 \begin{enumerate}\setcounter{enumi}{5}
   \item ALSCL $\!+\!$ Fleets. Scientists involved could include Fan Zhang
   (Shanghai Ocean University) and Nick Davies (SPC consultant).
-  \item Stock Synthesis $\!+\!$ Enhanced Tags. Scientists involved could include
-  Nicholas Ducharme-Barth (NOAA), Matthew Vincent (NOAA), and Arni Magnusson
-  (SPC).
   \item WHAM $\!+\!$ Length. Scientists involved could include Giancarlo Correa
   (AZTI) and Arni Magnusson (SPC).
-  \item SAM $\!+\!$ Length. Scientists involved could include Anders Nielsen
-  (DTU), Colin Millar (ICES), and Arni Magnusson (SPC).
 \end{enumerate}
 
 \textit{Design and develop new software for tuna assessments}
@@ -717,6 +696,35 @@ assessments of different species.
 \subsection{External tagging analysis}
 
 \subsection{Prototype FIMS modules}
+
+The FIMS project aims for a modular and flexible design paradigm, allowing
+scientists to choose and link together code modules to produce a stock
+assessment model that is tailored for a particular assessment. The project has
+currently developed a core module that allows the construction and fitting of
+age-structured models. Early FIMS exploratory case studies have focused on
+fitting to catch-at-age data, and the project is likely to initially prioritize
+the needs of NOAA stock assessments in U.S. waters.
+
+For the purposes of tuna assessments, it might be possible to design and develop
+specific code modules to link with the FIMS core modules. Such tuna modules
+could potentially provide a variety of features, both to add basic extensions
+and to introduce fundamental changes in the model structure. Possible examples
+of add-on FIMS modules might include:
+
+\begin{itemize}
+  \item Reference points specific for a tuna RFMO\\[-4.5ex]
+  \item Improved handling of tagging data\\[-4.5ex]
+  \item Explicit regions with fish movement coefficients\\[-4.5ex]
+  \item Explicit age-length structured population array, rather than age only
+\end{itemize}
+
+A first step, before designing and developing full-featured code modules, is to
+explore the technical procedures and programming interface involved in producing
+FIMS modules. This initial exploration should focus on very simple additions or
+model modifications as a demonstration. After the technical exploration of such
+prototype FIMS modules, the advantages and disadvantages of tuna-specific FIMS
+modules can be evaluated against other forms of tuna stock assessment software
+development.
 
 \subsection{Outline of a possible simulation analysis}
 
