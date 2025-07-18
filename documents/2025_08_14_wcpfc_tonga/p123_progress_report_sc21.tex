@@ -746,11 +746,10 @@ development.
 
 \textit{Development project to be launched in 2026}
 
-A preliminary outcome of the Project 123 scoping project is to recommend the
-development of tuna-specific code modules that can be linked with core FIMS
-moduels to produce a model that is tailored for tuna stock assessment. Possible
-examples of tuna-specific FIMS modules might provide some of the following
-features:
+A preliminary outcome of the current scoping is to recommend the development of
+tuna-specific code modules that can be linked with core FIMS moduels to produce
+a model that is tailored for tuna stock assessment. Possible examples of
+tuna-specific FIMS modules might provide some of the following features:
 
 \begin{itemize}
   \item Reference points specific for a tuna RFMO\\[-4.5ex]
@@ -760,16 +759,52 @@ features:
 \end{itemize}
 
 As of mid 2025, it is too early to lay out a precise work plan and budget for
-the development of tuna-specific FIMS code modules, both with respect to the
-current stage in scoping project and recent milestones in the FIMS project.
-However, the SC21 meeting is an opportune time to discuss the possible
-prioritization and funding of this work stream that can be launched in 2026. For
-this reason, we suggest that a small informal working group could be convened by
-the SC to discuss the potential scope, deliverables, timeline, resources, and
-draft TORs for this work stream, which has the potential to lead to the
-development of stock assessment software to be used in future tuna assessments.
+the development of tuna-specific FIMS code modules. However, with respect to the
+current stage in scoping project and recent milestones in the FIMS project, the
+SC21 meeting is an opportune time to discuss the possible prioritization and
+funding of this work stream that can be launched in 2026. For this reason, we
+suggest that a small informal working group could be convened by the SC to
+discuss the potential scope, deliverables, timeline, resources, and draft TORs
+for this work stream, which has the potential to lead to the development of
+stock assessment software to be used in future tuna assessments.
+
+The development work on tuna-specific FIMS modules could be carried out by a
+consultant, working at SPC headquarters or remotely.
 
 \subsection{DTU spatio-temporal full assessment model}
+
+\textit{Initial development}
+
+A workshop in 2025 initiated a collaboration between SPC and the Technical
+University of Denmark (DTU) to employ a spatio-temporal movement model to
+analyze tuna tagging data with the aim of producing abundance indices that can
+be used in a stock assessment. The model is under development as an R package
+that uses RTMB for the parameter estimation.
+
+As of mid 2025, this R package is in a relatively early stage of development. It
+can estimate preference functions that determine the effect of environmental
+variables on fish movement, but it does not yet have the capability to produce
+the abundance indices.
+
+In a collaborative project with IATTC, the DTU statisticians Tobias Mildenberger
+and Anders Nielsen had analyzed EPO skipjack tags with a spatio-temporal model
+implemented in TMB script-based workflows. The current development is migrating
+the methods from the TMB-based pilot study into an RTMB package that will become
+open-source software for general use. The
+
+\textit{Development project to be launched in 2026}
+
+During the 2025 SPC-DTU workshop in Copenhagen, the team of DTU statisticians
+
+A preliminary outcome of the current scoping is to recommend the development of
+tuna-specific code modules that can be linked with core FIMS moduels to produce
+a model that is tailored for tuna stock assessment. Possible examples of
+tuna-specific FIMS modules might provide some of the following features:
+
+Earlier
+analysis of
+
+\textit{Development project to be launched in 2026}
 
 \section{Acknowledgements}
 
@@ -789,9 +824,6 @@ online meetings of the 2024 international expert meeting.
   length-based, age-structured model for fisheries stock assessment, with
   application to South Pacific albacore, \textit{Thunnus alalunga}. Can. J.
   Fish. Aquat. Sci. 55:2105--2116.
-  \item Hoyle, S.D., M.N. Maunder, and Z.T. A'mar. 2020. Frameworks for the next
-  generation of general stock assessment models: 2019 CAPAM workshop report. New
-  Zealand Fish. Assess. Rep. 2020/39. 80 pp.
   \item Kristensen, K. 2024. RTMB: R bindings for TMB. R package version 1.5.\\
   \href{https://cran.r-project.org/package=RTMB}
   {https://cran.r-project.org/package=RTMB}.
