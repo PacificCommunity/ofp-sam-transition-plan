@@ -697,34 +697,9 @@ assessments of different species.
 
 \subsection{Prototype FIMS modules}
 
-The FIMS project aims for a modular and flexible design paradigm, allowing
-scientists to choose and link together code modules to produce a stock
-assessment model that is tailored for a particular assessment. The project has
-currently developed a core module that allows the construction and fitting of
-age-structured models. Early FIMS exploratory case studies have focused on
-fitting to catch-at-age data, and the project is likely to initially prioritize
-the needs of NOAA stock assessments in U.S. waters.
-
-For the purposes of tuna assessments, it might be possible to design and develop
-specific code modules to link with the FIMS core modules. Such tuna modules
-could potentially provide a variety of features, both to add basic extensions
-and to introduce fundamental changes in the model structure. Possible examples
-of add-on FIMS modules might include:
-
-\begin{itemize}
-  \item Reference points specific for a tuna RFMO\\[-4.5ex]
-  \item Improved handling of tagging data\\[-4.5ex]
-  \item Explicit regions with fish movement coefficients\\[-4.5ex]
-  \item Explicit age-length structured population array, rather than age only
-\end{itemize}
-
-A first step, before designing and developing full-featured code modules, is to
-explore the technical procedures and programming interface involved in producing
-FIMS modules. This initial exploration should focus on very simple additions or
-model modifications as a demonstration. After the technical exploration of such
-prototype FIMS modules, the advantages and disadvantages of tuna-specific FIMS
-modules can be evaluated against other forms of tuna stock assessment software
-development.
+The scoping project activities related to exploring prototype FIMS modules are
+outlined as an initial step in a recommended work stream on developing
+tuna-specific FIMS modules (\autoref{sec:tuna-fims}).
 
 \subsection{Outline of a possible simulation analysis}
 
@@ -744,6 +719,55 @@ development.
 \section{Recommended development work streams and required resources}
 
 \subsection{Tuna-specific FIMS modules}
+\label{sec:tuna-fims}
+
+\textit{Initial exploration}
+
+The FIMS project aims to provide a modular and flexible design paradigm,
+allowing scientists to choose and link together code modules to produce a stock
+assessment model that is tailored for a particular assessment. The project has
+currently developed a core module that allows the construction and fitting of
+age-structured models. Early FIMS exploratory case studies have focused on
+fitting to catch-at-age data, and the project is likely to initially prioritize
+the needs of NOAA stock assessments in U.S. waters.
+
+For the purposes of tuna assessments, it might be possible to design and develop
+specific code modules to link with the FIMS core modules. Such tuna modules
+could potentially provide a variety of features, adding basic model extensions
+and/or introducing fundamental changes in the model structure.
+
+A first step, before designing and developing full-featured code modules, is to
+explore the technical procedures and programming interface involved in producing
+FIMS modules. This initial exploration should focus on very simple additions or
+model modifications as a demonstration. After the technical exploration of such
+prototype FIMS modules, the advantages and disadvantages of tuna-specific FIMS
+modules can be evaluated against other forms of tuna stock assessment software
+development.
+
+\textit{Development project to be launched in 2026}
+
+A preliminary outcome of the Project 123 scoping project is to recommend the
+development of tuna-specific code modules that can be linked with core FIMS
+moduels to produce a model that is tailored for tuna stock assessment. Possible
+examples of tuna-specific FIMS modules might provide some of the following
+features:
+
+\begin{itemize}
+  \item Reference points specific for a tuna RFMO\\[-4.5ex]
+  \item Improved handling of tagging data\\[-4.5ex]
+  \item Explicit regions with fish movement coefficients\\[-4.5ex]
+  \item Explicit age-length structured population array, rather than age only
+\end{itemize}
+
+As of mid 2025, it is too early to lay out a precise work plan and budget for
+the development of tuna-specific FIMS code modules, both with respect to the
+current stage in scoping project and recent milestones in the FIMS project.
+However, the SC21 meeting is an opportune time to discuss the possible
+prioritization and funding of this work stream that can be launched in 2026. For
+this reason, we suggest that a small informal working group could be convened by
+the SC to discuss the potential scope, deliverables, timeline, resources, and
+draft TORs for this work stream, which has the potential to lead to the
+development of stock assessment software to be used in future tuna assessments.
 
 \subsection{DTU spatio-temporal full assessment model}
 
