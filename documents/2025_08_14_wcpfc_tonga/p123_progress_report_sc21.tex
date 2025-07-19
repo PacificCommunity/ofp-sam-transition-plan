@@ -21,7 +21,8 @@
 \hyphenation{decisions future supported assessments acknowledged marlin software
   assessment replacement consideration development traditional collaboration
   benefits exercises embarking modules variety structure denmark university
-  valuable inter-national input}
+  valuable inter-national input estimation available recommendations
+  presentations addition coordination collaborate magnusson}
 \begin{document}
 
 \wcpfctitlepage
@@ -262,47 +263,81 @@ especially relevant in tuna assessments:
 \textit{Incorporating data}
 
 \begin{itemize}
-  \item Fit to length comps
-  \item Fit to weight comps
-  \item Fit to tagging data
-  \item Fit to CKMR data
-  \item Estimate growth curve using otolith data
+  \item Fit to length comps\\[-4.5ex]
+  \item Fit to weight comps\\[-4.5ex]
+  \item Fit to tagging data\\[-4.5ex]
+  \item Fit to CKMR data\\[-4.5ex]
+  \item Estimate growth curve using otolith data\\[-4.5ex]
   \item Utilize tag-recapture growth increment to estimate growth
 \end{itemize}
+
+\newpage
 
 \textit{Specifics}
 
 \begin{itemize}
-  \item Age-specific M
-  \item Length-specific selectivity
-  \item Sex-specific growth and M
+  \item Age-specific M\\[-4.5ex]
+  \item Length-specific selectivity\\[-4.5ex]
+  \item Sex-specific growth and M\\[-4.5ex]
   \item Region-specific growth
 \end{itemize}
 
 \textit{Dimensions}
 
 \begin{itemize}
-  \item Explicit regions with movement
-  \item Tracking age and length in population
+  \item Explicit regions with movement\\[-4.5ex]
+  \item Tracking age and length in population\\[-4.5ex]
   \item Time steps within a year
 \end{itemize}
 
 \textit{Ecology}
 
 \begin{itemize}
-  \item Multispecies interactions
+  \item Multispecies interactions\\[-4.5ex]
   \item Climate change
 \end{itemize}
 
 \textit{Implementation}
 
 \begin{itemize}
-  \item Random effects, state space
-  \item Parallel computing
+  \item Random effects, state space\\[-4.5ex]
+  \item Parallel computing\\[-4.5ex]
   \item Computation time
 \end{itemize}
 
 \subsubsection{Conclusion}
+
+As seen in the list above, there is a multitude of wish list options for
+technical features provided by future stock assessment software. Realistically,
+all future software will only provide subsets of these features, and the
+importance of individual features will vary between stocks. The conclusion of
+this scoping project is that the critical requirements for future software for
+the WCPFC tuna and billfish assessments are best encapsulated in three general
+criteria:
+
+\begin{enumerate}
+  \item \textit{Scientific quality}. The software should have good statistical
+  performance, demonstrating estimation accuracy in self-test simulations. It
+  should make good use of available data, incorporating all relevant information
+  in a statistically sound manner. It should also allow spatial and temporal
+  variability in processes relating to the biology and the fishery dynamics. The
+  software should be computationally efficient and produce a fitted model within
+  too many hours, thus allowing a full exploration of a variety of model options
+  in the short stock assessment time frame.
+  \item \textit{Beginner friendly}. New staff scientists can be asked to lead a
+  WCPFC stock assessment and start working with the stock assessment software
+  within their first twelve months of contract. To make this feasible, the
+  software user interface and auxiliary tools should allow new staff scientists
+  to understand the configuration of model options and efficiently work with the
+  model.
+  \item \textit{Widely used}. SPC does not want to use stock assessment software
+  in isolation. The software should have a large development team and user
+  community beyond SPC. This will mean that new staff scientists can find expert
+  help outside of SPC. Feature-complete tools for working with model input and
+  output will be maintained outside of SPC. By adopting widely used stock
+  assessment software, external reviewers will have a good understanding of
+  model configurations and options.
+\end{enumerate}
 
 \subsection{Possible outcomes and options}
 
@@ -450,9 +485,10 @@ The meeting objectives were:
 
 \begin{enumerate}
   \item Communicate SPC scoping project and upcoming explorations, decisions,
-  and development.
-  \item Discuss succession plans for MULTIFAN-CL as well as Stock Synthesis.
-  \item Seek advice from the scientific community.
+  and development.\\[-4.5ex]
+  \item Discuss succession plans for MULTIFAN-CL as well as Stock
+  Synthesis.\\[-4.5ex]
+  \item Seek advice from the scientific community.\\[-4.5ex]
   \item Seek collaboration with tuna RFMOs and various research labs.
 \end{enumerate}
 
@@ -768,8 +804,8 @@ early 2026. The SC21 meeting is an opportune time to discuss the possible
 prioritization and funding of this work stream that can be launched in 2026, a
 software development project focusing on tuna-specific FIMS modules. For this
 reason, we suggest that a small informal working group could be convened by the
-SC to discuss the potential scope, deliverables, timeline, resources, and draft
-TORs for this work stream, which has the potential to lead to the development of
+SC to discuss the potential scope, deliverables, timeline, resources, and TORs
+for this work stream, which has the potential to lead to the development of
 stock assessment software to be used in future tuna assessments.
 
 The development work on tuna-specific FIMS modules could be carried out by a
@@ -807,25 +843,26 @@ for a possible follow-up development project described below.
 \textit{Development project to be launched in 2026}
 
 During the 2025 SPC-DTU workshop in Copenhagen, the team of DTU team raised an
-important point that could become increasingly relevant for future tuna
-assessments. Not only is the DTU Movement Model a useful tool for analyzing
-tagging data externally from the assessment model to produce abundance indices,
-which can faciliate transitioning tuna assessments from MULTIFAN-CL to other
-software. In addition to this, the DTU Movement Model could conceivably be
-extended considerably to become a full stock assessment model.
+important point. For the purposes of tuna assessments, the Movement Model can
+currently serve as a useful tool for analyzing tagging data externally from the
+assessment model to produce abundance indices, which can faciliate transitioning
+tuna assessments from MULTIFAN-CL to other software. However, the DTU Movement
+Model could conceivably be extended considerably in the future, to become a full
+stock assessment model.
 
-As a spatio-temporal model operating at a high resolution, it keeps track of key
-quantities such as M and F at each location. Thus, it already contains key
-elements of a population model, if processes such as recruitment and fitting to
-length composition data could be added. It is worth noting that the wider DTU
-team is responsible for designing and implementing the latest generation of
-models used in current European stock assessments, such as SAM and SPiCT. This
-means that their current speculations about extending the Movement Model to
-become a full assessment model should be taken seriously and might become highly
-relevant for future tuna assessments. Unlike existing stock assessments, this
-would be a statistical framework that incorporates movement and environmental
-covariates at a fine scale, rather than modelling bulk movement between very
-large rectangular regions as is done in today's tuna assessments.
+As a spatio-temporal model operating at a high resolution, it currently keeps
+track of key quantities such as M and F at each location. Thus, it already
+contains key elements of a population model, if processes such as recruitment
+and fitting to length composition data could be added. It is worth noting that
+the wider DTU team is responsible for designing and implementing the latest
+generation of models used in current European stock assessments, such as SAM and
+SPiCT. This means that their current speculations about extending the Movement
+Model to become a full assessment model should be taken seriously and might
+become highly relevant for future tuna assessments. Unlike existing stock
+assessments, this would be a statistical framework that incorporates movement,
+environmental variables, and other processes at a fine scale, rather than the
+somewhat arbitrary and very large rectangular regions used in today's tuna
+assessments.
 
 A preliminary outcome of the current scoping project is to recommend funding the
 DTU team to design and develop the considerable extensions required to convert
@@ -839,17 +876,17 @@ more likely that the resulting software would have the design focus and features
 that directly address the requirements of WCPFC tuna assessments.
 
 As of mid 2025, it is too early to lay out a precise work plan and budget for
-the development of a spatio-temporal full assessment model. The RTMB package
-currently under development is now close to having the core features of the
-basic movement model in place, a required first step before work can start to
-potentially extend the model. The SC21 meeting is an opportune time to discuss
-the possible prioritization and funding of this work stream that can be launched
-in 2026, a software development project focusing on a spatio-temporal full
-assessment model. For this reason, we suggest that a small informal working
-group could be convened by the SC to discuss the potential scope, deliverables,
-timeline, resources, and draft TORs for this work stream, which has the
-potential to lead to the development of stock assessment software to be used in
-future tuna assessments.
+the development of a spatio-temporal full assessment model. However, the latest
+development version of the R package is now close to having all the basic
+features of the Movement Model in place, which will complete the core foundation
+before work can start to potentially extend the model. The SC21 meeting is an
+opportune time to discuss the possible prioritization and funding of this work
+stream that can be launched in 2026, a software development project focusing on
+a spatio-temporal full assessment model. For this reason, we suggest that a
+small informal working group could be convened by the SC to discuss the
+potential scope, deliverables, timeline, resources, and TORs for this work
+stream, which has the potential to lead to the development of stock assessment
+software to be used in future tuna assessments.
 
 The development work on a spatio-temporal full assessment model would be carried
 out by the team of statisticians at the Technical University of Denmark, based
