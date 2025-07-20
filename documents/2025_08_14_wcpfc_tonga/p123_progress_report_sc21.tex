@@ -113,16 +113,17 @@ development support capacity, so as to avoid the current situation we are facing
 with MFCL. Wider collaboration in this venture is essential to achieving this
 and is expected to be encouraged through this project.
 
+\newpage
+
 \section{Progress against TOR items}
 
 \subsection{2024 (second half)}
 
-Below are terms of reference that were established at SC20 to start working on
-in the second half of 2024.
+Below are terms of reference 1--9 that were established at SC20.
 
-\subsubsection{TOR 1. Review and identify a list of necessary features for software to
-  do tuna stock assessments and identify existing software platforms that have
-  these features or capacity to develop these.}
+\subsubsection{TOR 1. Review and identify a list of necessary features for
+  software to do tuna stock assessments and identify existing software platforms
+  that have these features or capacity to develop these.}
 
 \vspace{2ex}
 
@@ -160,7 +161,7 @@ lists these features:
   \item Automatic production of diagnostic statistics
 \end{itemize}
 
-\vspace{2ex}
+\newpage
 
 The summary table in Punt et al. (2020) adds the following features:
 
@@ -184,7 +185,7 @@ The summary table in Punt et al. (2020) adds the following features:
   \item Allow time-varying processes, both in biology and fishing processes
 \end{itemize}
 
-\vspace{1.5ex}
+\vspace{2ex}
 
 Further in the text, Punt et al. (2020) add the following features:
 
@@ -201,7 +202,7 @@ Further in the text, Punt et al. (2020) add the following features:
   time-varying movement
 \end{itemize}
 
-\vspace{2ex}
+\newpage
 
 \textbf{International Expert Meeting 2024}
 
@@ -222,6 +223,8 @@ especially relevant in tuna assessments:
   \item Estimate growth curve using otolith data\\[-4.5ex]
   \item Utilize tag-recapture growth increment to estimate growth
 \end{itemize}
+
+\vspace{1ex}
 
 \textit{Specifics}
 
@@ -261,7 +264,7 @@ especially relevant in tuna assessments:
   \item Computation time
 \end{itemize}
 
-\vspace{3ex}
+\newpage
 
 \textbf{Conclusion}
 
@@ -289,7 +292,7 @@ assessment report.
 
 The conclusion of this scoping project is that the critical softure requirements
 for the WCPFC tuna and billfish assessments are best encapsulated in three
-general criteria:\\[-4ex]
+general criteria:
 
 \begin{enumerate}
   \item \textit{Scientific quality}. The software should have good statistical
@@ -306,8 +309,8 @@ general criteria:\\[-4ex]
   start working with the stock assessment software within their first twelve
   months of contract. To make this feasible, the software user interface and
   auxiliary tools should allow new staff scientists to have a good understanding
-  of the configuration of model options and the ability to work efficiently with
-  the model.
+  of the configuration of model options and be able to work efficiently with the
+  model.
   \item \textit{Widely used}. SPC does not want to use stock assessment software
   in isolation. The software should have a large development team and user
   community beyond SPC. This will mean that new staff scientists can find expert
@@ -327,19 +330,20 @@ general criteria:\\[-4ex]
 
 Stock Synthesis (SS3) is used in tuna assessments by the IATTC, IOTC, and ICCAT.
 Compared to MFCL, SS3 has a less sophisticated statistical method to analyze
-tagging data, which is especially relevant for the WCPO skipjack assessment. The
-SS3 development team does not plan to add new major features such as the ability
-to incorporate CKMR data, which is especially relevant for future South Pacific
-albacore assessment. On the other hand, the increasing use of SS3 at SPC has had
-a marked positive impact on collaboration between the tRFMOs, which is relevant
-for the discussion, development, and tests of future software. The use of SS3
-also shortens the training time for new SPC stock assessors and makes their
-skills and experience more transferable between workplaces. SS3 assessments
-allow closer comparisons of assessments conducted across RFMOs and ISC. The
-large SS3 user community is relevant for seeking expert insights, discussing
-technical model decisions, and for peer reviews. It also comes with an
-exceptionally complete suite of tools useful for diagnostics, as well as
-automated plots and tables for assessment reports.
+tagging data, which requires the scientist to convert length-at-release to
+age-at-release outside the model. This is especially relevant for the WCPO
+skipjack assessment. The SS3 development team does not plan to add new major
+features such as the ability to incorporate CKMR data, which is especially
+relevant for future South Pacific albacore assessment. On the other hand, the
+increasing use of SS3 at SPC has had a marked positive impact on collaboration
+between the tRFMOs, which is relevant for the discussion, development, and tests
+of future software. The use of SS3 also shortens the training time for new SPC
+stock assessors and makes their skills and experience more transferable between
+workplaces. SS3 assessments allow closer comparisons of assessments conducted
+across RFMOs and ISC. The large SS3 user community is relevant for seeking
+expert insights, discussing technical model decisions, and for peer reviews. It
+also comes with an exceptionally complete suite of tools useful for diagnostics,
+as well as automated plots and tables for assessment reports.
 
 Stock Synthesis scores particularly high in two key criteria: the ability of new
 staff scientists to use it effectively and the worldwide user community,
@@ -349,7 +353,7 @@ including tuna RFMOs.
 
 \textbf{Gadget}
 
-\vspace{-0.5ex}
+\vspace{-1ex}
 
 Gadget 3 is the latest version of Gadget stock assessment platform, implemented
 in TMB. It is an age-length structured platform and the implementation of this
@@ -368,7 +372,7 @@ with time and/or between regions.
 
 \textbf{SBT}
 
-\vspace{-0.5ex}
+\vspace{-1ex}
 
 The SBT software is used in the assessment of southern bluefin tuna by CCSBT.
 The software is implemented as an R package based on RTMB and stands out as the
@@ -385,14 +389,39 @@ assessment.
 
 \vspace{1ex}
 
+\textbf{FIMS}
+
+\vspace{-1ex}
+
+Fisheries Integrated Modeling System (FIMS) is a NOAA project that coordinates
+the development of a next-generation framework of stock assessment models based
+on TMB. The initial FIMS development and case studies have focused on models
+fitting to age composition data, but the design includes the ability to fit to
+length composition data. Spatially explicit models and tagging data are
+currently not high priorities for the FIMS project. However, FIMS aims to
+provide a modular and flexible design paradigm, allowing scientists to choose
+and link together code modules to produce a stock assessment model that is
+tailored for a particular assessment. For the purposes of tuna assessments, it
+might be possible to design and develop specific code modules to link with the
+FIMS core modules. Such tuna modules could potentially provide a variety of
+features, adding basic model extensions and/or introducing underlying changes in
+the model structure.
+
+FIMS is at a relatively early stage of development, but it scores high for its
+potential to become a mainstream stock assessment software. It seems likely that
+many U.S. stock assessments using Stock Synthesis today will migrate to FIMS in
+the future.
+
+\vspace{1ex}
+
 \textbf{Other}
 
-\vspace{-0.5ex}
+\vspace{-1ex}
 
 Casal 2 is the latest version of the Casal stock assessment platform, rewritten
 with an improved design and user interface. Casal has a wide range of features
-that would be useful for tuna assessments. However, its strengths and features
-fall slightly short of Gadget for the purposes of this scoping project.
+relevant for tuna assessments. However, its strengths and features fall slightly
+short of Gadget 3 for the purposes of this scoping project.
 
 \subsubsection{TOR 2. Conduct two workshops with selected experts from other
   tuna RFMOs and/or with relevant expertise. The first workshop can be remote
@@ -456,30 +485,41 @@ fall slightly short of Gadget for the purposes of this scoping project.
 
 \section{Recommendation of project activities}
 
+Note that the time indicated in the following plan is the time a task is
+started. In some cases, a task will take more than one time step to complete.
+
 \subsection{2025 (second half)}
 
-FIMS workshop to explore the technical procedures and programming interface
-involved in producing FIMS modules
+\subsubsection{TOR 10. Organize FIMS workshop to explore the technical
+  procedures and programming interface involved in producing FIMS modules}
 
-Summarize tRFMO discussion
+\subsubsection{TOR 11. Support DTU analysis of WCPO skipjack tagging data}
 
-Support DTU analysis of WCPO skipjack tagging data
+\subsubsection{TOR 12. Summarize tuna RFMO feedback from scoping project
+  questionnaire}
 
-Develop Gadget model for single-area yellowfin dataset
+\subsubsection{TOR 13. Develop Gadget model for single-area yellowfin dataset}
 
-Develop Stock Synthesis model for single-area yellowfin dataset
+\subsubsection{TOR 14. Explore the possibility of using the SBT model code as a
+  starting point for developing new software for the South Pacific albacore
+  assessment}
 
 \subsection{2026 (first half)}
 
-Prepare project proposal for development of DTU spatio-temporal full assessment
-model
+\subsubsection{TOR 15. Organize a workshop reviewing approaches and techniques
+  used in Stock Synthesis tuna assessment models}
 
-Prepare project proposal for development of tuna-specific FIMS modules
+\subsubsection{TOR 16. Develop Stock Synthesis model for single-area yellowfin
+  dataset}
 
-Prepare outline of simulation analysis that could be conducted to test the
-importance of explicit age-length structure
+\subsubsection{TOR 17. Prepare project proposal for development of DTU
+  spatio-temporal full assessment model}
 
-Complete full scoping project report
+\subsubsection{TOR 18. Prepare project proposal for development of tuna-specific
+  FIMS modules}
+
+\subsubsection{TOR 19. Prepare outline of simulation analysis that could be
+  conducted to test the importance of explicit age-length structure}
 
 \section{Updated project diagram}
 
