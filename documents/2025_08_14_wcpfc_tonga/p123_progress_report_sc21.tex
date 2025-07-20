@@ -17,6 +17,7 @@
   Software:\\Progress Report (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
 \reportdate{17 July 2025}
+\setlength\hyphenpenalty{2000}
 \setlength\tolerance{2000}
 \hyphenation{}
 \begin{document}
@@ -75,9 +76,365 @@ We invite SC21 to:
 
 \section{Background}
 
+Following the retirement of the lead developer of MULTIFAN-CL (MFCL), Dave
+Fournier, future advances to the MFCL software are not expected to be as
+mathematically innovative as they were in the past. While this does not render
+MFCL obsolete in the medium-term, it flags the need to plan and identify whether
+alternative existing software exists, or new software must be developed in the
+longer-term, to continue to support the specificities and future requirements of
+WCPFC tuna stock assessments.
+
+While MFCL (Fournier et al. 1998) continues to be improved to service the WCPFC
+tuna assessment needs over at least the next 5+ years, it is important to start
+on a phased approach to its replacement. An initial scoping phase is required to
+assess what features and capabilities will be important in future assessment
+software for tunas. This scoping phase will benefit from input from stock
+assessment scientists across global tuna RFMOs. Once this scoping phase is
+conducted, consideration of available software packages in relation to the
+desired features and capabilities can be conducted. This may identify suitable
+existing software that has potential to provide the desired features and/or has
+potential to be developed further. Alternatively, it may indicate whether
+embarking on development of a new software package is recommended.
+
+There has also been discussion around the need to explore, through
+modeling/simulation exercises, the benefits of applying alternative assessment
+structures (i.e., length-age structured versus the traditional length-based
+age-structured approach of MFCL and Stock Synthesis) before embarking on major
+software developments or changing methodology. Similar can be said about
+exploring benefits of state-space models and their use of random variables.
+Simulation exercises to explore the benefits or drawbacks of alternative model
+structures or approaches will also require collaboration across tuna RFMOs and
+practitioners experienced in using the alternative approaches and/or software.
+
+An important outcome of this work would be to ultimately have a software package
+that has the desired functionality for tuna assessments, not only for WCPFC but
+also for other tuna RFMOs, thus creating a user community and ongoing
+development support capacity, so as to avoid the current situation we are facing
+with MFCL. Wider collaboration in this venture is essential to achieving this
+and is expected to be encouraged through this project.
+
 \section{Progress against TOR items}
 
 \subsection{2024 (second half)}
+
+Below are terms of reference that were established at SC20 to start working on
+in the second half of 2024.
+
+\subsubsection{TOR 1. Review and identify a list of necessary features for software to
+  do tuna stock assessments and identify existing software platforms that have
+  these features or capacity to develop these.}
+
+\vspace{2ex}
+
+\textbf{i. Review of necessary software features}
+
+\vspace{2ex}
+
+\textbf{CAPAM 2019}
+
+\vspace{1ex}
+
+The CAPAM 2019 Workshop on Next Generation Assessment Models produced a review
+paper (Punt et al. 2020) that identifies a number of model features considered
+important in future stock assessment software. The abstract of the review paper
+lists these features:
+
+\begin{itemize}
+  \item Ability to to capture age and size dynamics simultaneously yet
+  computationally efficiently, while also offering the option to run a model as
+  purely age-structured for a simple and fast model
+  \item Scale from data-rich to data-poor
+  \item Include some multispecies capability
+  \item More appropriately deal with temporal variation, e.g., random effects
+  and state-space models
+  \item Better handling of tagging data, e.g., release-conditioned or
+  recapture-conditioned model
+  \item Ability to use close-kin mark-recapture data
+  \item Efficient methods to share parameter priors among stocks, borrowing
+  information from similar stocks where more data have been collected
+  \item Training programs and documentation
+  \item Data entry system that is well documented
+  \item Does not require specification of inputs that will not be used in an
+  application
+  \item Expert system to configure default settings based on best practices
+  \item Automatic production of diagnostic statistics
+\end{itemize}
+
+\vspace{2ex}
+
+The summary table in Punt et al. (2020) adds the following features:
+
+\begin{itemize}
+  \item Spatial structure
+  \item Multiple fisheries and surveys
+  \item Flexible parametrization of the initial conditions
+  \item Multiple time steps within a year
+  \item Flexible parametrization of growth
+  \item Flexible parametrization of natural mortality
+  \item Flexible parametrization of fecundity
+  \item Flexible parametrization of movement
+  \item Multiple recruitment functional forms, including nonparametric
+  \item Selectivity as a function of age, size, or both
+  \item Multiple selectivity functional forms, including dome-shaped and
+  asymptotic
+  \item Incorporation of ageing error
+  \item Ability to simulate datasets for management strategy evaluation
+  \item Prefer statistically based likelihood weighting over subjective choices
+  \item Ability to evaluate uncertainty using a variety of statistical methods
+  \item Allow time-varying processes, both in biology and fishing processes
+\end{itemize}
+
+\vspace{1.5ex}
+
+Further in the text, Punt et al. (2020) add the following features:
+
+\begin{itemize}
+  \item Allow for density-dependence at the spatial area level, as well as at
+  the stock level
+  \item Allow for nesting of spatial scales such that a population model can
+  appropriately utilize data types collected at fine scale and coarse spatial
+  resolutions
+  \item Allow for multiple movement types including advection, diffusion, and
+  that movement responds to environmental drivers
+  \item Account for multiple hypotheses regarding movement, including age- and
+  sex-specific processes processes, as well as density-dependent and
+  time-varying movement
+\end{itemize}
+
+\vspace{2ex}
+
+\textbf{International Expert Meeting 2024}
+
+At the launch of this scoping project in 2024, an international expert meeting
+was held in two sessions. As a background for the meeting discussion, the
+conveners (Magnusson and Davies 2024) highlighted model features that can be
+especially relevant in tuna assessments:
+
+\vspace{1ex}
+
+\textit{Incorporating data}
+
+\begin{itemize}
+  \item Fit to length comps\\[-4.5ex]
+  \item Fit to weight comps\\[-4.5ex]
+  \item Fit to tagging data\\[-4.5ex]
+  \item Fit to CKMR data\\[-4.5ex]
+  \item Estimate growth curve using otolith data\\[-4.5ex]
+  \item Utilize tag-recapture growth increment to estimate growth
+\end{itemize}
+
+\textit{Specifics}
+
+\begin{itemize}
+  \item Age-specific M\\[-4.5ex]
+  \item Length-specific selectivity\\[-4.5ex]
+  \item Sex-specific growth and M\\[-4.5ex]
+  \item Region-specific growth
+\end{itemize}
+
+\vspace{1ex}
+
+\textit{Dimensions}
+
+\begin{itemize}
+  \item Explicit regions with movement\\[-4.5ex]
+  \item Tracking age and length in population\\[-4.5ex]
+  \item Time steps within a year
+\end{itemize}
+
+\vspace{1ex}
+
+\textit{Ecology}
+
+\begin{itemize}
+  \item Multispecies interactions\\[-4.5ex]
+  \item Climate change
+\end{itemize}
+
+\vspace{1ex}
+
+\textit{Implementation}
+
+\begin{itemize}
+  \item Random effects, state space\\[-4.5ex]
+  \item Parallel computing\\[-4.5ex]
+  \item Computation time
+\end{itemize}
+
+\vspace{3ex}
+
+\textbf{Conclusion}
+
+As reflected in the software features identified at CAPAM 2019 and the
+International Expert Meeting in 2024, there is a multitude of wish list options
+for technical features in stock assessment software. No software will provide
+all of these features, and the relative importance of individual features will
+vary between stocks. For example:
+
+\begin{itemize}
+  \item The South Pacific albacore stock assessment will require the ability to
+  incorporate close-kin mark-recapture (CKMR) data.
+  \item The Western and Central Pacific Ocean (WCPO) skipjack stock assessment
+  relies heavily on tagging data and should therefore employ the
+  state-of-the-art statistical techniques for analyzing tagging data that are
+  available at any time.
+\end{itemize}
+
+The best choice of a software platform for a given stock assessment will not
+only depend on the precise features provided by each software, but also how well
+each software allows the stock assessment team to work effectively to explore
+and develop models to produce a high-quality assessment in the time frame
+between the availability of data and the SC deadline for submitting the
+assessment report.
+
+The conclusion of this scoping project is that the critical softure requirements
+for the WCPFC tuna and billfish assessments are best encapsulated in three
+general criteria:
+
+\begin{enumerate}
+  \item \textit{Scientific quality}. The software should have good statistical
+  performance, demonstrating a low level of estimation bias in self-test
+  simulations. It should make good use of available data, incorporating all
+  relevant information in a statistically sound manner. It should also allow
+  spatial and temporal variability in processes relating to the biology and the
+  fishery dynamics. The software should be computationally efficient and produce
+  a fitted model within too many hours, thus allowing a full exploration of a
+  variety of model options in the short stock assessment time frame. Finally,
+  the software should support the provision of scientific advice that matches
+  the needs for the management of each stock.
+  \item \textit{Beginner friendly}. New staff scientists are often asked to
+  start working with the stock assessment software within their first twelve
+  months of contract. To make this feasible, the software user interface and
+  auxiliary tools should allow new staff scientists to have a good understanding
+  of the configuration of model options and the ability to work efficiently with
+  the model.
+  \item \textit{Widely used}. SPC does not want to use stock assessment software
+  in isolation. The software should have a large development team and user
+  community beyond SPC. This will mean that new staff scientists can find expert
+  help outside of SPC. Feature-complete tools for working with model input and
+  output will be maintained outside of SPC. By adopting widely used stock
+  assessment software, external reviewers will have a good understanding of
+  model configurations and options.
+\end{enumerate}
+
+\vspace{2ex}
+
+\textbf{ii. Review existing software}
+
+\vspace{1ex}
+
+\textbf{Stock Synthesis}
+
+Stock Synthesis (SS3) is used in tuna assessments by the IATTC, IOTC, and ICCAT.
+Compared to MFCL, SS3 has a less sophisticated statistical method to analyze
+tagging data, which is especially relevant for the WCPO skipjack assessment. The
+SS3 development team does not plan to add new major features such as the ability
+to incorporate CKMR data, which is especially relevant for the South Pacific
+albacore assessment. On the other hand, the increasing use of SS3 at SPC has had
+a marked positive impact on collaboration between the tRFMOs, which is relevant
+for the discussion, development, and tests of future software. The use of SS3
+also shortens the training time for new SPC stock assessors and makes their
+skills and experience more transferable between workplaces. SS3 assessments
+allow closer comparisons of assessments conducted across RFMOs and ISC. The
+large SS3 user community is relevant for seeking expert insights, discussing
+technical model decisions, and for peer reviews. It also comes with an
+exceptionally complete suite of tools useful for diagnostics, as well as
+automated plots and tables for assessment reports.
+
+\vspace{1ex}
+
+\textbf{Gadget}
+
+Gadget 3 is the latest version of Gadget stock assessment platform, implemented
+in TMB. It is an age-length structured platform and the implementation of this
+software in TMB has resulted in a significant performance gain in terms of
+computational time, and opens the option of incorporating time-varying processes
+using random effects. Gadget has a wide range of features relevant for tuna
+assessments and a plan is underway to to test the use of Gadget on SPC example
+tuna datasets.
+
+\vspace{1ex}
+
+\textbf{sbt}
+
+Used in the assessment of southern bluefin tuna by CCSBT. This package,
+implemented in RTMB, stands out as the primary stock assessment software that is
+built around close-kin mark-recapture (CKMR) which is a new and important data
+type in upcoming SPC tuna assessments. The \textsf{sbt} R package is designed
+for a single-region assessment and would require some additional development to
+be used for a multiregion assessment. A possible avenue of collaborative
+development is to explore the possibility of adding multiregion functionality to
+the software.
+
+\subsection{Other}
+
+\begin{itemize}
+  \item Casal 2 is the latest version of the Casal stock assessment platform,
+  rewritten with an improved design and user interface. Casal has a wide range
+  of features relevant for tuna assessments and a possible avenue of
+  collaborative development is to test the use of Casal for a tuna assessment.
+  \item Stock Synthesis $\!+\!$ CKMR is an experimental add-on to Stock
+  Synthesis (A.E. Punt, pers. comm), adding CKMR as a data type in Stock
+  Synthesis. This was successful as a proof of concept, but it is unlikely to be
+  added to the core software.
+  \item ALSCL is a recent model (Zhang and Cadigan 2022) that has two important
+  features: state-space formulation and age-length structure. It is implemented
+  in TMB, but the software currently fits only to survey data and does not
+  include commercial catches or fleets. A possible avenue of collaborative
+  development is to explore the ability of this model to analyze a simplified
+  tuna dataset. This would provide insights into the dynamics of fitting
+  state-space age-length models in general and also be a first step before
+  considering extensions to the model further, see ALSCL $\!+\!$ Fleets below.
+\end{itemize}
+
+\section{Evaluation of software in early development}
+\label{sec:software-early-development}
+
+\subsection{FIMS}
+
+Fisheries Integrated Modeling System (FIMS) is a NOAA project that coordinates
+the development of a next-generation framework of stock assessment models based
+on TMB. So far, model development within FIMS has focused on models fitting to
+age data. It is not clear at this point whether the FIMS project will lead to
+stock assessment software that can be used in tuna assessments, but given the
+considerable resources and collaborative nature of the project, SPC will
+communicate and interact with the FIMS project to share development progress and
+ideas.
+
+\subsection{DTU Movement Model}
+
+\subsection{Other}
+
+\begin{itemize}
+  \item WHAM $\!+\!$ Length is a recent software development (Correa et al.
+  2023) extending the state-space stock assessment software WHAM (Stock and
+  Miller 2021) to fit to length data. A possible avenue of collaborative
+  development is to experiment with fitting the WHAM $\!+\!$ Length model to an
+  SPC tuna assessment dataset.
+  \item ALSCL $\!+\!$ Fleets is a potential software development extending the
+  ALSCL model to address the primary shortcomings of the current ALSCL model as
+  candidate software for tuna stock assessments. A possible avenue of
+  collaborative development is to explore the possibility of adding commercial
+  catches and fleets as software features.
+\end{itemize}
+
+
+
+\begin{enumerate}
+  \item Conduct two workshops with selected experts from other tuna RFMOs and/or
+  with relevant expertise. The first workshop can be remote (prior to SC20) and
+  the second one potentially in person (post SC20). The main goal will be to
+  communicate the scoping project, upcoming model explorations, and succession
+  plans for MFCL and Stock Synthesis, to seek advice from the scientific
+  community, and to seek collaboration with tRFMOs and various research labs.
+  \item Explore the new RTMB programming environment and how it could be used in
+  future tuna assessments. Specifically, how to modularize and organize code in
+  RTMB models, on one hand code that is specific to one assessment and on the
+  other hand code that is shared between assessments.
+  \item Establish collaboration with NOAA scientists to explore the feasibility
+  of enhancing the tagging module in Stock Synthesis, making it more similar to
+  the tagging module in MFCL.
+\end{enumerate}
 
 \subsection{2025 (first half)}
 
