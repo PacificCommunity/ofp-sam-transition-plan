@@ -5,10 +5,14 @@
 \usepackage{float}
 \captionsetup{font=small}
 \setcounter{tocdepth}{2}
-\newcommand\github
+% GitHub commands
+\newcommand\blob
 {https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main}
+\newcommand\present{\blob/presentations}
+\newcommand\tree
+{https://github.com/PacificCommunity/ofp-sam-transition-plan/tree/main}
+% GitHub commands
 \newcommand\h[1]{\hspace{#1}}
-\newcommand\present{\github/presentations}
 \newcommand\I[1]{\rule{0pt}{#1}}
 \reporttype{SC21}
 \reportauthor{A.~Magnusson\footnote{\spc}, N.~Davies\footnote{TeTakina Ltd},
@@ -423,6 +427,8 @@ with an improved design and user interface. Casal has a wide range of features
 relevant for tuna assessments. However, its strengths and features fall slightly
 short of Gadget 3 for the purposes of this scoping project.
 
+\vspace{1ex}
+
 \subsubsection{TOR 2. Conduct two workshops with selected experts from other
   tuna RFMOs and/or with relevant expertise. The first workshop can be remote
   (prior to SC20) and the second one potentially in person (post SC20). The main
@@ -431,7 +437,111 @@ short of Gadget 3 for the purposes of this scoping project.
   scientific community, and to seek collaboration with tRFMOs and various
   research labs.}
 
-~
+\vspace{1ex}
+
+Two workshops were conducted in 2024.
+
+\vspace{1ex}
+
+\textbf{Workshop 2024 I: International Expert Meeting 2024}
+
+This remote workshop was held in two sessions on 13 May and 18 June 2024,
+inviting stock assessment and software development experts from around the
+world. Around 40 participants represented the tuna RFMOs (CCSBT, IATTC, ICCAT,
+IOTC, WCPFC), stock assessment software projects (ALSCL, CASAL, FIMS, Gadget,
+MFCL, SAM, sbt, Stock Synthesis, WHAM), and relevant programming environments
+(ADMB, TMB, RTMB). The objectives, format, and outcomes from this workshop were
+reviewed in the P123 progress report presented to SC20 in 2024.
+
+\vspace{1ex}
+
+\textbf{Workshop 2024 II: Project Strategy and Evaluation of Options}
+
+\vspace{1ex}
+
+This workshop was held 23--30 August in Matapouri, New Zealand, with two
+in-person participants Arni Magnusson and Nick Davies, reaching out to Chris
+Cahill and Lisa Chong (Michigan State University), and Jeremy McKenzie (NZ). The
+work session was dynamic and did not follow a strict predefined schedule, but we
+visited the following focus topics in our discussions, explorations, and written
+deliverables:
+
+\vspace{1ex}
+
+\textit{Friday 23 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] SC20 outcomes and the general direction of the scoping
+  project\\[-4.5ex]
+  \item[] Topics and tasks to prioritize in the following week\\[-2.5ex]
+\end{itemize}
+
+\textit{Monday 26 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] Age-length structure, potential importance in stock
+  assessments\\[-4.5ex]
+  \item[] Gadget as the main platform using age-length structure, now written in
+  TMB\\[-4.5ex]
+  \item[] MFCL tagging module, each release group becomes a parallel
+  population\\[-2.5ex]
+\end{itemize}
+
+\textit{Tuesday 27 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] Simulation study, examining the importance of age-length
+  structure\\[-4.5ex]
+  \item[] Operating model implementation, online meeting with Jeremy McKenzie
+  (NZ)\\[-4.5ex]
+  \item[] Required resources and timeline for a simulation study\\[-2.5ex]
+\end{itemize}
+
+\textit{Wednesday 28 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] Needs and options for future SPC tuna and billfish
+  assessments\\[-4.5ex]
+  \item[] Multi-criteria decision making: scientific quality, beginner friendly,
+  widely used\\[-4.5ex]
+  \item[] FIMS could be the only option that can score high in all
+  criteria\\[-4.5ex]
+  \item[] Tuna RFMOs could collaborate and contribute tuna modules to
+  FIMS\\[-4.5ex]
+  \item[] RTMB is a new and interesting paradigm, but both FIMS and Gadget use
+  TMB\\[-2.5ex]
+\end{itemize}
+
+\textit{Thursday 29 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] Sparse matrix calculations, Matrix package, TMB, RTMB\\[-4.5ex]
+  \item[] Parallel computations, OpenMP library\\[-4.5ex]
+  \item[] RTMB code design, modularity, maintenance, reusing code in different
+  assessments\\[-2.5ex]
+\end{itemize}
+
+\textit{Friday 30 August}\\[-4ex]
+
+\begin{itemize}
+  \item[] RTMB code design, stock assessment applications from Michigan State
+  University\\[-4.5ex]
+  \item[] Wrap-up and write-up
+\end{itemize}
+
+Conclusions from the Matapouri workshop served as a basis for evaluating the
+necessary software features and existing software (TOR 1).
+
+In particular, identifying the three general criteria for selecting stock
+assessment software (scientific quality, beginner friendly, widely used) made it
+clear that the choice of software is a case of multi-criteria decision making,
+where it may not be possible to optimize all three criteria.
+
+The workshop notes and report are available on the scoping project
+\href{\tree/workshops/2024-08-matapouri}{website}, along with analytical scripts
+and results.
+
+\vspace{1ex}
 
 \subsubsection{TOR 3. Explore the new RTMB programming environment and how it
   could be used in future tuna assessments. Specifically, how to modularize and
