@@ -593,7 +593,7 @@ special wrapper to pass a data object to the model. This subject was raised on
 the package discussion board in 2024 and resolved with a documented example
 added to the package vignette later that same year.
 
-\vspace{1ex}
+\vspace{0.5ex}
 
 \textit{CRAN package}
 
@@ -607,7 +607,7 @@ from five functional forms (von Bertalanffy, Richards, Gompertz, Schnute Case 3,
 growth cessation), with each functional form offered using alternative
 parametrizations.
 
-\vspace{1ex}
+\vspace{0.5ex}
 
 \textit{Linking packages}
 
@@ -632,13 +632,37 @@ modules that can be linked with FIMS core modules. The expectation is that
 contributing and linking code modules is more difficult in the FIMS/TMB paradigm
 than in RTMB, but hopefully not much more difficult.
 
-\vspace{1ex}
+\vspace{0ex}
 
 \subsubsection{TOR 4. Establish collaboration with NOAA scientists to explore
   the feasibility of enhancing the tagging module in Stock Synthesis, making it
   more similar to the tagging module in MFCL.}
 
-~
+\vspace{0.5ex}
+
+To pursue this TOR, the scoping project reached out to Nicholas Ducharme-Barth
+(NOAA PIFSC) and Mark Maunder (IATTC), while also studying the MFCL code for
+analyzing tag releases and recaptures. The initial findings were that the
+tagging `module' in MFCL is not an independent component that is easily
+extracted from the code, but is meshed in the overall design of MFCL.
+
+The way tagging data are handled in MFCL is that each release group produces a
+parallel population, so when there are multiple tag releases year after year,
+the model keeps track of a growing number of parallel populations. After a
+certain number of years following a tag release, the release group enters a
+pooled population of old releases, thus avoiding the need to track an
+unnecessarily large number of parallel populations.
+
+More detailed commentary on the tagging module in MFCL can be found in the
+\href{\blob/workshops/2024-08-matapouri/notes/day1.md}{day1.md} notes from the
+2024 Matapouri workshop. The conclusion was that enhancing Stock Synthesis to
+apply the same statistical method would probably be a major undertaking.
+
+In discussions related to this TOR, Mark Maunder suggested that IATTC has
+recently had good success analyzing the tagging data externally, rather than
+inside the stock assessment model. See \hyperlink{link:tagging-index}{TOR 10}.
+
+\vspace{1ex}
 
 \subsection{2025 (first half)}
 
@@ -665,6 +689,8 @@ than in RTMB, but hopefully not much more difficult.
 
 ~
 
+\newpage
+
 \subsubsection{TOR 8. Communicate with tuna RFMOs and other research labs to
   establish which RFMOs and labs are willing and able to commit scientist time
   to collaborate on specific tasks of the scoping project, as well as the
@@ -679,9 +705,12 @@ than in RTMB, but hopefully not much more difficult.
 
 ~
 
+\hypertarget{link:tagging-index}{}
 \subsubsection{TOR 10. Organize an SPC-DTU workshop to establish a collaborative
   research project, using a spatio-temporal model to analyze tagging data
   outside the stock assessment model}
+
+~
 
 \section{Recommendation of project activities}
 
