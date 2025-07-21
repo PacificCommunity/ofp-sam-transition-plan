@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{caption}
 \usepackage{float}
+\usepackage{hyperref}
 \captionsetup{font=small}
 \setcounter{tocdepth}{2}
 % GitHub commands
@@ -12,6 +13,7 @@
 \newcommand\tree
 {https://github.com/PacificCommunity/ofp-sam-transition-plan/tree/main}
 % GitHub commands
+\newcommand\cpp{\mbox{C\raisebox{0.5ex}{\tiny\bfseries ++}}}
 \newcommand\h[1]{\hspace{#1}}
 \newcommand\I[1]{\rule{0pt}{#1}}
 \reporttype{SC21}
@@ -548,7 +550,89 @@ and results.
   organize code in RTMB models, on one hand code that is specific to one
   assessment and on the other hand code that is shared between assessments.}
 
-~
+\vspace{1ex}
+
+An initial evaluation of how RTMB code can be modularized and organized was
+conducted as part of the 2024 Matapouri workshop, where scientists at Michigan
+State University shared their recent reorganization of RTMB stock assessment
+case studies.
+
+The RTMB evaluation was resumed in December 2024, as part of a WCPO skipjack
+growth study, converting TMB scripts to RTMB scripts. Growth curve estimation
+using otoliths and tagging data is a simpler analysis than a full stock
+assessment, but the workflow involves the same types of code:
+
+\begin{enumerate}
+  \item Model source code\\[-4.5ex]
+  \item Code to prepare data in the model-specific format\\[-4.5ex]
+  \item Code to specify model options\\[-4.5ex]
+  \item Code to run model\\[-4.5ex]
+  \item Code to read the results into tables
+\end{enumerate}
+
+In TMB, the separation is very clear, with the model source code written in a
+\cpp\ file, while other code is organized in one or more R scripts.
+
+In RTMB, the separation can be less clear, since the model source code is
+written in R. The examples that come with the RTMB package make a point of
+interweaving the model source code with other code. This is effective for
+demonstrating how much simpler the model source code is in RTMB than in TMB, but
+for developing and maintaining larger models it is useful to maintain a modular
+design with a clear division between the general model source code and the
+specific application.
+
+In the skipjack growth study, three tiers of modular organization were tested
+and evaluated. In the first tier, all code was interwoven in one script. In the
+second tier, the model source code was saved in a separate R file and sourced
+into the script. In the third tier, the model source code was encapsulated in an
+R package that is now a general method for any species, thus completely
+separating the model from the specific skipjack growth study.
+
+Developing a general model in RTMB requires a workaround in the form of a
+special wrapper to pass a data object to the model. This subject was raised on
+the package discussion board in 2024 and resolved with a documented example
+added to the package vignette later that same year.
+
+\vspace{1ex}
+
+\textit{CRAN package}
+
+\vspace{-1ex}
+
+Having developed a general tool to estimate growth curves, it was decided to
+share the \textsf{fishgrowth} package with the wider scientific community in
+February 2025 by releasing it on CRAN (Magnusson and Maunder 2025). The package
+allows scientists to fit growth curves to otoliths and/or tagging data, choosing
+from five functional forms (von Bertalanffy, Richards, Gompertz, Schnute Case 3,
+growth cessation), with each functional form offered using alternative
+parametrizations.
+
+\vspace{1ex}
+
+\textit{Linking packages}
+
+\vspace{-1ex}
+
+As a follow-up to explore the ability to link RTMB packages, an additional
+package \textsf{linear} was also implemented, adding one more functional form of
+a growth model, different from the ones provided by the \textsf{fishgrowth}
+package. In this experiment, we first add the \textsf{linear} package as a
+dependency to the \textsf{fishgrowth} package and then create a new function
+called \texttt{experiment()} inside \textsf{fishgrowth} that calls the
+\textsf{linear} functional form. In short, the contributed growth curve was
+fitted successfully and the integration between the two modules was seamless.
+
+The outcome of this experiment was to demonstrate that it is trivially easy to
+contribute additional functionality to an existing RTMB package. This experiment
+is analogous to contributing a tuna-specific code module to link with FIMS core
+packages, except FIMS is currently based on TMB rather than RTMB. The scoping
+project is currently reaching out to collaborate with FIMS to explore the
+technical procedures and programming interface involved in producing code
+modules that can be linked with FIMS core modules. The expectation is that
+contributing and linking code modules is more difficult in the FIMS/TMB paradigm
+than in RTMB, but hopefully not much more difficult.
+
+\vspace{1ex}
 
 \subsubsection{TOR 4. Establish collaboration with NOAA scientists to explore
   the feasibility of enhancing the tagging module in Stock Synthesis, making it
@@ -593,6 +677,12 @@ and results.
   code modules, with the aim to develop future tuna assessment models using FIMS
   modules.}
 
+~
+
+\subsubsection{TOR 10. Organize an SPC-DTU workshop to establish a collaborative
+  research project, using a spatio-temporal model to analyze tagging data
+  outside the stock assessment model}
+
 \section{Recommendation of project activities}
 
 Note that the time indicated in the following plan is the time a task is
@@ -600,39 +690,66 @@ started. In some cases, a task will take more than one time step to complete.
 
 \subsection{2025 (second half)}
 
-\subsubsection{TOR 10. Organize FIMS workshop to explore the technical
+\subsubsection{TOR 11. Organize FIMS workshop to explore the technical
   procedures and programming interface involved in producing FIMS modules}
 
-\subsubsection{TOR 11. Support DTU analysis of WCPO skipjack tagging data}
+\subsubsection{TOR 12. Support DTU analysis of WCPO skipjack tagging data}
 
-\subsubsection{TOR 12. Summarize tuna RFMO feedback from scoping project
+\subsubsection{TOR 13. Summarize tuna RFMO feedback from scoping project
   questionnaire}
 
-\subsubsection{TOR 13. Develop Gadget model for single-area yellowfin dataset}
+\subsubsection{TOR 14. Develop Gadget model for single-area yellowfin dataset}
 
-\subsubsection{TOR 14. Explore the possibility of using the SBT model code as a
+\subsubsection{TOR 15. Explore the possibility of using the SBT model code as a
   starting point for developing new software for the South Pacific albacore
   assessment}
 
 \subsection{2026 (first half)}
 
-\subsubsection{TOR 15. Organize a workshop reviewing approaches and techniques
+Note that the time indicated in the following plan is the time a task is
+started. In some cases, a task will take more than one time step to complete.
+
+\subsubsection{TOR 16. Organize a workshop reviewing approaches and techniques
   used in Stock Synthesis tuna assessment models}
 
-\subsubsection{TOR 16. Develop Stock Synthesis model for single-area yellowfin
+\subsubsection{TOR 17. Develop Stock Synthesis model for single-area yellowfin
   dataset}
 
-\subsubsection{TOR 17. Prepare project proposal for development of DTU
+\subsubsection{TOR 18. Prepare project proposal for development of DTU
   spatio-temporal full assessment model}
 
-\subsubsection{TOR 18. Prepare project proposal for development of tuna-specific
+\subsubsection{TOR 19. Prepare project proposal for development of tuna-specific
   FIMS modules}
 
-\subsubsection{TOR 19. Prepare outline of simulation analysis that could be
+\subsubsection{TOR 20. Prepare outline of simulation analysis that could be
   conducted to test the importance of explicit age-length structure}
 
 \section{Updated project diagram}
 
 \section{Note to SC}
+
+\section{References}
+
+\sloppy\setlength\hyphenpenalty{1000}
+
+\begin{description}\setlength\itemsep{0ex}
+  \item Fournier, D.A., J. Hampton, and J.R. Sibert. 1998. MULTIFAN-CL: A
+  length-based, age-structured model for fisheries stock assessment, with
+  application to South Pacific albacore, \textit{Thunnus alalunga}. Can. J.
+  Fish. Aquat. Sci. 55:2105--2116.
+  \item Magnusson, A. and M. Maunder. 2025. fishgrowth: Fit growth curves to
+  fish data.\linebreak \href{https://doi.org/10.32614/CRAN.package.fishgrowth}
+  {doi: 10.32614/CRAN.package.fishgrowth}
+  \item Magnusson, A. and N. Davies. 2024b. Scoping the next stock assessment
+  platform, stage I:\linebreak Reaching out to tuna RFMOs and the scientific
+  community. Presented at the SPC international expert meeting, 13 May and 18
+  June 2024. 31 pp.
+  \href{\present/2024_05_13_experts_scoping/2024_05_13_experts_scoping.pdf}
+  {Available online}.
+  \item Punt, A.E., A. Dunn, B.Þ. Elvarsson, J. Hampton, S.D. Hoyle, M.N.
+  Maunder, R.D. Methot, and A. Nielsen. 2020. Essential features of the
+  next-generation integrated fisheries stock assessment package: A perspective.
+  Fish. Res. 229:105617.
+\end{description}
 
 \end{document}
