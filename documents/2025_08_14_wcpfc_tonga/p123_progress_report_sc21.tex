@@ -9,6 +9,7 @@
 % GitHub commands
 \newcommand\blob
 {https://github.com/PacificCommunity/ofp-sam-transition-plan/blob/main}
+\newcommand\ofpsam{https://github.com/PacificCommunity/ofp-sam}
 \newcommand\present{\blob/presentations}
 \newcommand\tree
 {https://github.com/PacificCommunity/ofp-sam-transition-plan/tree/main}
@@ -789,6 +790,42 @@ assessments.
 
 \vspace{2ex}
 
+Work on this TOR involves a few steps:
+
+\begin{enumerate}
+  \item Prepare a single-region yellowfin tuna (YFT) dataset\\[-4ex]
+  \item Develop a MULTIFAN-CL model to fit to the single-region YFT
+  dataset\\[-4ex]
+  \item Develop models based on other software for comparison
+\end{enumerate}
+
+The first step was relatively straightforward. The only difference between the
+original five-region dataset and the simplified single-region dataset is that
+the five CPUE indices are combined into a single index. The original dataset is
+available online on the \href{\ofpsam-yft-2023-diagnostic}{yft-2023-diagnostic}
+repository, both in \href{\ofpsam-yft-2023-diagnostic/tree/main/MFCL}{MFCL} and
+\href{\ofpsam-yft-2023-diagnostic/tree/main/TAF/data}{TAF} format. The
+single-area CPUE index is available on the
+\href{\ofpsam-yft-2025-single-region/blob/main/data/cpue/cpue_quarter.csv}
+{yft-2025-single-region} repository.
+
+The second step is presented in \autoref{sec:yft-mfcl}. The model was developed
+using MFCL having no spatial stratification (a single region), while retaining
+the original fisheries definitions for the 32 capture fisheries, and their
+fishery-specific input data structures. Instead of the five region-specific
+survey fisheries for which CPUE indices were available, the simplified model
+defined a single survey fishery representative of the entire model domain. The
+simplified model was fitted and achieved convergence, and a comparison with the
+original multi-region model is included in the Appendix.
+
+The third step will require a considerable amount of work and establishing a
+collaboration with a team of scientists who are domain experts in the use of a
+particular stock assessment software. Which software will be included in
+upcoming tests and comparisons will depend on prioritization by SC and the
+members of the scoping project, as well as the availability and interest of
+international colleagues. See the proposed Gadget model development
+(\autoref{sec:yft-gadget}).
+
 ~
 
 \vspace{2ex}
@@ -848,7 +885,7 @@ analyze tagging data outside the stock assessment model.
 
 \section{Recommendation of project activities}
 
-\subsection{SPC-FIMS workshop to explore linking modules}
+\subsection{SPC-FIMS workshop to explore linking FIMS modules}
 \label{sec:fims-workshop}
 
 Organize FIMS workshop to explore the technical procedures and programming
@@ -857,6 +894,7 @@ interface involved in producing FIMS modules.
 \subsection{Support DTU analysis of WCPO skipjack tagging data}
 
 \subsection{Develop Gadget model for single-area yellowfin dataset}
+\label{sec:yft-gadget}
 
 \subsection{Explore the possibility of using the SBT model code}
 
@@ -899,5 +937,283 @@ used in Stock Synthesis tuna assessment models
   next-generation integrated fisheries stock assessment package: A perspective.
   Fish. Res. 229:105617.
 \end{description}
+
+\newpage
+
+\appendix
+
+\section{Appendix: Single-region YFT2023 model}
+\label{sec:yft-mfcl}
+
+\vspace{1ex}
+
+Nick Davies\\
+1 July 2025
+
+\vspace{1ex}
+
+\subsection*{Summary}
+
+As part of the P123 project ``Scoping the next Stock Assessment software'', a
+step includes the preparation of a simplified tuna stock assessment model and
+input data set. This report presents the preliminary results of this step using
+the yellowfin tuna stock assessment model as was developed in 2023. The original
+model was spatially stratified into 5 defined regions. A simplified version was
+developed using MULTIFAN-CL having no spatial stratification (a single region),
+while retaining the original fisheries definitions for the 32 capture fisheries,
+and their fishery-specific input data structures. Instead of the five
+region-specific survey fisheries for which CPUE indices were available, the
+simplified model defined a single survey fishery representative of the entire
+model domain. The simplified model was fitted and achieved convergence, and a
+comparison with the original multi-region model is presented here.
+
+\vspace{1ex}
+
+\subsection*{Method}
+
+The existing YFT2023 diagnostic case model that employs the catch-conditioned
+method was used for preparing the input data, and to demonstrate the application
+of MULTIFAN-CL to a spatially unstratified tuna data set.
+
+\vspace{1ex}
+
+\textit{De-stratification of the model spatial configuration and observations}
+
+The input files that specify the spatial stratification, recruitment and
+movement parameterisations (*.ini and *.frq) were duly modified to define a
+single region with no movement diffusion coefficients or spatial recruitments.
+All fisheries and all tagging release events were defined to occur in the same
+single region. All other fishery-specific observations (size compositions,
+catch, effort, conditional age-length data) for the capture fisheries (1 to 32)
+were retained without modification; as these fisheries were re-defined as
+occurring in the single region. A single standardized CPUE time series was
+available for the survey fisheries combined over all 5 regions, and was taken as
+being representative of the entire model domain, i.e., a single-region index.
+Similarly, the size composition data among all five survey fisheries were
+aggregated into a single data set. This single survey fishery (33) was defined
+as such for the simplified model. Estimates of temporal precision for the CPUE
+indices were available, allowing a concentrated CPUE likelihood to be estimated
+for the simplified model.
+
+The initial MULTIFAN-CL -makepar operation was completed, and the
+resultant 00.par file structure was assessed for correctly excluding all spatial
+stratification or movement parameterisation. All phases of the doitall
+minimization that originally included spatial parameter estimation, were
+modified to de-activate the estimation of these parameters. The phase 1
+operation was successfully completed, and then all subsequent phases of the
+minimization run to convergence.
+
+The models included in this comparison were:
+
+\begin{small}
+  \begin{tabular}{ll}
+    mult\_regs             & - original YFT2023 diagnostic case model, having
+                             multiple (5) regional strata\\[1ex]
+    sngl\_reg\_cpue1       & - simplified single-region model, employs
+                             non-concentrated CPUE likelihood\\[1ex]
+    sngl\_reg\_conc\_cpue1 & - simplified single-region model, employs
+                             concentrated CPUE likelihood\\[1ex]
+  \end{tabular}
+\end{small}
+
+\vspace{1ex}
+
+\subsection*{Results}
+
+Both the single-region models produced stable minimisations with converged
+solutions obtained (maximum gradients $\sim$2.0e-04). Whereas the
+multi-region model produced a positive definite Hessian (PDH) solution, neither
+of the single-region models were PDH solutions (Table 1).
+
+In respect of the size-composition data, comparable fits to the
+length-frequencies were obtained among the models, but markedly worse
+weight-frequency fits were obtained for the single-region models (21\% worse
+negative-log likelihood) (Table 1). Similarly, worse fits were obtained to the
+tagging data (9.6\% worse negative-log likelihood). Slightly better (1.1\%) fits
+were obtained to the conditional age-length data by the single-region models.
+There was negligible difference in the fit to the CPUE indices among the
+single-region models (Figure 8), with that using the concentrated likelihood
+differing only slightly in respect of the indices in the early time periods for
+which temporal precision was low.
+
+There were notable differences in the recruitment and natural mortality
+estimates of the single-region models compared to the multi-region model.
+Absolute recruitments were approximately 50\% lower in all time periods (Figure
+2), but with similar temporal variation. The Lorenzen natural mortality function
+was lower overall by on average approximately 10\%, which accorded lower
+mortality, particularly for age classes $<$ 12 quarters (Figure 5). In contrast,
+the growth function was almost identical (Figure 4). A number of the estimated
+selectivity-at-age functions were more dome-shaped, or with lower right-hand
+limbs (Figure 6).
+
+Despite these differences in model fit to the observations and estimated
+parameters, overall absolute biomass was generally similar among the multi- and
+single-region models (Figure 1), and showed similar temporal variation.
+Noticeable differences were however evident in the recent periods (the past 15
+years), with absolute total biomass of the single-region models being 23\% lower
+(Table 1). Despite this similarity, the estimated depletion of adult biomass is
+at a 35\% lower level compared to the multi-region model (Table 1 and Figure 7).
+Equilibrium quantities also differed, with MSY being 9.5\% lower, and unfished
+total biomass (B0) being 8.6\% higher (Table 1).
+
+These differences in the model derived variables can be attributed to the
+various parameter estimates that differ among the multi- and single-region
+models. It seems surprising that a model having substantially lower productivity
+(50\% of the recruitments), yet sustains the equivalent total removals and
+produces a comparable absolute abundance, with only 10\% lower equilibrium
+yield. Notably, the lower Lorenzen natural mortality over all age classes
+substantially reduces the total mortality; hence, B0 is higher. The more
+dome-shaped selectivities and being lower for older age classes, reduces fishing
+mortality for the older age classes and allows for ``cryptic'' biomass, and
+increases MSY. Also, the spatial dynamics of the multi-region model in respect
+of recruitment, movement and fishing mortality on sub-populations may increase
+the overall fishing mortality estimates. Whereas, the fishing mortality of all
+fisheries acting upon a single population serves to exclude the effects of high
+impacts on sub-populations.
+
+The combined effects of the above parameter differences can accord higher
+resilience of the single-region model to fishing mortality. However, the lower
+natural mortality rate contributes to greater estimated depletion, indicating
+the relative fishing impact is higher. A closer examination of the estimated
+adult depletion within the equatorial regions of the multi-region model (regions
+2, 3 and 4) reveals substantial regional differences, with that of region 2
+being very similar to the estimated level of the single-region models. This
+might indicate a dominant effect of the region 2 observations upon the
+single-region model estimates.
+
+\newpage
+
+\section*{Tables and Figures}
+
+\begin{small}
+  Table A.1. Comparison of selected model parameters, negative log-likelihood
+  terms and derived quantities,\\[-1ex]
+  for the multi-region (mult\_regs) and single-region models (sngl\_reg\_cpue1,
+  sngl\_reg\_conc\_cpue1).
+\end{small}
+
+\begin{footnotesize}
+  \begin{tabular}{lrrrrr}
+    \hline
+    Model quantity
+    & mult\_regs
+    & sngl\_reg\_cpue1
+    & sngl\_reg\_conc\_cpue1
+    & \%diff\_nonconc
+    & \%diff\_conc\\
+    \hline
+    MSY & 169700 & 153500 & 153600 & -9.55 & -9.49\\
+    Ccurr.MSY & 4.224 & 4.665 & 4.662 & 10.44 & 10.37\\
+    Fmsy & 0.073 & 0.060 & 0.060 & -18.08 & -18.08\\
+    Fmult & 1.676 & 1.209 & 1.206 & -27.86 & -28.04\\
+    Fcurr.Fmsy & 0.597 & 0.827 & 0.829 & 38.63 & 38.97\\
+    B0 & 8510000 & 9241000 & 9244000 & 8.59 & 8.63\\
+    Bmsy & 2336000 & 2580000 & 2581000 & 10.45 & 10.49\\
+    Bcurr & 4648625 & 3587013 & 3577813 & -22.84 & -23.04\\
+    SB0 & 5347000 & 6573000 & 6576000 & 22.93 & 22.98\\
+    SBmsy & 1072000 & 1440000 & 1440000 & 34.33 & 34.33\\
+    SBcurr & 2404755 & 1996569 & 1991219 & -16.97 & -17.20\\
+    Bcurr.Bmsy & 1.990 & 1.390 & 1.386 & -30.13 & -30.34\\
+    SBcurr.SBmsy & 2.243 & 1.387 & 1.383 & -38.19 & -38.36\\
+    SBcurr.SBcurrF0 & 0.454 & 0.296 & 0.295 & -34.92 & -35.08\\
+    SBlatest.SBlatestF0 & 0.429 & 0.292 & 0.291 & -31.95 & -32.15\\
+    obj\_bhsteep & 0.311 & 0.415 & 0.415 & 33.51 & 33.31\\
+    obj\_lencomp & -154969.914 & -153345.580 & -153345.611 & -1.05 & -1.05\\
+    obj\_wtcomp & -610342.171 & -483274.416 & -483273.668 & -20.82 & -20.82\\
+    obj\_tagdata & 13217.201 & 14479.783 & 14479.435 & 9.55 & 9.55\\
+    obj\_agelngdata & 2480.443 & 2452.738 & 2452.727 & -1.12 & -1.12\\
+    obj\_cpue & -1157.645 & -314.031 & -313.991 & -72.87 & -72.88\\
+    Obj & -750515.800 & -619859.458 & -619858.965 & -17.41 & -17.41\\
+    No. parameters & 1901 & 445 & 445 & -76.59 & -76.59\\
+    gradient & 0.0001268 & 0.0001774 & 0.0001527 & 39.90 & 20.46\\
+    Lmin & 19.800 & 19.800 & 19.800 & 0.00 & 0.00\\
+    Lmax & 141.958 & 141.924 & 141.923 & -0.02 & -0.02\\
+    K & 0.132 & 0.132 & 0.132 & 0.03 & 0.03\\
+    PDH & Yes & No & No & - & -\\
+    \hline
+  \end{tabular}
+\end{footnotesize}
+
+\newpage
+
+\small
+
+\includegraphics[width=0.58\textwidth]{yft_biomass}
+
+Figure A.1. Comparison of adult biomass between the multi-region (mult\_regs)
+and\\[-0.8ex]
+single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\includegraphics[width=0.58\textwidth]{yft_recruitment}
+
+Figure A.2. Comparison of estimated absolute recruitment between the
+multi-region (mult\_regs) and\\[-0.8ex]
+single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\includegraphics[width=0.58\textwidth]{yft_growth}
+
+Figure A.4. Comparison of estimated von Bertalanffy growth between the
+multi-region (mult\_regs) and\\[-0.8ex]
+single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\includegraphics[width=0.58\textwidth]{yft_natmort}
+
+Figure A.5. Comparison of estimated Lorenzen natural mortality functions between
+the\\[-0.8ex]
+multi-region (mult\_regs) and single-region (sngl\_reg\_cpue1,
+sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\newpage
+
+\includegraphics[width=\textwidth]{yft_selectivity}\\[1ex]
+
+Figure A.6. Comparison of estimated selectivity-at-age between the multi-region
+(mult\_regs, histograms)\\[-0.8ex]
+and single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1, red and green
+lines) models.
+
+\vspace{1ex}
+
+\includegraphics[width=0.58\textwidth]{yft_depletion_structure}
+
+Figure A.7. Comparison of estimated spawning biomass depletion between the
+multi-region (mult\_regs) and\\[-0.8ex]
+single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\includegraphics[width=0.58\textwidth]{yft_depletion_regions}
+
+Figure A.8. Comparison of estimated spawning biomass depletion between\\[-0.8ex]
+component regions of the multi-region model (Region 2, Region 3, Region
+4)\\[-0.8ex]
+and single-region (sngl\_reg\_cpue1, sngl\_reg\_conc\_cpue1) models.
+
+\vspace{1ex}
+
+\includegraphics[width=11cm]{yft_cpue}\\[1ex]
+
+Figure A.9. Comparison of the fit to the observed CPUE indices between the
+single-region models employing\\[-0.8ex]
+the non-concentrated (sngl\_reg\_cpue1), and
+concentrated (sngl\_reg\_conc\_cpue1) likelihood formulations.\\[-0.8ex]
+Vertical dashed lines are the index + or - CV.
+
+\vspace{1ex}
+
+\includegraphics[width=11cm]{yft_map}\\[1ex]
+
+The geographical area covered by the stock assessment and the
+boundaries of the model regions\\[-0.8ex]
+for the 5 region structure that was used for 2023 WCPO yellowfin tuna
+assessment.
 
 \end{document}
