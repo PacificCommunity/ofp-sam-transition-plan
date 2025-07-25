@@ -499,8 +499,8 @@ the model structure.
 
 FIMS is at a relatively early stage of development, but it scores high for its
 potential to become the foundation of mainstream stock assessment software. It
-seems likely that many stock assessments using Stock Synthesis today will
-migrate to FIMS in the future.
+is possible that many stock assessments using Stock Synthesis today will migrate
+to FIMS software in the future.
 
 \vspace{1ex}
 
@@ -846,19 +846,21 @@ international colleagues. See the proposed Gadget model development
 
 \vspace{2ex}
 
-The scoping project has identified two streams of development work that could
+The scoping project has identified three streams of development work that could
 produce software to use in future WCPFC tuna and billfish assessments:
 
-\begin{itemize}
-  \item DTU spatio-temporal full assessment model\\[-4.5ex]
-  \item FIMS tuna-specific modules
-\end{itemize}
+\begin{enumerate}
+  \item DTU spatio-temporal model\\[-4.5ex]
+  \item FIMS tuna-specific modules\\[-4.5ex]
+  \item IATTC designed tuna model
+\end{enumerate}
 
-As of mid 2025, both of these software projects are at an early stage, for the
-purposes of conducting tuna assessments. The scoping project recommends for the
-work period from August 2025 to August 2026 that SPC strengthen the partnerships
-with both DTU and the FIMS project, and prepare a software development project
-proposal involving these two streams of work.
+As of mid 2025, the first two of these software projects are under development,
+while the third model is a current design concept. All three have the potential
+to be used in future tuna stock assessments. The scoping project recommends for
+the work period from August 2025 to August 2026 that SPC work with DTU, FIMS,
+and IATTC to evaluate and examine the options further, as the scoping project
+works towards a development project proposal.
 
 Discussion at SC21 will focus on the scientific value, uncertainties, and
 practical aspects of this upcoming development work, as it relates to future
@@ -872,37 +874,16 @@ would allow:
 \begin{itemize}
   \item \$50,000 per year for workshops and smaller development subprojects, in
   the same manner as the current scoping project; and
-  \item \$150,000 per year to divide between the development of a DTU
-  spatio-temporal full assessment model and tuna-specific FIMS modules.
-\end{itemize}
-
-\subsubsection{DTU spatio-temporal full assessment model}
-\label{sec:dtu-development-project}
-
-\vspace{1ex}
-
-\textit{Tagging model vs. full assessment model}
-
-It is important to clarify the difference between two distinct but related
-models:
-
-\begin{itemize}
-  \item The DTU \emph{tagging model}, a spatio-temporal model to analyze tagging
-  data. This model is already operational, although it is currently being
-  rewritten as an RTMB package. It has been applied to analyze EPO skipjack
-  tagging data to produce abundance indices, and a similar analysis is underway
-  for WCPO skipjack tuna. The current paradigm is that the resulting abundance
-  indices are then incorporated in a separate (not DTU) stock assessment model
-  as a later step.
-  \item The DTU \emph{full assessment model}, a design concept building on the
-  current tagging model. Extending the current spatio-temporal model to become a
-  full stock assessment model would involve adding features and extensions to
-  fit to length composition data, estimate recruitment, etc. This could produce
-  a next-generation model for tuna assessments, but the design and development
-  will require time and resources.
+  \item \$150,000 per year to divide between the development options that will
+  be prioritized.
 \end{itemize}
 
 \vspace{2ex}
+
+\subsubsection{DTU spatio-temporal model}
+\label{sec:dtu-development-project}
+
+\vspace{1ex}
 
 \textit{Background}
 
@@ -924,79 +905,85 @@ The package is based on a newer RTMB framework and will be intended for general
 use to analyze animal migrations of aquatic and terrestrial animals, as well as
 birds.
 
-As of mid 2025, the R package providing the DTU tagging model is under
+As of mid 2025, the R package providing the DTU spatio-temporal model is under
 development. It can estimate preference functions that determine the effect of
 environmental variables on fish movement (\autoref{fig:dtu-prototype}), but it
 does not yet have the capability to produce the abundance indices. The
-completion of the core features in the tagging model software will be relevant
-for the possible follow-up development project described below.
+completion of the core features in the model software will be relevant for the
+possible follow-up development project described below.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{dtu_prototype}
-  \caption{Snapshot of the DTU tagging model analyzing a small subset of the
-    WCPO skipjack tagging data.\label{fig:dtu-prototype}}
+  \caption{Snapshot of the DTU spatio-temporal model analyzing a small subset of
+    the WCPO skipjack tagging data.\label{fig:dtu-prototype}}
 \end{figure}
 
 \vspace{2ex}
 
-\textit{Development of a DTU full assessment model}
+\textit{Enhancing and extending the DTU spatio-temporal model}
 
-During the 2025 SPC-DTU workshop in Copenhagen, the DTU team raised the
-following important point. For the purposes of tuna assessments, the DTU
-spatio-temporal model can currently serve as a useful tool for analyzing tagging
-data externally from the assessment model to produce abundance indices, which
-can faciliate transitioning tuna assessments from MULTIFAN-CL to other software.
-However, the DTU spatio-temporal model could conceivably be extended
-considerably in the future, to become a full stock assessment model.
+For the purposes of tuna assessments, the DTU spatio-temporal model currently
+serves as a useful tool for analyzing tagging data externally from the
+assessment model to produce abundance indices, which can faciliate transitioning
+tuna assessments from MULTIFAN-CL to other software.
 
-As a spatio-temporal model operating at a fine spatial scale, it currently keeps
-track of key quantities such as natural and fishing mortalities at each
-location. Thus, it already contains key elements of a population model, if
-processes such as recruitment and fitting to length composition data could be
-added. It is worth noting that the wider DTU team is responsible for designing
-and implementing the latest generation of models used in current European stock
-assessments, such as SAM and SPiCT. This means that their current speculations
-about extending the spatio-temporal model to become a full assessment model
-should be taken seriously and might become highly relevant for future tuna
-assessments. Unlike existing stock assessments, this would be a statistical
-framework that incorporates movement, environmental variables, and other
-processes at a fine scale, rather than the somewhat arbitrary and very large
-rectangular regions used in today's tuna assessments.
+When the earlier results from the IATTC-DTU analysis of EPO skipjack tagging
+data were presented and reviewed at the SPC-DTU 2025 workshop in Copenhagen, it
+was identified that improvements can still be made in the methodology. Areas
+that could be enhanced involve the use of effort data and the application of the
+Lincoln-Petersen mark-recapture estimator. During the initial exploration of
+fitting the spatio-temporal model to WCPO skipjack tags, it was also apparent
+that further development would be required to run the analysis using parallel
+computing, given the very large WCPO skipjack tagging dataset. Tagging data are
+known to be particularly influential in the WCPO skipjack assessment, which
+makes it important to ensure that the best available statistical methods are
+used to produce the resulting abundance indices.
+
+Another development direction worth exploring is that the DTU spatio-temporal
+model could conceivably be extended considerably in the future, to become a full
+stock assessment model. This design concept was outlined by the DTU team at the
+2025 workshop in Copenhagen. As a spatio-temporal model operating at a fine
+spatial scale, it currently keeps track of key quantities such as natural and
+fishing mortalities at each location. Thus, it already contains many elements of
+a stock assessment model, if processes such as recruitment and fitting to length
+composition data could be added. It is worth noting that the wider DTU team is
+responsible for designing and implementing the latest generation of models used
+in current European stock assessments, such as SAM and SPiCT. This means that
+their current speculations about extending the spatio-temporal model to become a
+full assessment model should be taken seriously and might become highly relevant
+for future tuna assessments. Unlike existing stock assessments, this would be a
+statistical framework that incorporates movement, environmental variables, and
+other processes at a fine scale, rather than the somewhat arbitrary and very
+large rectangular regions used in today's tuna assessments.
 
 A preliminary outcome of the current scoping project is to recommend funding the
-DTU team to design and develop the considerable extensions required to convert
-the current spatio-temporal movement model into a full stock assessment model.
-WCPFC funding of DTU research efforts into this new domain in fisheries science
-would make it more likely that operational stock assessment software would be
-successfully developed. Secondly, funding and collaboration would make it more
-likely that the resulting software would have the design focus and features that
-directly address the requirements of WCPFC tuna assessments.
+DTU team to enhance features and explore extensions of the spatio-temporal
+model, as described above. WCPFC funding of DTU research efforts into this new
+domain in fisheries science would make it more likely that operational stock
+assessment software would be successfully developed. Secondly, funding and
+collaboration would make it more likely that the resulting software would have
+the design focus and features that directly address the requirements of WCPFC
+tuna assessments.
 
-As of mid 2025, it is too early to lay out a precise work plan for the
-development of a spatio-temporal full assessment model. However, the latest
-development version of the R package is now close to having all the basic
-features of the tagging model in place, which will complete the core foundation
-before work can start to potentially extend the model. The SC21 meeting is an
-opportune time to discuss the possible prioritization and funding of this work
-stream that can be formalized in 2026, a software development project focusing
-on a spatio-temporal full assessment model. For this reason, we suggest that a
+As of mid 2025, it is too early to lay out a precise work plan for enhancing and
+extending of the spatio-temporal model. However, the latest development version
+of the R package is now close to having all the basic features of the model in
+place, which will complete the core foundation before work can start to further
+enhance and explore extensions of the model. The SC21 meeting is an opportune
+time to discuss the possible prioritization and funding of this work stream that
+can be formalized in 2026, a software development project focusing on enhancing
+and extending the spatio-temporal model. For this reason, we suggest that a
 small informal working group could be convened by the SC to discuss the
 potential scope, deliverables, timeline, and resources for this work stream,
 which has the potential to develop next-generation stock assessment software to
 be used in future tuna assessments.
 
-As an important by-product, this development work would look at further
-refinements of the statistical methods used to produce abundance indices from
-the external analysis of tagging data. The methodology is currently operational,
-but the IATTC-DTU research collaboration has identified that improvements could
-still be made.
+The development work on enhancing and extending the spatio-temporal model would
+be carried out by the team of statisticians at the Technical University of
+Denmark, based in Copenhagen.
 
-The development work on a spatio-temporal full assessment model would be carried
-out by the team of statisticians at the Technical University of Denmark, based
-in Copenhagen.
-
-\vspace{1ex}
+\vspace{2ex}
 
 \subsubsection{FIMS tuna-specific modules}
 \label{sec:fims-development-project}
@@ -1016,7 +1003,7 @@ specific code modules to link with the FIMS core modules. Such tuna modules
 could potentially provide a variety of features, adding basic model extensions
 and/or introducing fundamental changes in the model structure.
 
-\vspace{2ex}
+\newpage
 
 \textit{Development of tuna-specific FIMS modules}
 
@@ -1059,6 +1046,66 @@ consultant, working at SPC headquarters or remotely.
 
 \newpage
 
+\subsubsection{IATTC designed tuna model}
+
+The scoping project has regularly reached out to experts in tuna stock
+assessments to discuss development options for future tuna stock assessment
+software. In a recent discussion, Mark Maunder (IATTC) shared his perspective
+that there is a need for a new general model that can be applied in tuna stock
+assessments. In his words, there are structural design issues to be considered,
+such as:
+
+\begin{itemize}
+  \item Spatial structure (e.g., fine scale spatio-temporal models)\\[-4ex]
+  \item Length based dynamics\\[-4ex]
+  \item Random effects\\[-4ex]
+  \item Tagging data\\[-4ex]
+  \item Close kin mark-recapture\\[-4ex]
+  \item Multi-species
+\end{itemize}
+
+\vspace{2ex}
+
+In his view, if he was asked to design a new model for tuna assessments today,
+this is what he would probably do:
+
+\begin{itemize}
+  \item Large block spatial structure\\[-4ex]
+  \item No length based dynamics\\[-4ex]
+  \item Include random effects\\[-4ex]
+  \item No tagging data\\[-4ex]
+  \item Hopefully close kin mark-recapture can be added later easily\\[-4ex]
+  \item No multi-species
+\end{itemize}
+
+\vspace{2ex}
+
+This outline of a model design seems like an achievable model to implement, with
+a high probability of success. For the purposes of this scoping project, an
+initial evaluation of this model highlights the following key benefits:
+
+\begin{itemize}
+  \item New codebase in RTMB that will be relatively small, easy to modify and
+  extend\\[-4ex]
+  \item Keeping it simple, just focusing on the priority needs of tuna
+  assessments\\[-4ex]
+  \item Random effects, useful for allowing processes to vary in time and
+  possibly between regions
+\end{itemize}
+
+\vspace{2ex}
+
+The design reflects the new paradigm adopted by IATTC to analyze tags using
+spatio-temporal analysis outside the assessment model. Given the growing
+importance of the ability to incorporate CKMR data in tuna assessments, a
+development project would take into account that this important model capability
+would be added as the next milestone after achieving the core functionality
+listed above. It is worth noting that the SBT stock assessment model that
+incorporates CKMR data started off as a model without this feature, which was
+added later (Rich Hillary, pers. comm.).
+
+\newpage
+
 \subsubsection{Adaptive plan}
 
 \textit{Uncertainty and risks}
@@ -1082,7 +1129,12 @@ uncertainty and risks:
   architecture that results in slower progress and lower levels of code
   contributions than anticipated. A possible outcome could be that FIMS software
   will not be used in future tuna assessments.
+  \item The IATTC designed model resembles currently used models and has a lower
+  level of uncertainty and risk than the other development options. It seems
+  likely that this model could be used in future tuna assessments.
 \end{itemize}
+
+\vspace{1ex}
 
 The recommended strategy to succeed in the face of uncertainty is to be active
 and adaptive. Being active means investing resources into collaborative research
@@ -1109,6 +1161,8 @@ SPiCT, and the spatio-temporal model described above are only some of the
 examples where the DTU team has introduced new paradigms for how fisheries
 science is conducted.
 
+\newpage
+
 The DTU team benefits from internal access to each other within the workplace.
 For example, during their initial development of their spatio-temporal model,
 Tobias Mildenberger and Anders Nielsen realized that the design of TMB was
@@ -1123,16 +1177,20 @@ Albertsen, and Vanessa Trijoulet, with Anders Nielsen as the team coordinator.
 \textit{IATTC as our closest collaborator}
 
 The best outcome for SPC would be to use stock assessment software that is also
-used outside of SPC. In practical terms, the software used by other tuna RFMOs
-will be especially relevant for identifying the best software for the WCPFC tuna
-and billfish stock assessments. Among the tuna RFMOs, IATTC has a particularly
-high research and development capacity, and works closely with SPC on highly
-migratory stocks whose distribution often straddles the management boundaries
-between the WCPO and EPO. IATTC and SPC regularly participate in reviews
+used outside of SPC. In practical terms, the software used by other tRFMOs will
+be especially relevant for identifying the best software for the WCPFC tuna and
+billfish stock assessments. Among the tRFMOs, IATTC has a particularly high
+research and development capacity and has a long history working closely with
+SPC researching stocks whose distribution often straddles the management
+boundaries between the WCPO and EPO. IATTC and SPC regularly collaborate in peer
+reviews and workshops to share ideas, experiences, and new methods for tuna and
+billfish assessments.
+
+Given the benefits of using the same software as other tRFMOs, it seems sensible
+to coordinate, consult, and collaborate with IATTC when the time seems right to
+move a certain assessment from one software platform to another.
 
 \newpage
-
-aha
 
 \subsection{TOR work area 8 (2025)}
 
