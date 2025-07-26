@@ -1,6 +1,6 @@
 # IOTC response to scoping project questionnaire
 
-*Dan Fu, Genevieve Phillips*
+*Dan Fu and Genevieve Phillips*
 
 --------------------------------------------------------------------------------
 
