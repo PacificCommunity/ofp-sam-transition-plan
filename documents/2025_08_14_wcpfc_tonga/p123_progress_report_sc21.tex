@@ -23,7 +23,7 @@
 \reporttitle{Scoping the Next Generation of Tuna Stock Assessment
   Software:\\Progress Report (Project 123)}
 \reportnumber{\tpnum/SA-WP-01}
-\reportdate{24 July 2025}
+\reportdate{26 July 2025}
 \setlength\hyphenpenalty{2000}
 \setlength\tolerance{2000}
 \hyphenation{implementing}
@@ -76,7 +76,7 @@ We invite SC21 to:
   striped marlin, transitioned from MULTIFAN-CL to Stock Synthesis;
   \item review and comment on two suggested software development work streams,
   described in this report, providing feedback that will guide the preparation
-  of project proposals to be presented to SC22; and
+  of project proposal to be presented to SC22; and
   \item convene an ISWG to discuss the progress and develop activities and a TOR
   for the third year of Project 123.
 \end{itemize}
@@ -140,53 +140,64 @@ The project terms of reference established at SC20 are listed in
     \hline
     TOR & Description\\
     \hline
-    1 & Review and identify a list of necessary features for software to do tuna
-        stock assessments and identify existing software platforms that have
-        these features or capacity to develop these.\\
+    \hyperlink{link:tor-1}{1}
+        & Review and identify a list of necessary features for software to do
+          tuna stock assessments and identify existing software platforms that
+          have these features or capacity to develop these.\\
     \hline
-    2 & Conduct two workshops with selected experts from other tuna RFMOs and/or
-        with relevant expertise. The first workshop can be remote (prior to
-        SC20) and the second one potentially in person (post SC20). The main
-        goal will be to communicate the scoping project, upcoming model
-        explorations, and succession plans for MFCL and Stock Synthesis, to seek
-        advice from the scientific community, and to seek collaboration with
-        tRFMOs and various research labs.\\
+    \hyperlink{link:tor-2}{2}
+        & Conduct two workshops with selected experts from other tuna RFMOs
+          and/or with relevant expertise. The first workshop can be remote
+          (prior to SC20) and the second one potentially in person (post SC20).
+          The main goal will be to communicate the scoping project, upcoming
+          model explorations, and succession plans for MFCL and Stock Synthesis,
+          to seek advice from the scientific community, and to seek
+          collaboration with tRFMOs and various research labs.\\
     \hline
-    3 & Explore the new RTMB programming environment and how it could be used in
-        future tuna assessments. Specifically, how to modularize and organize
-        code in RTMB models, on one hand code that is specific to one assessment
-        and on the other hand code that is shared between assessments.\\
+    \hyperlink{link:tor-3}{3}
+        & Explore the new RTMB programming environment and how it could be used
+          in future tuna assessments. Specifically, how to modularize and
+          organize code in RTMB models, on one hand code that is specific to one
+          assessment and on the other hand code that is shared between
+          assessments.\\
     \hline
-    4 & Establish collaboration with NOAA scientists to explore the feasibility
-        of enhancing the tagging module in Stock Synthesis, making it more
-        similar to the tagging module in MFCL.\\
+    \hyperlink{link:tor-4}{4}
+        & Establish collaboration with NOAA scientists to explore the
+          feasibility of enhancing the tagging module in Stock Synthesis, making
+          it more similar to the tagging module in MFCL.\\
     \hline
-    5 & Provide support to the stock assessment team transitioning the 2025
-        swordfish assessment from MFCL to Stock Synthesis. Also, coordinate with
-        the 2024/2025 striped marlin assessment team to start preparing for the
-        transition of that assessment to Stock Synthesis in 2029.\\
+    \hyperlink{link:tor-5}{5}
+        & Provide support to the stock assessment team transitioning the 2025
+          swordfish assessment from MFCL to Stock Synthesis. Also, coordinate
+          with the 2024/2025 striped marlin assessment team to start preparing
+          for the transition of that assessment to Stock Synthesis in 2029.\\
     \hline
-    6 & Compare a variety of software platforms using a simplified single-region
-        WCPO yellowfin tuna dataset. The comparison will evaluate available
-        features, run time speed, auxiliary tools, time and skills required to
-        develop and diagnose models, and other characteristics.\\
+    \hyperlink{link:tor-6}{6}
+        & Compare a variety of software platforms using a simplified
+          single-region WCPO yellowfin tuna dataset. The comparison will
+          evaluate available features, run time speed, auxiliary tools, time and
+          skills required to develop and diagnose models, and other
+          characteristics.\\
     \hline
-    7 & Prepare alternative workplans and budget scenarios for the larger
-        implementing (main) project to go beyond scoping. The scoping project
-        will be expected to transition into the main implementing project based
-        on the discussions at SC21, budget considerations, and funding
-        availability. It is expected that the work leading up SC21 will inform
-        the implementing workplan options and budget estimations.\\
+    \hyperlink{link:tor-7}{7}
+        & Prepare alternative workplans and budget scenarios for the larger
+          implementing (main) project to go beyond scoping. The scoping project
+          will be expected to transition into the main implementing project
+          based on the discussions at SC21, budget considerations, and funding
+          availability. It is expected that the work leading up SC21 will inform
+          the implementing workplan options and budget estimations.\\
     \hline
-    8 & Communicate with tuna RFMOs and other research labs to establish which
-        RFMOs and labs are willing and able to commit scientist time to
-        collaborate on specific tasks of the scoping project, as well as the
-        upcoming main project.\\
+    \hyperlink{link:tor-8}{8}
+        & Communicate with tuna RFMOs and other research labs to establish which
+          RFMOs and labs are willing and able to commit scientist time to
+          collaborate on specific tasks of the scoping project, as well as the
+          upcoming main project.\\
     \hline
-    9 & Communicate with tuna RFMOs and the FIMS project team to evaluate
-        whether joint software development by tuna RFMOs could produce FIMS code
-        modules, with the aim to develop future tuna assessment models using
-        FIMS modules.\\
+    \hyperlink{link:tor-9}{9}
+        & Communicate with tuna RFMOs and the FIMS project team to evaluate
+          whether joint software development by tuna RFMOs could produce FIMS
+          code modules, with the aim to develop future tuna assessment models
+          using FIMS modules.\\
     \hline
   \end{tabular}
 \end{table}
@@ -201,7 +212,9 @@ established at SC20.
 
 \vspace{1ex}
 
+\hypertarget{link:tor-1}{}
 \subsection{TOR work area 1 (2024 second half)}
+\label{sec:tor-1}
 
 \begin{quote}\sf
   Review and identify a list of necessary features for software to do tuna stock
@@ -414,26 +427,28 @@ general criteria:
 \subsubsection{Evaluation of existing software}
 
 \textbf{Stock Synthesis}
+\label{sec:ss-software-evaluation}
 
 \vspace{-1ex}
 
 Stock Synthesis (SS3) is used in tuna assessments by the IATTC, IOTC, and ICCAT,
-as well as in WCPFC billfish assessments as of 2025.
-Compared to MFCL, SS3 has a less sophisticated statistical method to analyze
-tagging data, which requires the scientist to convert length-at-release to
-age-at-release outside the model. This is especially relevant for the WCPO
-skipjack assessment. The SS3 development team does not plan to add new major
-features such as the ability to incorporate CKMR data, which is especially
-relevant for future South Pacific albacore assessment. On the other hand, the
-increasing use of SS3 at SPC has had a marked positive impact on collaboration
-between the tRFMOs, which is relevant for the discussion, development, and tests
-of future software. The use of SS3 also shortens the training time for new SPC
-stock assessors and makes their skills and experience more transferable between
-workplaces. SS3 assessments allow closer comparisons of assessments conducted
-across RFMOs and ISC. The large SS3 user community is relevant for seeking
-expert insights, discussing technical model decisions, and for peer reviews. It
-also comes with an exceptionally complete suite of tools useful for diagnostics,
-as well as automated plots and tables for assessment reports.\\[-4.5ex]
+as well as in WCPFC billfish assessments as of 2025. Compared to MFCL, SS3 has a
+less sophisticated statistical method to analyze tagging data, which requires
+the scientist to convert length-at-release to age-at-release outside the model.
+This is especially relevant for the WCPO skipjack assessment. The SS3
+development team does not plan to add new major features such as the ability to
+incorporate CKMR data, which is especially relevant for future South Pacific
+albacore assessment. On the other hand, the increasing use of SS3 at SPC has had
+a marked positive impact on collaboration between the tRFMOs, which is relevant
+for the discussion, development, and tests of future software. The use of SS3
+also shortens the training time for new SPC stock assessors and makes their
+skills and experience more transferable between workplaces. SS3 assessments
+allow closer comparisons of assessments conducted across RFMOs and ISC. The
+large SS3 user community is relevant for seeking expert insights, discussing
+technical model decisions, and for peer reviews. It also comes with an
+exceptionally complete suite of tools useful for diagnostics, as well as
+automated plots and tables for assessment reports. See the proposed
+workshop on modeling techniques (\autoref{sec:ss-modeling-techniques})\\[-4.5ex]
 
 Stock Synthesis scores particularly high in two key criteria: the ability of new
 staff scientists to use it effectively and the worldwide user community,
@@ -442,6 +457,7 @@ including tuna RFMOs.
 \vspace{1ex}
 
 \textbf{Gadget}
+\label{sec:gadget-software-evaluation}
 
 \vspace{-1ex}
 
@@ -456,11 +472,13 @@ tuna datasets.\\[-4.5ex]
 Gadget scores particularly high for representing certain state-of-the art
 statistical methods of interest: explicit age-length structure and a TMB
 implementation that may allow the use of random effects to have processes vary
-with time and/or between regions.
+with time and/or between regions. See proposed analysis
+(\autoref{sec:yft-gadget}).
 
 \vspace{1ex}
 
 \textbf{SBT}
+\label{sbt-software-evaluation}
 
 \vspace{-1ex}
 
@@ -469,10 +487,11 @@ The software is implemented as an R package based on RTMB and stands out as the
 primary stock assessment software that is built around CKMR, a new and important
 data type in future South Pacific albacore assessments. The SBT package is
 designed for a single-region assessment and would require some additional
-development to be used for a multiregion assessment. This scoping project has
-reached out to the team of scientists inolved in the SBT assessment and will
+development to be used for a multiregion assessment. The scoping project has
+reached out to the team of scientists involved in the SBT assessment and will
 discuss further the possibility of using their model code as a starting point
-for developing new software for the South Pacific albacore assessment.\\[-4.5ex]
+for developing new software for the South Pacific albacore assessment. See the
+proposed SPC-CCSBT communication (\autoref{sec:sbt-model-code}).\\[-4.5ex]
 
 SBT scores particularly high for incorporating CKMR data in a tuna stock
 assessment.
@@ -480,6 +499,7 @@ assessment.
 \vspace{1ex}
 
 \textbf{FIMS}
+\label{sec:fims-software-evaluation}
 
 \vspace{-1ex}
 
@@ -515,7 +535,9 @@ short of Gadget 3 for the purposes of this scoping project.
 
 \vspace{2ex}
 
+\hypertarget{link:tor-2}{}
 \subsection{TOR work area 2 (2024 second half)}
+\label{sec:tor-2}
 
 \begin{quote}\sf
   Conduct two workshops with selected experts from other tuna RFMOs and/or with
@@ -585,7 +607,9 @@ and results.
 
 \vspace{2ex}
 
+\hypertarget{link:tor-3}{}
 \subsection{TOR work area 3 (2024 second half)}
+\label{sec:tor-3}
 
 \begin{quote}\sf
   Explore the new RTMB programming environment and how it could be used in
@@ -706,7 +730,9 @@ recommended programming environment.
 
 \vspace{2ex}
 
+\hypertarget{link:tor-4}{}
 \subsection{TOR work area 4 (2024 second half)}
+\label{sec:tor-4}
 
 \begin{quote}\sf
   Establish collaboration with NOAA scientists to explore the feasibility of
@@ -744,7 +770,9 @@ workshop (\autoref{sec:dtu-2025-workshop}).
 
 \vspace{2ex}
 
+\hypertarget{link:tor-5}{}
 \subsection{TOR work area 5 (2025)}
+\label{sec:tor-5}
 
 \begin{quote}\sf
   Provide support to the stock assessment team transitioning the 2025 swordfish
@@ -780,11 +808,13 @@ that requires new knowledge, tools, and technical solutions. The increased
 interaction with the wider scientific community has already proved to be an
 important benefit from using a widely used software platform for these
 assessments. See the proposed tuna RFMO workshop to review Stock Synthesis
-modeling techniques (\autoref{sec:ss-workshop}).
+modeling techniques (\autoref{sec:ss-modeling-techniques}).
 
 \vspace{2ex}
 
+\hypertarget{link:tor-6}{}
 \subsection{TOR work area 6 (2025)}
+\label{sec:tor-6}
 
 \begin{quote}\sf
   Compare a variety of software platforms using a simplified single-region WCPO
@@ -833,7 +863,9 @@ international colleagues. See the proposed Gadget model development
 
 \vspace{2ex}
 
+\hypertarget{link:tor-7}{}
 \subsection{TOR work area 7 (2025)}
+\label{sec:tor-7}
 
 \begin{quote}\sf
   Prepare alternative workplans and budget scenarios for the larger implementing
@@ -865,7 +897,8 @@ works towards a development project proposal.
 Discussion at SC21 will focus on the scientific value, uncertainties, and
 practical aspects of this upcoming development work, as it relates to future
 tuna and billfish stock assessments. The development project proposal will be
-presented at SC22 as a key outcome from the scoping project.
+presented at SC22 as a key outcome from the scoping project
+(see \autoref{sec:development-proposal-sc22} ).
 
 As an initial estimate, the development project could be launched as a
 three-year project from 2027 to 2030, with an annual budget of \$200,000. This
@@ -1047,6 +1080,7 @@ consultant, working at SPC headquarters or remotely.
 \newpage
 
 \subsubsection{IATTC designed tuna model}
+\label{sec:iattc-tuna-model}
 
 The scoping project has regularly reached out to experts in tuna stock
 assessments to discuss development options for future tuna stock assessment
@@ -1056,11 +1090,11 @@ assessments. In his words, there are structural design issues to be considered,
 such as:
 
 \begin{itemize}
-  \item Spatial structure (e.g., fine scale spatio-temporal models)\\[-4ex]
-  \item Length based dynamics\\[-4ex]
-  \item Random effects\\[-4ex]
-  \item Tagging data\\[-4ex]
-  \item Close kin mark-recapture\\[-4ex]
+  \item Spatial structure (e.g., fine scale spatio-temporal models)\\[-4.5ex]
+  \item Length based dynamics\\[-4.5ex]
+  \item Random effects\\[-4.5ex]
+  \item Tagging data\\[-4.5ex]
+  \item Close kin mark-recapture\\[-4.5ex]
   \item Multi-species
 \end{itemize}
 
@@ -1070,11 +1104,11 @@ In his view, if he was asked to design a new model for tuna assessments today,
 this is what he would probably do:
 
 \begin{itemize}
-  \item Large block spatial structure\\[-4ex]
-  \item No length based dynamics\\[-4ex]
-  \item Include random effects\\[-4ex]
-  \item No tagging data\\[-4ex]
-  \item Hopefully close kin mark-recapture can be added later easily\\[-4ex]
+  \item Large block spatial structure\\[-4.5ex]
+  \item No length based dynamics\\[-4.5ex]
+  \item Include random effects\\[-4.5ex]
+  \item No tagging data\\[-4.5ex]
+  \item Hopefully close kin mark-recapture can be added later easily\\[-4.5ex]
   \item No multi-species
 \end{itemize}
 
@@ -1086,9 +1120,9 @@ initial evaluation of this model highlights the following key benefits:
 
 \begin{itemize}
   \item New codebase in RTMB that will be relatively small, easy to modify and
-  extend\\[-4ex]
+  extend\\[-4.5ex]
   \item Keeping it simple, just focusing on the priority needs of tuna
-  assessments\\[-4ex]
+  assessments\\[-4.5ex]
   \item Random effects, useful for allowing processes to vary in time and
   possibly between regions
 \end{itemize}
@@ -1103,6 +1137,10 @@ would be added as the next milestone after achieving the core functionality
 listed above. It is worth noting that the SBT stock assessment model that
 incorporates CKMR data started off as a model without this feature, which was
 added later (Rich Hillary, pers. comm.).
+
+Mark Maunder has proposed organizing an online CAPAM workshop
+(\autoref{sec:capam-online-workshop}) with tuna RFMOs and invited experts to
+discuss the structural components of this tuna model design.
 
 \newpage
 
@@ -1190,9 +1228,11 @@ Given the benefits of using the same software as other tRFMOs, it seems sensible
 to coordinate, consult, and collaborate with IATTC when the time seems right to
 move a certain assessment from one software platform to another.
 
-\newpage
+\vspace{2ex}
 
+\hypertarget{link:tor-8}{}
 \subsection{TOR work area 8 (2025)}
+\label{sec:tor-8}
 
 \begin{quote}\sf
   Communicate with tuna RFMOs and other research labs to establish which RFMOs
@@ -1202,11 +1242,50 @@ move a certain assessment from one software platform to another.
 
 \vspace{2ex}
 
-~
+A list of ten questions was circulated to all the tuna RFMOs, to inform the
+scoping project about current and future tuna stock assessment software.
+
+\begin{enumerate}
+  \item What assessment software do you use for tuna and billfish assessments?
+  If possible, can you indicate which software is used for which stock?
+  \item Are these software adequate for your current needs?
+  \item Do you the think they will still be adequate in 10 years? If not, what
+  are the likely main inadequacies?
+  \item How important is explicit regional structure for the assessment and
+  management of tuna and billfish stocks for your RFMO?
+  \item Are tagging data important for any of your assessments? If so, which
+  assessments?
+  \item Given that Stock Synthesis is entering a sunset phase, do you have a
+  strategy or plans in place for a post Stock Synthesis era? If yes, can you
+  provide a brief description of your strategy or plans?
+  \item How closely do you follow ongoing FIMS developments? Are you directly
+  involved in discussions or experimental development?
+  \item Do you have any ongoing development work on improving existing stock
+  assessment software or developing new software? If yes, can you provide a
+  brief description?
+  \item Would you be willing to work collaboratively on the evaluation and/or
+  development of software tailored for tuna assessments? If yes, is it likely
+  that resources or scientist time might be available for this?
+  \item Would your team be interested in attending an online CAPAM workshop
+  focusing on current and future development of new stock assessment platforms
+  to meet the needs of future tuna assessments?
+\end{enumerate}
 
 \vspace{2ex}
 
+The responses from the tuna RFMOs are available on the project
+\href{\tree/notes/rfmo_discussion/feedback}{website}.
+
+In the response to question 9, regarding the ability to commit scientist time to
+collaborate in the development and testing of stock assessment software, the
+tuna RFMOs generally indicate a positive interest and emphasize the importance
+of collaboration between the tuna RFMOs.
+
+\vspace{2ex}
+
+\hypertarget{link:tor-9}{}
 \subsection{TOR work area 9 (2025)}
+\label{sec:tor-9}
 
 \begin{quote}\sf
   Communicate with tuna RFMOs and the FIMS project team to evaluate whether
@@ -1216,7 +1295,19 @@ move a certain assessment from one software platform to another.
 
 \vspace{2ex}
 
-~
+In the response to question 7 in the above questionnaire, and more specifically
+in follow-up discussions, the tuna RFMOs indicate different views on the FIMS
+project. IOTC indicated that they had not been following the FIMS project, while
+IATTC and CCSBT have expressed reservations about the potential of FIMS to
+produce software relevant for future tuna assessments. Their recommendation is
+to develop new tuna assessment software in RTMB that could be used by the tuna
+RFMOs, rather than investing resources in producing FIMS-compatible modules.
+
+The scoping project remains slightly more optimistic about the potential of FIMS
+to produce software relevant for future tuna and billfish assessments. After
+reaching out to the FIMS project, the conclusion from the discussion is to plan
+a joint workshop to explore the development of tuna-specific FIMS modules. See
+the proposed SPC-FIMS workshop (\autoref{sec:fims-workshop}).
 
 \vspace{2ex}
 
@@ -1279,51 +1370,124 @@ analytical scripts and results.
 
 \textit{DTU workshop follow-up}
 
-See the two proposed follow-up project activities:
+See the proposed follow-up project activity to support enhancing and extending
+the spatio-temporal model (\autoref{sec:dtu-support-tagging}).
 
-\begin{itemize}
-  \item Supporting the external tagging analysis
-  (\autoref{sec:dtu-support-tagging}).
-  \item Supporting the design and development of a DTU spatio-temporal full
-  stock assessment model (\autoref{sec:dtu-support-assessment}).
-\end{itemize}
+\vspace{2ex}
 
 \section{Recommendation of project activities}
 
-\subsection{SPC-FIMS workshop to explore linking FIMS modules}
-\label{sec:fims-workshop}
+\subsection{Support online CAPAM workshop on future tuna assessment software}
+\label{sec:capam-online-workshop}
 
-Organize FIMS workshop to explore the technical procedures and programming
-interface involved in producing FIMS modules.
+Mark Maunder has proposed organizing an online CAPAM workshop with tuna RFMOs
+and invited experts to discuss the structural components of a possible future
+tuna assessment model design (\autoref{sec:iattc-tuna-model}).
+
+It would be beneficial for the scoping project to have an active support role in
+organizing and conducting this workshop. The timing of this workshop is to be
+decided.
+
+\vspace{2ex}
+
+\subsection{Tuna RFMO workshop to review Stock Synthesis modeling techniques}
+\label{sec:ss-modeling-techniques}
+
+Transitioning the two WCPFC billfish assessments to Stock Synthesis has been a
+learning process that requires new knowledge, tools, and technical solutions.
+The increased interaction with the wider scientific community has already proved
+to be an important benefit from using a widely used software platform for these
+assessments (\autoref{sec:tor-5}). See also the overview and evaluation of Stock
+Synthesis (\autoref{sec:ss-software-evaluation}).
+
+It would be beneficial for the billfish assessments and possibly future tuna
+assessments to bring together scientists who have experience and expertise in
+configuring and diagnosing tuna and billfish assessments in Stock Synthesis. SPC
+could organize such a workshop jointly with other tuna RFMOs. The timing of this
+workshop is to be decided.
+
+\vspace{2ex}
 
 \subsection{Support DTU analysis of WCPO skipjack tagging data}
 \label{sec:dtu-support-tagging}
 
 The next step in the DTU analysis of WCPO skipjack tagging data is to secure
-funding for the DTU team to work on the spatio- temporal model development and
-analysis. The timeline of the project will be aligned with the 2028 SKJ
-assessment, so the final model results should be delivered by the end of 2027.
-Intermediate milestones will be planned after funding has been secured, possibly
-organizing a second workshop to discuss and decide on model options.
+funding for the DTU team to work on the spatio-temporal model development and
+analysis. The timeline of the project will be aligned with the 2028 WCPFC
+skipjack assessment, so the final model results should be delivered by the end
+of 2027. Intermediate milestones will be planned after funding has been secured,
+possibly organizing a second workshop to discuss and decide on model options.
+
+See the SPC-DTU 2025 workshop (\autoref{sec:dtu-2025-workshop}) for the work
+completed so far, as well as further details about the analysis, along with
+possible enhancements and extensions of the DTU spatio-temporal model
+(\autoref{sec:dtu-development-project}).
+
+\vspace{2ex}
+
+\subsection{Explore the possibility of using the SBT model code}
+\label{sec:sbt-model-code}
+
+The scoping project has reached out to the team of scientists involved in the
+SBT assessment and will discuss further the possibility of using their model
+code as a starting point for developing new software for the South Pacific
+albacore assessment. IATTC is also involved in this discussion, as albacore is a
+joint assessment between WCPFC and IATTC.
+
+See the overview and evaluation of the SBT stock assessment software
+(\autoref{sbt-software-evaluation}).
+
+\vspace{2ex}
 
 \subsection{Develop Gadget model for single-area yellowfin dataset}
 \label{sec:yft-gadget}
 
-\subsection{Explore the possibility of using the SBT model code}
+The scoping project has reached out to the Gadget development team (Bjarki
+Elvarsson and Jamie Lentin) to explore the possibility of fitting a Gadget model
+to the single-area yellowfin dataset that was prepared as part of the scoping
+project (\autoref{sec:tor-6}).
 
-As a starting point for developing new software for the South Pacific albacore
-assessment.
+It would be beneficial for the scoping project to gain first-hand experience
+fitting a Gadget model to a large tuna dataset that consists of 280 quarterly
+time steps, 40 quarterly ages, 95 length bins, and 32 fisheries. This can help
+the scoping project gain insights from using an explicity age-length structured
+model to analyze tuna data and get a rough estimate of the computational
+overhead of age-length models. Gadget represents certain state-of-the art
+statistical methods of interest, and examining the model configuration, results,
+and diagnostics will be a useful reference for designing any future tuna
+assessment software. See the overview and evaluation of Gadget
+(\autoref{sec:gadget-software-evaluation}).
 
-\subsection{Tuna RFMO workshop to review Stock Synthesis modeling techniques}
-\label{sec:ss-workshop}
+\vspace{2ex}
 
-used in Stock Synthesis tuna assessment models
+\subsection{SPC-FIMS workshop to explore linking FIMS modules}
+\label{sec:fims-workshop}
 
-\subsection{Proposal for development of DTU spatio-temporal full assessment
-  model}
-\label{sec:dtu-support-assessment}
+The scoping project has identified the usefulness of exploring the technical
+procedures and programming interface involved in producing FIMS-compatible
+modules. This initial exploration should focus on very simple additions or model
+modifications as a demonstration. After the technical exploration of such
+prototype FIMS modules, the advantages and disadvantages of tuna-specific FIMS
+modules can be evaluated against other forms of tuna stock assessment software
+development.
 
-\subsection{Proposal for development of tuna-specific FIMS modules}
+See the overview and evaluation of the FIMS project
+(\autoref{sec:fims-software-evaluation}), as well as the possible development
+work stream (\autoref{sec:fims-development-project}). The timing of this
+workshop is to be decided.
+
+\vspace{2ex}
+
+\subsection{Formal proposal for WCPFC software development project}
+\label{sec:development-proposal-sc22}
+
+This year's progress report outlines a potential development project, describing
+possible development work streams that are currently being evaluated (see
+\autoref{sec:tor-7}).
+
+The scoping and evaluation will continue for the work period from August 2025 to
+August 2026, with a formal development project proposal to be be presented at
+SC22 as a key outcome from the scoping project.
 
 \section{Updated project diagram}
 
