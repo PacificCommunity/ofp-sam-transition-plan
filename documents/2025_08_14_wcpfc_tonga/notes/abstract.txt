@@ -1,0 +1,53 @@
+1 Executive summary
+2 Background
+2.1 TOR summary
+3 Progress against TOR items
+3.1 TOR work area 1 (2024 second half)
+3.1.1 Evaluation of necessary software features
+3.1.2 Evaluation of existing software
+3.2 TOR work area 2 (2024 second half)
+3.3 TOR work area 3 (2024 second half)
+3.4 TOR work area 4 (2024 second half)
+3.5 TOR work area 5 (2025)
+3.6 TOR work area 6 (2025)
+3.7 TOR work area 7 (2025)
+3.7.1 DTU spatio-temporal model
+3.7.2 FIMS tuna-specific modules
+3.7.3 IATTC designed tuna model
+3.7.4 Adaptive plan
+3.7.5 Partnerships
+3.8 TOR work area 8 (2025)
+3.9 TOR work area 9 (2025)
+4 Other recent project activitites
+4.1 SPC-DTU workshop to analyze tagging data
+5 Recommendation of project activities
+5.1 Support online CAPAM workshop on future tuna assessment software
+5.2 Tuna RFMO workshop to review Stock Synthesis modeling techniques
+5.3 Support DTU analysis of WCPO skipjack tagging data
+5.4 Explore the possibility of using the SBT model code
+5.5 Develop Gadget model for single-area yellowfin dataset
+5.6 SPC-FIMS workshop to explore linking FIMS modules
+5.7 Formal proposal for WCPFC software development project
+6 Updated project diagram
+7 Note to SC
+8 References
+A Appendix: Single-region YFT2023 model
+
+--------------------------------------------------------------------------------
+
+Tell Jim the story:
+
+SPC will be transitioning all assessments from MULTIFAN-CL to other software.
+
+The swordfish and striped marlin assessments transitioned to Stock Synthesis in
+2025.
+
+Some of the tuna stocks have specific requirements for future assessments. For
+example, skipjack should use the state-of-the-art statistical techniques for
+analyzing tagging data that are available at any time, while albacore will
+transition to software that can incorporate close-kin mark-recapture data that
+are currently being collected.
+
+A new statistical approach looks promising for analyzing skipjack tagging data
+using a spatio-temporal model. This method produces abundance indices that can
+be incorporated into a Stock Synthesis assessment.
