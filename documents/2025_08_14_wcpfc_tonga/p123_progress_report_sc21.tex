@@ -36,47 +36,56 @@
 
 \section{Executive summary}
 
-The 3-year Project 123 aims to evaluate features and capabilities that will be
-important in future tuna assessments, explore fitting models to tuna data using
-existing software platforms, guide decisions on the type of new software
-development required, and establish collaboration with tuna Regional Fisheries
-Management Organizations (RFMOs) and research labs to achieve these goals.
+\vspace{-1ex}
 
-At SC20, ISG-09 reviewed the scoping of next-generation tuna stock assessment
-software and supported prioritizing practical tasks, including transitioning
-swordfish and striped marlin assessments to Stock Synthesis and testing
-simplified models for yellowfin tuna. Members acknowledged the need to focus on
-immediate assessment priorities while keeping longer-term software development
-under consideration, depending on available resources and capacity. (SC20
-Summary Report, Attachment E).
+The 3-year Project 123 aims to examine and evaluate options for transitioning
+WCPFC stock assessments from MULTIFAN-CL to other software. At SC20, ISG-09
+reviewed the scoping of next-generation tuna stock assessment software and
+supported prioritizing practical tasks, including transitioning swordfish and
+striped marlin assessments to Stock Synthesis and testing simplified models for
+yellowfin tuna. Members acknowledged the need to focus on immediate assessment
+priorities while keeping longer-term software development under consideration,
+depending on available resources and capacity. (SC20 Summary Report, Attachment
+E).
 
 SC21 will review the progress of Project 123, which explores the transition to
-next-generation stock assessment software for tuna fisheries. The project report
-i) evaluates the benefits, limitations, uncertainties, and resource implications
-associated with each software platform under consideration; ii) evaluates the
-feasibility of analyzing tagging data independently from the main stock
-assessment models, a potential strategy to reduce model complexity while
-maintaining scientific robustness; and iii) identifies key analytical features
-and technical capabilities that future stock assessment platforms should
-incorporate, such as support for spatial structure, tagging integration, and
-flexibility for multi-species and multi-fleet assessments, to ensure that WCPFC
-assessments remain scientifically credible, transparent, and adaptable to
-evolving fishery and management needs.
+next-generation stock assessment software for tuna fisheries. Some of the WCPFC
+tuna stocks have specific requirements for future assessments. For example,
+skipjack should use the state-of-the-art statistical techniques for analyzing
+tagging data, while albacore will transition to software that can incorporate
+\mbox{close-kin} mark-recapture data that are currently being collected. A new
+statistical approach that looks promising for analyzing skipjack tagging data
+uses an external DTU spatio-temporal model. This method produces abundance
+indices that can be incorporated into any stock assessment platform, such as
+Stock Synthesis.
+
+One outcome from reaching out to tuna RFMOs is that IATTC has outlined a general
+design for developing a new tuna model based on RTMB. This development work
+stream will be initiated with an online CAPAM workshop on this topic. Compared
+to an IATTC designed model in RTMB, the FIMS pathway to developing a new tuna
+stock assessment software is subject to somewhat higher levels of uncertainty
+and risks. Nevertheless, the scoping project is planning an \mbox{SPC-FIMS}
+workshop to examine and evaluate the FIMS development option. Gadget represents
+key statistical methods of interest, and the scoping project will examine this
+model as a useful reference for designing any future tuna assessment software.
+Ultimately, there are important benefits in using the same software as other
+tuna RFMOs. The WCPFC partnership with IATTC is especially relevant for
+collaborative research and development of new stock assessment software.
 
 SC21 will provide feedback on the progress of the project as needed.
 
-\vspace{4ex}
-
-We invite SC21 to:
+We invite SC21 to:\\[-4ex]
 
 \begin{itemize}
-  \item note that over the next 5+ years, MULTIFAN-CL will begin to be phased
-  out as a software platform for WCPFC tuna and billfish stock assessments;
+  \item note that the scoping project is establishing partnerships with IATTC
+  and the Technical University of Denmark (DTU) focusing on developing new
+  software;\\[-4.5ex]
   \item note that in 2025, the two billfish stock assessments, swordfish and
-  striped marlin, transitioned from MULTIFAN-CL to Stock Synthesis;
-  \item review and comment on two suggested software development work streams,
-  described in this report, providing feedback that will guide the preparation
-  of project proposal to be presented to SC22; and
+  striped marlin, transitioned from MULTIFAN-CL to Stock Synthesis;\\[-4.5ex]
+  \item review and comment on three possible software development work streams,
+  described in this report (\autoref{sec:tor-7}), providing feedback that will
+  guide the preparation of project proposal to be presented to SC22;
+  and\\[-4.5ex]
   \item convene an ISWG to discuss the progress and develop activities and a TOR
   for the third year of Project 123.
 \end{itemize}
@@ -109,9 +118,10 @@ structures (i.e., length-age structured versus the traditional length-based
 age-structured approach of MFCL and Stock Synthesis) before embarking on major
 software developments or changing methodology. Similar can be said about
 exploring benefits of state-space models and their use of random variables.
-Simulation exercises to explore the benefits or drawbacks of alternative model
-structures or approaches will also require collaboration across tuna RFMOs and
-practitioners experienced in using the alternative approaches and/or software.
+Recent development in external tagging data analysis also opens up possibilities
+to utilize SPCs tagging data with other software, and the application of
+close-kin mark-recapture (CKMR) needs be an important part of our
+considerations, given the work in this area on South Pacific albacore.
 
 An important outcome of this work would be to ultimately have a software package
 that has the desired functionality for tuna assessments, not only for WCPFC but
@@ -403,23 +413,23 @@ general criteria:
   relevant information in a statistically sound manner. It should also allow
   spatial and temporal variability in processes relating to the biology and the
   fishery dynamics. The software should be computationally efficient and produce
-  a fitted model within too many hours, thus allowing a full exploration of a
-  variety of model options in the short stock assessment time frame. Finally,
-  the software should support the provision of scientific advice that matches
-  the needs for the management of each stock.
-  \item \textit{Beginner friendly}. New staff scientists are often asked to
+  a fitted model within not too many hours, thus allowing a full exploration of
+  a variety of model options in the short stock assessment time frame, as well
+  as uncertainty evaluation. Finally, the software should support the provision
+  of scientific advice that matches the needs for the management of each stock.
+  \item \textit{Beginner friendly}. New scientific staff are often asked to
   start working with the stock assessment software within their first twelve
   months of contract. To make this feasible, the software user interface and
   auxiliary tools should allow new staff scientists to have a good understanding
   of the configuration of model options and be able to work efficiently with the
   model.
   \item \textit{Widely used}. SPC does not want to use stock assessment software
-  in isolation. The software should have a large development team and user
+  in isolation. The software should have a wider development team and user
   community beyond SPC. This will mean that new staff scientists can find expert
-  help outside of SPC. Feature-complete tools for working with model input and
-  output will be maintained outside of SPC. By adopting widely used stock
-  assessment software, external reviewers will have a good understanding of
-  model configurations and options.
+  help and technical advice outside of SPC. Feature-complete tools for working
+  with model input and output will be maintained outside of SPC. By adopting
+  widely used stock assessment software, external reviewers will have a good
+  understanding of model configurations and options.
 \end{enumerate}
 
 \vspace{1ex}
@@ -438,16 +448,16 @@ the scientist to convert length-at-release to age-at-release outside the model.
 This is especially relevant for the WCPO skipjack assessment. The SS3
 development team does not plan to add new major features such as the ability to
 incorporate CKMR data, which is especially relevant for future South Pacific
-albacore assessment. On the other hand, the increasing use of SS3 at SPC has had
-a marked positive impact on collaboration between the tRFMOs, which is relevant
-for the discussion, development, and tests of future software. The use of SS3
-also shortens the training time for new SPC stock assessors and makes their
-skills and experience more transferable between workplaces. SS3 assessments
-allow closer comparisons of assessments conducted across RFMOs and ISC. The
-large SS3 user community is relevant for seeking expert insights, discussing
-technical model decisions, and for peer reviews. It also comes with an
-exceptionally complete suite of tools useful for diagnostics, as well as
-automated plots and tables for assessment reports. See the proposed
+albacore assessment. On the other hand, the recent use of SS3 at SPC has had a
+positive impact on collaboration between the tRFMOs, which is relevant for the
+discussion, development, and tests of future software. The use of SS3 also
+shortens the training time for new SPC stock assessors and makes their skills
+and experience more transferable between workplaces. SS3 assessments allow
+closer comparisons of assessments conducted across RFMOs and ISC. The large SS3
+user community is relevant for seeking expert insights, discussing technical
+model decisions, and for peer reviews. It also comes with an exceptionally
+complete suite of tools useful for diagnostics, as well as automated plots and
+tables for assessment reports. See the proposed
 workshop on modeling techniques (\autoref{sec:ss-modeling-techniques})\\[-4.5ex]
 
 Stock Synthesis scores particularly high in two key criteria: the ability of new
@@ -466,10 +476,10 @@ in TMB. It is an age-length structured platform and the implementation of this
 software in TMB has resulted in a significant performance gain in terms of
 computational time, and opens the option of incorporating time-varying processes
 using random effects. Gadget has a wide range of features relevant for tuna
-assessments and a plan is underway to to test the use of Gadget on SPC example
-tuna datasets.\\[-4.5ex]
+assessments and a plan is underway to test the use of Gadget on SPC example tuna
+datasets.\\[-4.5ex]
 
-Gadget scores particularly high for representing certain state-of-the art
+Gadget scores particularly high for representing certain state-of-the-art
 statistical methods of interest: explicit age-length structure and a TMB
 implementation that may allow the use of random effects to have processes vary
 with time and/or between regions. See proposed analysis
@@ -703,13 +713,13 @@ workshop (\autoref{sec:fims-workshop}).
 
 \textit{Comparison between TMB and RTMB}
 
-Kasper Kristensen (DTU) released the TMB package on CRAN in 2015. It provides
-the same automatic differentiation capability for parameter estimation as ADMB,
-but with greatly improved functionality and performance when using random
-effects. The developer writes the model source code in written in \cpp\, while
-user scripts are written in R.
+Kasper Kristensen at the Danish Technical University (DTU) released the TMB
+package on CRAN in 2015. It provides the same automatic differentiation
+capability for parameter estimation as ADMB, but with greatly improved
+functionality and performance when using random effects. The developer writes
+the model source code in written in \cpp\, while user scripts are written in R.
 
-Kasper Kristensen released the RTMB package on CRAN in 2023. It uses the
+Kasper Kristensen later released the RTMB package on CRAN in 2023. It uses the
 underlying TMB engine to fit models, and the resulting model output and
 computational speed is the same as in TMB. The main difference is that in RTMB,
 the model source code is written in R, which has several important benefits. The
@@ -807,8 +817,14 @@ Transitioning these assessments to Stock Synthesis has been a learning process
 that requires new knowledge, tools, and technical solutions. The increased
 interaction with the wider scientific community has already proved to be an
 important benefit from using a widely used software platform for these
-assessments. See the proposed tuna RFMO workshop to review Stock Synthesis
-modeling techniques (\autoref{sec:ss-modeling-techniques}).
+assessments. However, the transition has highlighted that there are aspects of
+SS3 that need to be better understood in relation to consistency in approaches
+between SS3 and MFCL. For example, calculation of key quantities such as fishing
+mortality and some management reference points. Also, the importance of
+consistency in some settings in SS3 that influence management reference point
+calculations, and how these are applied by different assessment teams. See the
+proposed tuna RFMO workshop to review Stock Synthesis modeling techniques
+(\autoref{sec:ss-modeling-techniques}).
 
 \vspace{2ex}
 
@@ -852,6 +868,8 @@ survey fisheries for which CPUE indices were available, the simplified model
 defined a single survey fishery representative of the entire model domain. The
 simplified model was fitted and achieved convergence, and a comparison with the
 original multi-region model is included in the Appendix.
+
+\newpage
 
 The third step will require a considerable amount of work and establishing a
 collaboration with a team of scientists who are domain experts in the use of a
@@ -912,6 +930,11 @@ would allow:
 \end{itemize}
 
 \vspace{2ex}
+
+It may also be possible to explore joint funding options, for example,
+partnering with IATTC.
+
+\newpage
 
 \subsubsection{DTU spatio-temporal model}
 \label{sec:dtu-development-project}
@@ -1016,7 +1039,7 @@ The development work on enhancing and extending the spatio-temporal model would
 be carried out by the team of statisticians at the Technical University of
 Denmark, based in Copenhagen.
 
-\vspace{2ex}
+\vspace{3ex}
 
 \subsubsection{FIMS tuna-specific modules}
 \label{sec:fims-development-project}
@@ -1036,7 +1059,7 @@ specific code modules to link with the FIMS core modules. Such tuna modules
 could potentially provide a variety of features, adding basic model extensions
 and/or introducing fundamental changes in the model structure.
 
-\newpage
+\vspace{2ex}
 
 \textit{Development of tuna-specific FIMS modules}
 
@@ -1218,11 +1241,11 @@ The best outcome for SPC would be to use stock assessment software that is also
 used outside of SPC. In practical terms, the software used by other tRFMOs will
 be especially relevant for identifying the best software for the WCPFC tuna and
 billfish stock assessments. Among the tRFMOs, IATTC has a particularly high
-research and development capacity and has a long history working closely with
-SPC researching stocks whose distribution often straddles the management
-boundaries between the WCPO and EPO. IATTC and SPC regularly collaborate in peer
-reviews and workshops to share ideas, experiences, and new methods for tuna and
-billfish assessments.
+research and development capacity and a long history working closely with SPC
+researching stocks whose distribution often straddles the management boundaries
+between the WCPO and EPO. IATTC and SPC regularly collaborate in peer reviews
+and workshops to share ideas, experiences, and new methods for tuna and billfish
+assessments.
 
 Given the benefits of using the same software as other tRFMOs, it seems sensible
 to coordinate, consult, and collaborate with IATTC when the time seems right to
@@ -1330,11 +1353,11 @@ are a basic input data type that can then be incorporated into any stock
 assessment model.
 
 This spatio-temporal model (Mildenberger et al. 2024) is a recent innovative
-model that was developed by Tobias Mildenberger and Anders Nielsen at the
-Technical University of Denmark (DTU) in collaboration with Mark Maunder. After
-a round of discussion among the members of the scoping project, it was decided
-to fast-track and organize a technical workshop to explore the feasibility of
-using this modeling approach to analyze WCPO skipjack tagging data.
+model that was developed by Tobias Mildenberger and Anders Nielsen at DTU in
+collaboration with Mark Maunder. After a round of discussion among the members
+of the scoping project, it was decided to fast-track and organize a technical
+workshop to explore the feasibility of using this modeling approach to analyze
+WCPO skipjack tagging data.
 
 The workshop was held at DTU in Copenhagen 12--16 May 2025. Participants were
 Arni Magnusson, Joe Scutt Phillips, and Inna Senina from SPC, and Anders Nielsen
@@ -1431,8 +1454,8 @@ possible enhancements and extensions of the DTU spatio-temporal model
 The scoping project has reached out to the team of scientists involved in the
 SBT assessment and will discuss further the possibility of using their model
 code as a starting point for developing new software for the South Pacific
-albacore assessment. IATTC is also involved in this discussion, as albacore is a
-joint assessment between WCPFC and IATTC.
+albacore assessment, incorporating CKMR data. IATTC is also involved in this
+discussion, as albacore is a joint assessment between WCPFC and IATTC.
 
 See the overview and evaluation of the SBT stock assessment software
 (\autoref{sbt-software-evaluation}).
@@ -1450,9 +1473,9 @@ project (\autoref{sec:tor-6}).
 It would be beneficial for the scoping project to gain first-hand experience
 fitting a Gadget model to a large tuna dataset that consists of 280 quarterly
 time steps, 40 quarterly ages, 95 length bins, and 32 fisheries. This can help
-the scoping project gain insights from using an explicity age-length structured
+the scoping project gain insights from using an explicitly age-length structured
 model to analyze tuna data and get a rough estimate of the computational
-overhead of age-length models. Gadget represents certain state-of-the art
+overhead of age-length models. Gadget represents certain state-of-the-art
 statistical methods of interest, and examining the model configuration, results,
 and diagnostics will be a useful reference for designing any future tuna
 assessment software. See the overview and evaluation of Gadget

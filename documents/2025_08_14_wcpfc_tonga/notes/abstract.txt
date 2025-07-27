@@ -42,12 +42,40 @@ SPC will be transitioning all assessments from MULTIFAN-CL to other software.
 The swordfish and striped marlin assessments transitioned to Stock Synthesis in
 2025.
 
-Some of the tuna stocks have specific requirements for future assessments. For
-example, skipjack should use the state-of-the-art statistical techniques for
-analyzing tagging data that are available at any time, while albacore will
-transition to software that can incorporate close-kin mark-recapture data that
-are currently being collected.
+Some of the WCPFC tuna stocks have specific requirements for future assessments.
+For example, skipjack should use the state-of-the-art statistical techniques for
+analyzing tagging data, while albacore will transition to software that can
+incorporate close-kin mark-recapture data that are currently being collected.
 
 A new statistical approach looks promising for analyzing skipjack tagging data
 using a spatio-temporal model. This method produces abundance indices that can
-be incorporated into a Stock Synthesis assessment.
+be incorporated into any stock assessment platform, such as Stock Synthesis.
+
+One outcome from reaching out to tuna RFMOs is that IATTC has outlined a general
+design for developing a new tuna model, based on RTMB. This development work
+stream will be initiated with an online CAPAM workshop on this topic.
+
+Compared to an IATTC designed model in RTMB, the FIMS pathway to developing a
+new tuna stock assessment software is subject to somewhat higher levels of
+uncertainty and risks. Nevertheless, the scoping project is planning an SPC-FIMS
+workshop to examine and evaluate the FIMS development option.
+
+Gadget represents certain state-of-the-art statistical methods of interest, and
+the scoping project will examine the model configuration, results, and
+diagnostics as a useful reference for designing any future tuna assessment
+software.
+
+Ultimately, there are important benefits in using the same software as other
+tuna RFMOs. The WCPFC partnership with IATTC is especially relevant for
+collaborative research and development of new stock assessment software.
+
+--------------------------------------------------------------------------------
+
+1: Transitioning from MFCL
+2: SWO and MLS in SS
+3: SKJ tags and ALB ckmr
+4: External analysis of tags
+5: IATTC designed tuna model
+6: FIMS
+7: Gadget
+8: Same as other tuna RFMOs
