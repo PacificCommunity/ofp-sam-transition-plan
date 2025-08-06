@@ -3,17 +3,51 @@
 \usepackage{graphicx}
 \begin{document}
 
+\setbeamertemplate{title page}{
+  \usebackgroundtemplate{}
+  \begin{picture}(0,0)
+    \put(-27.97,-147.11){
+      \includegraphics[height=\paperheight]{front_banner}
+    }
+    \put(160,73){
+      \includegraphics[width=24mm]{wcpfc}
+    }
+    \put(82,2){
+      \begin{minipage}{\textwidth}
+        \centering\green\Large\bf\inserttitle
+      \end{minipage}
+    }
+    \put(82,-68){
+      \begin{minipage}{\textwidth}
+        \centering\darkgray\fns\bf\insertauthor
+      \end{minipage}
+    }
+    \put(82,\datepos){
+      \begin{minipage}{\textwidth}
+        \centering\darkblue\tiny\insertdate
+      \end{minipage}
+    }
+  \end{picture}
+}
+
+% ______________________________________________________________________________
+
 \begin{frame}
-  \title{\vspace{-5ex}\darkblue Scoping the next stock assessment
-    platform\\[2ex]
-    \it\large\darkgray
-    Project 123 progress update}
-  \author{\vspace{-10ex}\darkgray\bf
-    Arni Magnusson, Nick Davies,\\[0.5ex]
+  \title{Scoping the Next Generation of\\
+    Tuna Stock Assessment Software\\[1.2ex]
+    \it\fns Progress Report (Project 123)}
+  \author{Arni Magnusson, Nick Davies,\\[0.4ex]
     Graham Pilling, Paul Hamer}
-  \date{\darkgreen WCPFC-SC21-2025/SA-WP-01\\[0.5ex]
-    Nuku'alofa, 14 August 2025}
+  \date{SCIENTIFIC COMMITTEE\\[0.4ex]
+    TWENTY-FIRST REGULAR SESSION\\[0.4ex]
+    Nuku'alofa, Tonga\\[0.4ex]
+    13--21 August 2025}
   \titlepage
+  \begin{picture}(0,0)
+    \put(7,-136){
+      \white\tiny\bf WCPFC-SC21-2025/SA-WP-01
+    }
+  \end{picture}
 \end{frame}
 
 % ______________________________________________________________________________
