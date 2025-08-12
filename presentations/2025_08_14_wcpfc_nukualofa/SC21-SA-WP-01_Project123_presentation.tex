@@ -74,21 +74,10 @@
     \item[] MFCL team (Dave Fournier, John Hampton, Nick Davies) retiring in the
     2020s\\[5ex]
     \item[] Development of new features is slowing down\\[5ex]
-    \item[] Resources are being allocated to succession plans\\[4ex]
+    \item[] Resources are being allocated to succession plans\\[5ex]
+    \item[] The overarching objective is to
+    {\darkgreen transition all assessments from MFCL}\\[4ex]
   \end{itemize}
-\end{frame}
-
-% ______________________________________________________________________________
-
-\begin{frame}{Migrating all MFCL assessments to other platforms}\small
-  \textbf{\darkgreen Shared} process, {\darkgreen\bf continuous} communications,
-  {\darkgreen\bf adaptive} strategy\\[3ex]
-  \begin{itemize}
-    \item[] {\blue\bf WCPFC} ~--~ guidance\\[2ex]
-    \item[] {\blue\bf SPC} ~--~ conduct and coordinate the work\\[4ex]
-  \end{itemize}
-  Also involved: other tuna RFMOs and various research labs\\[4ex]
-  Possibly different software platforms for different stocks\\[4ex]
 \end{frame}
 
 % ______________________________________________________________________________
@@ -97,14 +86,14 @@
   This scoping project is scheduled from 1 Feb 2024 to 31 Dec 2026. It
   will:\\[3ex]
   \begin{itemize}
-    \item[] Evaluate features and capabilities that will be important in future
-    tuna assessments\\[3ex]
-    \item[] Explore fitting models to tuna data using existing software
-    platforms\\[3ex]
-    \item[] Guide decisions on what kind of new software development will be
-    required\\[3ex]
-    \item[] Establish collaboration with tuna RFMOs and research labs to achieve
-    these goals\\[3ex]
+    \item[] {\darkgreen Evaluate features} and capabilities that will be
+    important in future tuna assessments\\[3ex]
+    \item[] Explore fitting models to tuna data using {\darkgreen existing
+      software platforms}\\[3ex]
+    \item[] Guide decisions on what kind of
+    {\darkgreen new software development} will be required\\[3ex]
+    \item[] {\darkgreen Establish collaboration} with tuna RFMOs and research
+    labs to achieve these goals\\[3ex]
   \end{itemize}
 \end{frame}
 
@@ -158,7 +147,7 @@
 
 % ______________________________________________________________________________
 
-\begin{frame}{Necessary software features for tuna assessments}\small
+\begin{frame}{Evaluation of necessary software features}\small
   A long wish list of next-generation software features was covered in the CAPAM
   2019 review paper (Punt et al. 2020)\\[2.5ex]
   This year's P123 progress report to SC21 identifies features that are
@@ -179,8 +168,8 @@
 
 % ______________________________________________________________________________
 
-\begin{frame}{Necessary software features for tuna assessments}\small
-  \textdarkgreen{Three general criteria}\\[1ex]
+\begin{frame}{Evaluation of necessary software features}\small
+  \textdarkgreen{\bf Three main criteria}\\[1ex]
   \begin{enumerate}
     \item \textit{Scientific quality}:
     The software should have good statistical performance,\\
@@ -194,9 +183,237 @@
     \item \textit{Widely used}:
     SPC does not want to use stock assessment software in\\
     isolation, the software should have a wider development team and user\\
-    community beyond SPC, new scientific staff can find expert help and\\
-    technical advice outside of SPC.\\[2.5ex]
+    community beyond SPC, especially at tRFMOs, so new scientific staff\\
+    can find expert help and technical advice outside of SPC.\\[2.5ex]
   \end{enumerate}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of existing software}\small
+  \textdarkgreen{\bf Stock Synthesis}\\[2ex]
+  Used in tuna assessments by the IATTC, IOTC, and ICCAT, and in WCPFC billfish
+  assessments\\[2.5ex]
+  Two options for incorporate tagging data: (1) convert release lengths to age
+  externally, or\\
+  (2) analyze the tags externally and incorporate as abundance indices.
+  Especially relevant for WCPO skipjack assessment\\[2.5ex]
+  The SS3 development team does not plan to add new major features such as the
+  ability to incorporate CKMR data, which is especially relevant for future
+  South Pacific albacore assessment\\[2.5ex]
+  The recent use of SS3 at SPC has had a positive impact on collaboration
+  between the tRFMOs, relevant for the discussion, development, and
+  tests of future software\\[2.5ex]
+  Stock Synthesis scores particularly high in two key criteria: the ability of
+  new staff scientists to use it effectively and the worldwide user community,
+  including tuna RFMOs.\\[2ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of existing software}\small
+  \textdarkgreen{\bf Gadget}\\[2ex]
+  Explicit age-length structured platform\\[2.5ex]
+  Gadget 3 was recently implemented in TMB, resulting in substantial performance
+  gains\\[2.5ex]
+  Wide range of features relevant for tuna assessments and a plan
+  is underway to test the use\\
+  of Gadget on the single-region yellowfin tuna dataset\\[2.5ex]
+  A useful reference for designing any future tuna assessment software\\[2.5ex]
+  Gadget scores particularly high for representing state-of-the-art statistical
+  methods of interest: explicit age-length structure and a TMB implementation
+  that may allow the use of random effects to have processes vary with time
+  and/or between regions\\[8ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of existing software}\small
+  \textdarkgreen{\bf SBT}\\[2ex]
+  Used in the assessment of southern bluefin tuna by CCSBT\\[2.5ex]
+  Implemented as an R package based on RTMB\\[2.5ex]
+  Fitted to CKMR, a new and important data type in future South Pacific albacore
+  assessments\\[2.5ex]
+  The SBT package is designed for a single-region assessment and would require
+  some additional development to be used for a multiregion assessment\\[2.5ex]
+  The scoping project has reached out to the SBT team and will discuss further
+  the possibility of using their model code as a starting point for developing
+  new software for the South Pacific albacore assessment\\[2.5ex]
+  SBT scores particularly high for incorporating CKMR data in a tuna stock
+  assessment\\[2ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of existing software}\small
+  \textdarkgreen{\bf FIMS}\\[2ex]
+  NOAA project developing a new framework of stock assessment models based on
+  TMB\\[2.5ex]
+  Initial development and case studies have focused on models fitting to age
+  composition data,\\
+  but the design includes the ability to fit to length composition data.
+  Spatially explicit models\\
+  and tagging data are currently not high priorities for the FIMS project\\[2.5ex]
+  Might be possible to design and develop tuna-specific FIMS modules: basic
+  model extensions and/or introducing underlying changes in the model
+  structure.\\[2.5ex]
+  The FIMS project might develop an overly complex framework architecture that
+  results in slower progress and lower levels of code contributions than
+  anticipated. A possible outcome could be that FIMS software cannot be used in
+  future tuna assessments\\[8ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of existing software}\small
+  \textdarkgreen{\bf Other}\\[2ex]
+  Casal 2 is the latest version of the Casal stock assessment platform,
+  rewritten with an\\
+  improved design and user interface\\[2.5ex]
+  Wide range of features relevant for tuna assessments\\[2.5ex]
+  However, its strengths and features fall slightly short of Gadget 3 for the
+  purposes of this\\
+  scoping project\\[20ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{\gray TOR summary}\small
+  \textit{\gray\fns Work areas from Aug 2024 to Aug 2025:}\\[1ex]
+  \begin{enumerate}
+    \item[\orange $\Rightarrow$ 1.] Evaluate {\orange necessary features} for
+    tuna assessment software and {\orange existing software}\\[1.5ex]
+    \item[\gray 2.] \gray Conduct 2024 workshops\\[1.5ex]
+    \item[\gray 3.] Evaluate RTMB programming environment\\[1.5ex]
+    \item[\gray 4.] \gray Explore feasibility of enhancing tagging module in
+    Stock Synthesis\\[1.5ex]
+    \item[\gray 5.] \gray Support billfish assessments transitioning from MFCL
+    to Stock Synthesis\\[1.5ex]
+    \item[\gray 6.] Prepare a single-region YFT dataset for comparing and
+    testing platforms\\[1.5ex]
+    \item[\orange $\Rightarrow$ 7.] \black Prepare work plans and budget
+    scenarios for {\orange upcoming development project}\\[1.5ex]
+    \item[\gray 8.] \gray Communicate with tuna RFMOs and research labs to
+    establish who will participate\\[1.5ex]
+    \item[\gray 9.] Communicate with tuna RFMOs to evaluate FIMS development
+    option\\[3ex]
+  \end{enumerate}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Upcoming development project}\small
+  Development project proposal to be \textdarkgreen{\bf submitted to SC22}, as a
+  key outcome from\\
+  the scoping project\\[2ex]
+  As an initial estimate, the development project could be launched as a
+  three-year project\\
+  from 2027 to 2030, with an annual budget of \$200,000. This would
+  allow:\\[0.5ex]
+  \begin{itemize}
+    \item[] \$50,000 per year for workshops and smaller development subprojects,
+    in the same\\
+    manner as the current scoping project; and\\[1.5ex]
+    \item[] \$150,000 per year to divide between the development options that
+    will be prioritized.\\[3ex]
+  \end{itemize}
+  A preliminary recommendation from the scoping project is to have the
+  development project pursue primarily two work streams:\\[0.5ex]
+  \begin{itemize}
+    \item DTU spatio-temporal model
+    \item IATTC designed tuna model\\[1ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Upcoming development project}\small
+  \textdarkgreen{\bf DTU spatio-temporal model}\\[2ex]
+  New collaboration between SPC and statisticians at the Technical University of
+  Denmark (DTU), Tobias Mildenberger and Anders Nielsen\\[2.5ex]
+  A workshop was conducted in Copenhagen in May 2025, focusing on the fitting a
+  spatio-temporal model for analyzing WCPO skipjack tagging data\\[2.5ex]
+  Following a similar DTU spatio-temporal model that has been used to analyze
+  EPO skipjack tags, producing abundance indices that were used in the 2024
+  EPO skipjack assessment\\[18ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Upcoming development project}\small
+  \textdarkgreen{\bf IATTC designed tuna model}\\[2ex]
+  Scoping project has reached out to IATTC regularly to discuss future software
+  for tuna assessments\\[2.5ex]
+  In the latest round of discussions in July 2025, Mark Maunder proposed an
+  initial design of a platform that could be developed for tuna
+  assessments:
+  \begin{itemize}
+    \item[-] New codebase in RTMB that will be relatively small, easy to modify and
+    extend
+    \item[-] Keeping it simple, just focusing on the priority needs of tuna
+    assessments
+    \item[-] Random effects, useful for allowing processes to vary in time and
+    possibly between regions\\[3ex]
+  \end{itemize}
+  Online CAPAM workshop in December 2025 on the model design and a development
+  plan\\[2.5ex]
+  $\Rightarrow$ Small Informal Working Group discussion at SC21\\[3ex]
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{General plan}\small
+  \begin{tabular}{ll}
+    1990s\,--\,2024   & {\darkgreen\it The past.} SPC uses MULTIFAN-CL for all
+                        tuna and billfish assessments\\[4ex]
+    2025\,--\,c2030   & {\darkgreen\it The interim period.} SPC uses a
+                        combination of MULTIFAN-CL and\\[0.4ex]
+    ~                 & \,Stock Synthesis for tuna and billfish
+                        assessments\\[4ex]
+    c2030\,--\,onward & {\darkgreen\it The future.} SPC starts replacing some of
+                        the MULTIFAN-CL and\\[0.4ex]
+    ~                 & \,Stock Synthesis assessments with new software
+  \end{tabular}
+  ~\\[6ex]
+  \h{1.5ex}The year `c2030' is a placeholder; the exact year is not important
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{General plan}\scriptsize
+  \h{-2ex}\begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    \darkgray Year\I{2.4ex}
+    & \darkblue Skipjack & \darkblue Yellowfin & \darkblue Bigeye
+    & \darkblue Albacore & \green Swordfish    & \green Striped marlin\\
+    \hline
+    2025\I{2.5ex}
+    & MFCL &           &         &          & SS3       & SS3           \\
+    \hline
+    2026\I{2.5ex}
+    &      & MFCL      & MFCL    &          &           &               \\
+    \hline
+    2027\I{2.5ex}
+    &                  &         &         & MFCL/New$^2$ &       &               \\
+    \hline
+    2028\I{2.5ex}
+    & MFCL/SS3/New$^1$ &      &              &          &           &               \\
+    \hline
+    2029\I{2.5ex}
+    &      & MFCL/SS3/New & MFCL/SS3/New &  & SS3/New   & SS3/New       \\
+    \hline
+    2030\I{2.5ex}
+    &      &              &         & MFCL/New$^2$ &       &               \\
+    \hline
+  \end{tabular}
+  \fns\\[3ex]
+  \h{1.5ex}1\h{0.4pt}: Skipjack tags could be analyzed externally using the DTU
+  spatio-temporal model before 2028,\\
+  \h{4.1ex}producing abundance indices for the MFCL/SS3/New stock assessment
+  platform.\\[2ex]
+  \h{1.5ex}2\h{0.4pt}: Albacore CKMR data could be incorporated in a New stock
+  assessment platform, most likely\\
+  \h{4.1ex}in 2030.
 \end{frame}
 
 % ______________________________________________________________________________
