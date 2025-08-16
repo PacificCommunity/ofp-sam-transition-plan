@@ -1,0 +1,61 @@
+\documentclass[aspectratio=169,fleqn]{beamer}
+\usepackage{spc}
+\usepackage{graphicx}
+\begin{document}
+
+\setbeamertemplate{title page}{
+  \usebackgroundtemplate{}
+  \begin{picture}(0,0)
+    \put(-27.97,-147.11){\includegraphics[height=\paperheight]{front_banner}}
+    \put(160,73){\includegraphics[width=24mm]{wcpfc}}
+    \put(82,2){
+      \begin{minipage}{\textwidth}
+        \centering\darkgreen\Large\bf\inserttitle
+      \end{minipage}
+    }
+    \put(82,-68){
+      \begin{minipage}{\textwidth}
+        \centering\darkgray\fns\bf\insertauthor
+      \end{minipage}
+    }
+    \put(82,\datepos){
+      \begin{minipage}{\textwidth}
+        \centering\darkblue\tiny\insertdate
+      \end{minipage}
+    }
+  \end{picture}
+}
+
+% ______________________________________________________________________________
+
+\begin{frame}
+  \title{Scoping the Next Generation of\\
+    Tuna Stock Assessment Software\\[1.2ex]
+    \it\fns ISG-07 Discussion}
+  \author{Arni Magnusson, Nick Davies,\\[0.4ex]
+    Graham Pilling, Paul Hamer}
+  \date{SCIENTIFIC COMMITTEE\\[0.4ex]
+    TWENTY-FIRST REGULAR SESSION\\[0.4ex]
+    Nuku'alofa, Tonga\\[0.4ex]
+    13--21 August 2025}
+  \titlepage
+  \begin{picture}(0,0)
+    \put(8,-136){\white\tiny\bf WCPFC-SC21-2025/SA-WP-01}
+  \end{picture}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Potential activities for 2026}
+  \begin{itemize}
+    \item[* 5.1] Collaborate with IATTC and others on the design of a new tuna model, \$30k\\
+    \item[* 5.3] Support DTU analysis of WCPO skipjack tagging data, \$20k\\
+    \item[* 5.6] SPC-FIMS workshop to explore linking FIMS modules, \$10k\\
+    \item[* 5.4] Explore the possibility of using the SBT model code\\[3ex]
+    \item[5.5] Develop Gadget model for single-area yellowfin dataset, \$10k\\
+    \item[5.7] Formal proposal for WCPFC software development project\\[3ex]
+    \item[5.2] Tuna RFMO workshop to review Stock Synthesis modeling techniques\\
+  \end{itemize}
+\end{frame}
+
+\end{document}
