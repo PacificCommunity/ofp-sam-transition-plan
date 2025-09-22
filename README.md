@@ -2,6 +2,10 @@
 
 ## Documents
 
+* [SC21 progress
+report](documents/2025_08_14_wcpfc_nukualofa/p123_progress_report_sc21.pdf) -
+2025 Aug
+
 * [SC20 outcomes, see pp. 5-6 and
 71-73](documents/2024_08_14_wcpfc_manila/p123_progress_report_sc20.pdf) - 2024
 Sep
@@ -27,6 +31,10 @@ Synthesis](documents/2016_08_03_mfcl_ss_comparison/sc12_mfcl_ss_comparison.pdf) 
 
 ## Presentations
 
+* [SC21
+presentation](presentations/2025_08_14_wcpfc_nukualofa/SC21-SA-WP-01_Project123_presentation.pdf) -
+2025 Aug
+
 * [PAW 2025
 presentation](presentations/2025_04_10_paw_scoping/2025_04_10_paw_scoping.pdf) -
 2025 Apr
@@ -39,7 +47,7 @@ presentation](presentations/2024_08_14_wcpfc_manila/SC20-SA-WP-01_Project123_pre
 meeting](presentations/2024_05_13_experts_scoping/2024_05_13_experts_scoping.pdf) -
 2024 May
 
-* [MFCL addendum at International expert
+* [MFCL addendum at international expert
 meeting](presentations/2024_05_13_mfcl_future/MULTIFAN-CL_future.pdf) - 2024 May
 
 * [PAW 2024
