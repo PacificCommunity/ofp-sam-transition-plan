@@ -1,0 +1,110 @@
+\documentclass[aspectratio=169,fleqn]{beamer}
+\usepackage{spc}
+\usepackage{graphicx}
+\begin{document}
+
+\begin{frame}
+  \title{\vspace{-5ex}\darkblue Next generation tuna assessment software\\[2ex]
+    \it\large\darkgray
+    Entering the design stage}
+  \author{\vspace{-10ex}\darkgray\bf
+    Arni Magnusson, Nick Davies,\\[0.5ex]
+    Graham Pilling, Paul Hamer, Mark Maunder}
+  \date{\darkgreen CAPAM Workshop\\[-2.5ex]
+    9--11 December 2025 \h{36ex}
+    \includegraphics[height=5ex]{logo_spc}\qquad
+    \includegraphics[height=5ex]{logo_iattc}\qquad
+    \includegraphics[height=5ex]{logo_capam}}
+  \titlepage
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{The need for new tuna assessment software}\small
+  \begin{itemize}
+    \item[] MULTIFAN-CL (MFCL) has been used in SPC tuna assessments since
+    1990s\\[5ex]
+    \item[] MFCL team (Dave Fournier, John Hampton, Nick Davies) retiring in the
+    2020s\\[5ex]
+    \item[] Development of new features is slowing down\\[5ex]
+    \item[] Resources are being allocated to succession plans\\[5ex]
+    \item[] Stock Synthesis is on a similar trajectory, but both will be
+    maintained as long\\[0.5ex]
+    as necessary\\[4ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Partnership between SPC, IATTC, DTU}\small
+  \begin{itemize}
+    \item[] Long-standing partnership between SPC and IATTC: Western,
+    Central,\\[0.5ex]
+    and Eastern Pacific tuna and billfish\\[4ex]
+    \item[] Comparable datasets, comparable challenges, overlapping distribution
+    range,\\[0.5ex]
+    regular peer reviews of methodology\\[4ex]
+    \item[] For future software considerations, it would be highly beneficial
+    for SPC to\\[0.5ex]
+    use the same software as IATTC for our tuna assessments\\[4ex]
+    \item[] The Technical University of Denmark (DTU) is developing, in
+    collaboration\\[0.5ex]
+    with IATTC and SPC, a spatio-temporal model for analyzing tagging
+    data,\\[0.5ex]
+    producing abundance indices\\[4ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Evaluation of software for tuna assessments}\small
+  \begin{itemize}
+    \item[] Stock Synthesis, Gadget, CASAL, SBT, FIMS\\[6ex]
+    \item[] Presented to the WCPFC Scientific Committee in 2025:\\[0.5ex]
+    \quad\textblue{
+      \url{https://github.com/PacificCommunity/ofp-sam-transition-plan}}\\[6ex]
+    \item[] Main conclusion: develop new software specifically for tuna
+    assessments\\[6ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{New tuna model}\small
+  \begin{itemize}
+    \item[] The SPC scoping project has reached out to IATTC regularly to
+    discuss\\[0.5ex]
+    future software for tuna assessments\\[4ex]
+    \item[] In July 2025, Mark Maunder proposed an initial design of a platform
+    that could be\\[0.5ex]
+    developed for tuna assessments:\\[1.5ex]
+    \begin{itemize}
+      \item New codebase in RTMB that will be relatively small, easy to modify
+      and extend\\[1ex]
+      \item Keeping it simple, just focusing on the priority needs of tuna
+      assessments\\[1ex]
+      \item Random effects, useful for allowing processes to vary in time and
+      possibly\\[0.2ex]
+      between regions\\[4ex]
+    \end{itemize}
+    \item[] SPC will present a project proposal in August 2026 for funding the
+    development of\\[0.5ex]
+    the next generation tuna model\\[4ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+{
+  \setbeamertemplate{background}{}
+  \begin{frame}{}
+    \vspace{10ex}
+    \centering
+    \includegraphics[height=6ex]{logo_spc}\h{8ex}
+    \includegraphics[height=6ex]{logo_iattc}\h{8ex}
+    \includegraphics[height=6ex]{logo_capam}\\[8ex]
+    \textblue{\url{https://github.com/PacificCommunity/ofp-sam-transition-plan}}
+  \end{frame}
+}
+
+\end{document}
