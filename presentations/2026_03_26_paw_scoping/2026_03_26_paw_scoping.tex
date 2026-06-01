@@ -1,0 +1,242 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{spc}
+\newcommand\cpp{\mbox{C\raisebox{0.5ex}{\tiny\bfseries ++}}}
+\begin{document}
+
+\begin{frame}
+  \title{\vspace{-5ex}\darkblue Scoping the Next Generation of\\[0.6ex]
+    Tuna Stock Assessment Software (P123)\\[2ex]
+    \it\large\darkgray External Tagging Analysis and Assessment Model Design}
+  \author{\vspace{-10ex}\darkgray\bf Arni Magnusson}
+  \date{\darkgreen SPC PAW Meeting\\[0.5ex]
+    26 March 2026, Nouméa}
+  \titlepage
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Overview}
+  \vspace{2ex}
+  \begin{itemize}
+    \item[] {\bf\darkblue External Tagging Analysis}
+    \comment{method being developed by DTU scientists,\\[0.4ex]
+      \h{31.7ex} related but different from SEAPODYM}\\[6ex]
+    \item[] {\bf\darkblue Assessment Model Design}
+    \comment{SPC\,--\,IATTC\,--\,NOAA\,--\,Quantifish collaboration,\\[0.4ex]
+      \h{32.1ex} RTMB estimation platform, time-varying selectivity}\\[6ex]
+    \item[] {\bf\darkblue SC22 Project Proposal}
+    \comment{budget, work plan, timeline}\\[6ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External tagging analysis}\small
+  \begin{itemize}
+    \item[] Method being developed by {\darkgreen DTU scientists}, in
+    collaboration with SPC and IATTC\\[3ex]
+    \item[] The current analysis focuses on WCPO skipjack tags, with the
+    intention to analyze\\[0.2ex]
+    yellowfin and bigeye tags later\\[3ex]
+    \item[] Initial workshop in 2025
+    \begin{itemize}
+      \item[-] Tobias Mildenberger, Anders Nielsen (DTU)\\[0.6ex]
+      \item[-] Inna Senina, Joe Scutt Phillips, John Hampton, Arni Magnusson
+      (SPC)\\[0.6ex]
+      \item[-] Mark Maunder, Rujia Bi (IATTC)\\[3ex]
+    \end{itemize}
+    \item[] Currently securing funding for this work to proceed
+    \begin{itemize}
+      \item[-] small amount for 2026 (from P123 budget)\\[0.6ex]
+      \item[-] larger amount for 2027 (from upcoming Software Development
+      Project budget)\\[0.6ex]
+      \item[-] method development could be completed in 2028
+      \comment{\fns\gray for that year's SKJ assessment}\\[3ex]
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{External tagging analysis}\small
+  Related but different from SEAPODYM\\[4ex]
+  \textblue{\bf DTU Movement Model}
+  \begin{itemize}
+    \item[] Uses all tags, also those that are not recaptured\\[-0.6ex]
+    \item[] Designed to produce abundance indices\\[-0.6ex]
+    \item[] Software maintained by Tobias Mildenberger (DTU) using RTMB\\[4ex]
+  \end{itemize}
+  \textgreen{\bf SEAPODYM}
+  \begin{itemize}
+    \item[] Only uses recaptured tags\\[-0.6ex]
+    \item[] Designed to estimate fish movement\\[-0.6ex]
+    \item[] Software maintained by Inna Senina (SPC) using AUTODIF \cpp\
+    libraries
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Assessment model design}\small
+  \textdarkgreen{\bf CAPAM 2025}
+  \begin{itemize}
+    \item[] Mini-conference showcasing cutting-edge research across\\[0.2ex]
+    many research domains in stock assessment modelling\\[2ex]
+    \item[] \blue\fns
+    \url{https://www.populationassessment.com/tuna/next-gen-model/workshop}
+  \end{itemize}
+  \vspace{4ex}
+  \textdarkgreen{\bf Priority features}
+  \begin{itemize}
+    \item Features that are currently used in WCPFC tuna stock
+    assessments\\[1.2ex]
+    \item[+] Time-varying selectivity, using random effects\\[1.2ex]
+    \item[--\,] No tagging analysis inside the model
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Development paradigm and first steps}\small
+  \textdarkgreen{\bf Continuous and dynamic}
+  \begin{itemize}
+    \item[-] Design decisions will be made based on findings during
+    development\\[1.6ex]
+    \item[-] Mark Maunder contributes to model design coordination
+  \end{itemize}
+  \vspace{5ex}
+  \textdarkgreen{\bf OPAL project}
+  \begin{itemize}
+    \item[-] Nicholas Ducharme-Barth (NOAA), Darcy Webber (Quantifish),\\[0.5ex]
+    Philipp Neubauer (Dragonfly)\\[1.2ex]
+    \item[] \blue\fns
+    \url{https://github.com/N-DucharmeBarth-NOAA/opal}\\[1.2ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{SC22 project proposal}\small
+  \textdarkgray{\bf Moving from recommendations to software development}\\[2ex]
+  \begin{itemize}
+    \item[] The plan is to deliver a WCPFC project proposal to SC22 in
+    2026,\\[0.4ex]
+    to follow up on recommendations from the scoping project\\[4ex]
+    \item[] This will include a proposed {\darkgreen budget}, {\darkgreen work
+      plan}, and {\darkgreen timeline}
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Budget}\small
+  \textdarkgreen{From the scoping project report at SC21 in 2025}\\[2ex]
+  \begin{quote}
+    As an initial estimate, the development project could be launched as
+    a\\[0.2ex]
+    three-year project from 2027 to 2030, with an annual budget of
+    {\darkgreen \$200,000}\\[2ex]
+    This would allow:
+    \begin{itemize}
+      \item[] {\darkgreen \$50,000} per year for workshops and smaller
+      development subprojects,\\[0.2ex]
+      in the same manner as the current scoping project; and\\[2ex]
+      \item[] {\darkgreen \$150,000} per year to divide between the development
+      options that will\\[0.2ex]
+      be prioritized
+    \end{itemize}
+  \end{quote}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Work plan}\small
+  \begin{itemize}
+    \item[] The scoping project is currently working with domain
+    experts to\\[0.2ex]
+    draft a work plan for the project that will be proposed at SC22\\[4ex]
+    \item[] One work plan for developing the {\darkgreen software for tagging
+      analysis} and\\[0.2ex]
+    another work plan for developing the {\darkgreen tuna assessment model
+      software}
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Timeline}\small
+  \h{4ex} \textdarkgreen{\bf DTU Movement Model}\\[4ex]
+  \h{4ex} \begin{tabular}{lll}
+    \hline
+    \bf\darkgray Year
+    & \bf\darkgray Activity
+    & \bf\darkgray Amount required\I{2.2ex}\\
+    \hline
+    2026 & Demonstrate method at SC22              & Small          \I{2.2ex}\\
+    ~    & Contribute to SC22 Project Proposal     & ~                       \\
+    \hline
+    2027 & Enhance statistical method and software & Medium         \I{2.2ex}\\
+    ~    & Deliver abundance indices for SKJ assmt & ~                       \\
+    \hline
+    2028 & Finalize SKJ abundance indicies         & Medium         \I{2.2ex}\\
+    ~    & Help SPC analyze YFT and BET indices    & ~                       \\
+    \hline
+    2029 & Finalize YFT and BET indices            & Small          \I{2.2ex}\\
+    \hline
+  \end{tabular}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Timeline}\small
+  \h{4ex} \textdarkgreen{\bf Tuna Assessment Model}\\[4ex]
+  \h{4ex}
+  \begin{tabular}{lll}
+    \hline
+    \bf\darkgray Year
+    & \bf\darkgray Activity
+    & \bf\darkgray Amount required\I{2.2ex}\\
+    \hline
+    2026 & Develop prototype model components      & Medium         \I{2.2ex}\\
+    ~    & Demonstrate software at SC22            & ~                       \\
+    ~    & Contribute to SC22 Project Proposal     & ~                       \\
+    \hline
+    2027 & Develop basic tuna assessment model     & Large          \I{2.2ex}\\
+    ~    & Test model on single-region BET dataset & ~                       \\
+    \hline
+    2028 & Develop prioritized model features      & Large          \I{2.2ex}\\
+    ~    & Test model on SKJ dataset               & ~                       \\
+    \hline
+    2029 & Develop prioritized model features      & Large          \I{2.2ex}\\
+    ~    & Test model on YFT and BET datasets      & ~                       \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}{Summary}
+  \vspace{2ex}
+  \begin{itemize}
+    \item[] {\bf\darkblue External Tagging Analysis}
+    \comment{method being developed by DTU scientists,\\[0.4ex]
+      \h{31.7ex} related but different from SEAPODYM}\\[6ex]
+    \item[] {\bf\darkblue Assessment Model Design}
+    \comment{SPC\,--\,IATTC\,--\,NOAA\,--\,Quantifish collaboration,\\[0.4ex]
+      \h{32.1ex} RTMB estimation platform, time-varying selectivity}\\[6ex]
+    \item[] {\bf\darkblue SC22 Project Proposal}
+    \comment{budget, work plan, timeline}\\[6ex]
+  \end{itemize}
+\end{frame}
+
+% ______________________________________________________________________________
+
+\begin{frame}
+  \vspace{4ex}
+  These slides:\\[2ex]
+  \begin{center}
+    \blue\url{https://github.com/PacificCommunity/ofp-sam-transition-plan}
+  \end{center}
+\end{frame}
+
+\end{document}

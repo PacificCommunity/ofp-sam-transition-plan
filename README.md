@@ -31,6 +31,10 @@ Synthesis](documents/2016_08_03_mfcl_ss_comparison/sc12_mfcl_ss_comparison.pdf) 
 
 ## Presentations
 
+* [PAW 2026
+presentation](presentations/2026_03_26_paw_scoping/2026_03_26_paw_scoping.pdf) -
+2026 Mar
+
 * [SC21
 presentation](presentations/2025_08_14_wcpfc_nukualofa/SC21-SA-WP-01_Project123_presentation.pdf) -
 2025 Aug
